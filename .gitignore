@@ -1,0 +1,10 @@
+.node_modules
+.dist
+.firebase
+.vite
+.eslint
+.prettier
+.prettierignore
+.prettierrc
+.prettierrc.json
+.prettierrc.json
