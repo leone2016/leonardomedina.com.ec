@@ -1,1 +1,11 @@
 node_modules
+dist
+.idea
+.firebase
+.vite
+.eslint
+.prettier
+.prettierignore
+.prettierrc
+.prettierrc.json
+.prettierrc.json
