@@ -40,10 +40,10 @@ export default function Portafolio(){
     }, [location, navigate]);
 
     return(
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-slate-900 transition-colors duration-500 dark:bg-gradient-to-br dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 dark:text-slate-100">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
             {/* Progress bar */}
             <motion.div
-                className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50 origin-left dark:from-purple-400 dark:to-blue-500"
+                className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50 origin-left"
                 style={{ scaleX }}
             />
 

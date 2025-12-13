@@ -109,24 +109,24 @@ export default function PostViewer({ post }) {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="rounded-3xl border border-slate-200/70 bg-white/95 p-10 shadow-lg dark:border-slate-800/70 dark:bg-slate-900/85 dark:shadow-slate-950/50"
+                className="rounded-3xl border border-slate-200/70 bg-white/95 p-10 shadow-lg dark:border-slate-800/70"
             >
                 <Link
                     to="/blogs"
-                    className="inline-flex items-center text-sm font-semibold text-blue-600 transition-colors hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+                    className="inline-flex items-center text-sm font-semibold text-blue-600 transition-colors hover:text-blue-500"
                 >
                     ← Back to all posts
                 </Link>
 
                 <header className="mt-6 space-y-4">
-                    <p className="text-sm uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Personal blog</p>
-                    <h1 className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+                    <p className="text-sm uppercase tracking-[0.2em] text-slate-400 ">Personal blog</p>
+                    <h1 className="text-4xl font-semibold tracking-tight text-slate-900">
                         {post.title}
                     </h1>
                 </header>
 
                 <motion.div
-                    className="mt-10 space-y-8 text-slate-700 dark:text-slate-200"
+                    className="mt-10 space-y-8 text-slate-700"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.4 }}

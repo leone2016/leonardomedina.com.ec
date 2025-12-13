@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle.jsx';
+
 
 const navItems = [
     { id: 'hero', label: 'Home', type: 'section' },
@@ -96,8 +96,8 @@ export default function Navigation() {
         <motion.nav
             className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
                 isScrolled
-                    ? 'bg-white/80 backdrop-blur-lg border-b border-slate-200/50 shadow-sm dark:bg-slate-950/80 dark:border-slate-800/60 dark:shadow-slate-950/40'
-                    : 'bg-transparent dark:bg-transparent'
+                    ? 'bg-white/80 backdrop-blur-lg border-b border-slate-200/50 shadow-sm'
+                    : 'bg-transparent'
             }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -107,7 +107,7 @@ export default function Navigation() {
                 <div className="flex justify-between items-center h-16">
                     <motion.button
                         type="button"
-                        className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer dark:from-blue-400 dark:to-purple-500"
+                        className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
                         whileHover={{ scale: 1.05 }}
                         onClick={() => {
                             if (isHome) {
@@ -121,7 +121,7 @@ export default function Navigation() {
                     </motion.button>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-6">
+                    <div className="hidden md:flex space-x-8">
                         <div className="flex items-center space-x-8">
                             {navItems.map((item) => {
                                 const active = isItemActive(item);
@@ -131,14 +131,14 @@ export default function Navigation() {
                                         onClick={() => handleNavigation(item)}
                                         className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative ${
                                             active
-                                                ? 'text-blue-600 dark:text-blue-400'
-                                                : 'text-slate-700 hover:text-blue-600 dark:text-slate-200 dark:hover:text-blue-400'
+                                                ? 'text-blue-600'
+                                                : 'text-slate-700 hover:text-blue-600'
                                         }`}
                                     >
                                         {item.label}
                                         {active && (
                                             <motion.div
-                                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-500"
+                                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
                                                 layoutId="activeTab"
                                                 initial={false}
                                                 transition={{ duration: 0.3 }}
@@ -148,15 +148,15 @@ export default function Navigation() {
                                 );
                             })}
                         </div>
-                        <ThemeToggle />
+
                     </div>
 
                     {/* Mobile menu button */}
                     <button
-                        className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors dark:hover:bg-slate-800/70"
+                        className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        {isMenuOpen ? <X className="w-6 h-6 text-slate-700 dark:text-slate-200" /> : <Menu className="w-6 h-6 text-slate-700 dark:text-slate-200" />}
+                        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
                 </div>
 
@@ -170,7 +170,7 @@ export default function Navigation() {
                     }}
                     transition={{ duration: 0.3 }}
                 >
-                    <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-lg rounded-lg mt-2 border border-slate-200/50 dark:bg-slate-950/80 dark:border-slate-800/60">
+                    <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-lg rounded-lg mt-2 border border-slate-200/50">
                         {navItems.map((item) => {
                             const active = isItemActive(item);
                             return (
@@ -179,17 +179,14 @@ export default function Navigation() {
                                     onClick={() => handleNavigation(item)}
                                     className={`block px-3 py-2 text-base font-medium w-full text-left rounded-lg transition-colors ${
                                         active
-                                            ? 'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-500/10'
-                                            : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50 dark:text-slate-200 dark:hover:text-blue-400 dark:hover:bg-slate-800/70'
+                                            ? 'text-blue-600 bg-blue-50'
+                                            : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                                     }`}
                                 >
                                     {item.label}
                                 </button>
                             );
                         })}
-                        <div className="pt-4 flex justify-center">
-                            <ThemeToggle />
-                        </div>
                     </div>
                 </motion.div>
             </div>

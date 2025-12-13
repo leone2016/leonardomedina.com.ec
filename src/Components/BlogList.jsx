@@ -11,7 +11,7 @@ export default function BlogList() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="rounded-3xl border border-dashed border-slate-300 bg-white/80 p-12 text-center shadow-sm dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300"
+                className="rounded-3xl border border-dashed border-slate-300 bg-white/80 p-12 text-center shadow-sm"
             >
                 <p className="text-lg font-medium text-slate-500 dark:text-slate-400">
                     New stories are coming soon. Stay tuned!
