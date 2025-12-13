@@ -10,7 +10,7 @@ export default function BlogCard({ post, index }) {
             className="group relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
         >
             <div className="space-y-4">
-                <h2 className="text-2xl font-semibold text-slate-900 tracking-tight transition-colors duration-300 group-hover:text-blue-600 ">
+                <h2 className="text-2xl font-semibold text-slate-900 tracking-tight transition-colors duration-300 group-hover:text-primary ">
                     {post.title}
                 </h2>
                 <p className="text-base leading-relaxed text-slate-600">
@@ -27,7 +27,7 @@ export default function BlogCard({ post, index }) {
                 </div>
             </div>
             <div className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="h-full w-full bg-gradient-to-br from-blue-50 via-transparent to-purple-50" />
+                <div className="h-full w-full bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
             </div>
         </motion.article>
     );

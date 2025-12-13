@@ -94,11 +94,10 @@ export default function Navigation() {
 
     return (
         <motion.nav
-            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-                isScrolled
+            className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
                     ? 'bg-white/80 backdrop-blur-lg border-b border-slate-200/50 shadow-sm'
                     : 'bg-transparent'
-            }`}
+                }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
@@ -107,7 +106,7 @@ export default function Navigation() {
                 <div className="flex justify-between items-center h-16">
                     <motion.button
                         type="button"
-                        className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
+                        className="font-bold text-xl bg-brand-gradient bg-clip-text text-transparent cursor-pointer"
                         whileHover={{ scale: 1.05 }}
                         onClick={() => {
                             if (isHome) {
@@ -129,16 +128,15 @@ export default function Navigation() {
                                     <button
                                         key={item.id}
                                         onClick={() => handleNavigation(item)}
-                                        className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative ${
-                                            active
-                                                ? 'text-blue-600'
-                                                : 'text-slate-700 hover:text-blue-600'
-                                        }`}
+                                        className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative ${active
+                                                ? 'text-primary'
+                                                : 'text-slate-700 hover:text-primary'
+                                            }`}
                                     >
                                         {item.label}
                                         {active && (
                                             <motion.div
-                                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
+                                                className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-gradient"
                                                 layoutId="activeTab"
                                                 initial={false}
                                                 transition={{ duration: 0.3 }}
@@ -177,11 +175,10 @@ export default function Navigation() {
                                 <button
                                     key={item.id}
                                     onClick={() => handleNavigation(item)}
-                                    className={`block px-3 py-2 text-base font-medium w-full text-left rounded-lg transition-colors ${
-                                        active
-                                            ? 'text-blue-600 bg-blue-50'
-                                            : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
-                                    }`}
+                                    className={`block px-3 py-2 text-base font-medium w-full text-left rounded-lg transition-colors ${active
+                                            ? 'text-primary bg-primary/10'
+                                            : 'text-slate-700 hover:text-primary hover:bg-slate-50'
+                                        }`}
                                 >
                                     {item.label}
                                 </button>

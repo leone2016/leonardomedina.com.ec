@@ -163,21 +163,21 @@ export default function Experience() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
                     >
-                        Professional <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Experience</span>
+                        Professional <span className="bg-brand-gradient bg-clip-text text-transparent">Experience</span>
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+                        className="w-24 h-1 bg-brand-gradient mx-auto"
                     />
                 </motion.div>
 
                 {/* Timeline */}
                 <div className="relative">
                     {/* Timeline line */}
-                    <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-600"></div>
+                    <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-brand-gradient"></div>
 
                     {/* Experience items */}
                     {experiences.map((exp, index) => (
@@ -187,23 +187,22 @@ export default function Experience() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
-                            className={`relative flex items-center mb-16 ${
-                                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                            }`}
+                            className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                                }`}
                         >
                             {/* Timeline dot */}
-                            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-blue-500 rounded-full z-10"></div>
+                            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-primary rounded-full z-10"></div>
 
                             {/* Content */}
                             <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                                 <motion.div
                                     whileHover={{ scale: 1.02, y: -5 }}
-                                    className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300"
+                                    className="bg-gradient-to-br from-slate-50 to-primary/5 rounded-2xl p-8 shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300"
                                 >
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
                                             <h3 className="text-2xl font-bold text-slate-900 mb-1">{exp.company}</h3>
-                                            <p className="text-lg font-semibold text-blue-600 mb-2">{exp.position}</p>
+                                            <p className="text-lg font-semibold text-primary mb-2">{exp.position}</p>
                                         </div>
                                     </div>
 
@@ -226,7 +225,7 @@ export default function Experience() {
                                                 whileInView={{ opacity: 1 }}
                                                 viewport={{ once: true }}
                                                 transition={{ delay: (index * 0.2) + (projectIndex * 0.1) }}
-                                                className="border-l-4 border-blue-500 pl-4"
+                                                className="border-l-4 border-primary pl-4"
                                             >
                                                 <h4 className="font-bold text-slate-900 mb-2">{project.title}</h4>
                                                 <p className="text-slate-700 mb-3 text-sm leading-relaxed">{project.description}</p>
@@ -236,7 +235,7 @@ export default function Experience() {
                                                     <ul className="space-y-1">
                                                         {project.responsibilities.map((responsibility, respIndex) => (
                                                             <li key={respIndex} className="flex items-start gap-2 text-sm text-slate-600">
-                                                                <ChevronRight className="w-3 h-3 mt-0.5 text-blue-500 flex-shrink-0" />
+                                                                <ChevronRight className="w-3 h-3 mt-0.5 text-primary flex-shrink-0" />
                                                                 <span>{responsibility}</span>
                                                             </li>
                                                         ))}
@@ -247,10 +246,10 @@ export default function Experience() {
                                                     {project.technologies.map((tech, techIndex) => (
                                                         <span
                                                             key={techIndex}
-                                                            className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium"
+                                                            className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium"
                                                         >
-                              {tech}
-                            </span>
+                                                            {tech}
+                                                        </span>
                                                     ))}
                                                 </div>
                                             </motion.div>
@@ -269,21 +268,21 @@ export default function Experience() {
                         transition={{ duration: 0.6, delay: 0.8 }}
                         className="relative flex items-center"
                     >
-                        <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-purple-500 rounded-full z-10"></div>
+                        <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-secondary rounded-full z-10"></div>
 
                         <div className="ml-12 md:ml-0 md:w-1/2 md:pr-12">
                             <motion.div
                                 whileHover={{ scale: 1.02, y: -5 }}
-                                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300"
+                                className="bg-gradient-to-br from-secondary/5 to-pink-50 rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300"
                             >
                                 <div className="flex items-center gap-2 mb-4">
-                                    <span className="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full">FREELANCE</span>
+                                    <span className="px-3 py-1 bg-secondary text-white text-xs font-bold rounded-full">FREELANCE</span>
                                 </div>
 
                                 <div className="flex items-start justify-between mb-4">
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-1">{freelanceProject.company}</h3>
-                                        <p className="text-lg font-semibold text-purple-600 mb-2">{freelanceProject.position}</p>
+                                        <p className="text-lg font-semibold text-secondary mb-2">{freelanceProject.position}</p>
                                     </div>
                                 </div>
 
@@ -299,7 +298,7 @@ export default function Experience() {
                                 </div>
 
                                 {freelanceProject.projects.map((project, projectIndex) => (
-                                    <div key={projectIndex} className="border-l-4 border-purple-500 pl-4">
+                                    <div key={projectIndex} className="border-l-4 border-secondary pl-4">
                                         <h4 className="font-bold text-slate-900 mb-2">{project.title}</h4>
                                         <p className="text-slate-700 mb-3 text-sm leading-relaxed">{project.description}</p>
 
@@ -308,7 +307,7 @@ export default function Experience() {
                                             <ul className="space-y-1">
                                                 {project.responsibilities.map((responsibility, respIndex) => (
                                                     <li key={respIndex} className="flex items-start gap-2 text-sm text-slate-600">
-                                                        <ChevronRight className="w-3 h-3 mt-0.5 text-purple-500 flex-shrink-0" />
+                                                        <ChevronRight className="w-3 h-3 mt-0.5 text-secondary flex-shrink-0" />
                                                         <span>{responsibility}</span>
                                                     </li>
                                                 ))}
@@ -319,10 +318,10 @@ export default function Experience() {
                                             {project.technologies.map((tech, techIndex) => (
                                                 <span
                                                     key={techIndex}
-                                                    className="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs font-medium"
+                                                    className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium"
                                                 >
-                          {tech}
-                        </span>
+                                                    {tech}
+                                                </span>
                                             ))}
                                         </div>
                                     </div>

@@ -57,14 +57,14 @@ export default function Skills() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
                     >
-                        Technology <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expertise</span>
+                        Technology <span className="bg-brand-gradient bg-clip-text text-transparent">Expertise</span>
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+                        className="w-24 h-1 bg-brand-gradient mx-auto"
                     />
                 </motion.div>
 
@@ -111,7 +111,7 @@ export default function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white"
+                    className="mt-16 bg-brand-gradient rounded-2xl p-8 text-center text-white"
                 >
                     <h3 className="text-2xl font-bold mb-4">Additional Expertise</h3>
                     <div className="flex flex-wrap justify-center gap-4">

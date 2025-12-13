@@ -11,8 +11,8 @@ export default function Hero() {
         <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 -z-10">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-300/10 rounded-full blur-3xl" />
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -29,11 +29,11 @@ export default function Hero() {
                         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                         className="w-40 h-40 mx-auto relative"
                     >
-                        <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl font-bold">
+                        <div className="w-full h-full bg-brand-gradient rounded-full flex items-center justify-center text-white text-6xl font-bold">
                             LM
                         </div>
                         <motion.div
-                            className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 opacity-20"
+                            className="absolute inset-0 rounded-full bg-brand-gradient opacity-20"
                             animate={{ scale: [1, 1.2, 1] }}
                             transition={{ duration: 2, repeat: Infinity }}
                         />
@@ -47,13 +47,13 @@ export default function Hero() {
                             transition={{ delay: 0.4 }}
                             className="text-5xl md:text-7xl font-bold tracking-tight"
                         >
-              <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-                Leonardo
-              </span>
+                            <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                                Leonardo
+                            </span>
                             <br />
-                            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Medina
-              </span>
+                            <span className="bg-brand-gradient bg-clip-text text-transparent">
+                                Medina
+                            </span>
                         </motion.h1>
 
                         <motion.p
@@ -84,15 +84,15 @@ export default function Hero() {
                         className="flex flex-wrap justify-center gap-6 text-slate-600"
                     >
                         <div className="flex items-center gap-2">
-                            <MapPin className="w-5 h-5 text-blue-500" />
+                            <MapPin className="w-5 h-5 text-primary" />
                             <span>Iowa, Fairfield</span>
                         </div>
-                        <a href="tel:+16418191456" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
-                            <Phone className="w-5 h-5 text-blue-500" />
+                        <a href="tel:+16418191456" className="flex items-center gap-2 hover:text-primary transition-colors">
+                            <Phone className="w-5 h-5 text-primary" />
                             <span>+1 (641) 819-1456</span>
                         </a>
-                        <a href="mailto:leoz.31@hotmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
-                            <Mail className="w-5 h-5 text-blue-500" />
+                        <a href="mailto:leoz.31@hotmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                            <Mail className="w-5 h-5 text-primary" />
                             <span>leoz.31@hotmail.com</span>
                         </a>
                     </motion.div>
@@ -108,7 +108,7 @@ export default function Hero() {
                             href="https://www.linkedin.com/in/leone2018/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                            className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-primary/90 transition-colors"
                             whileHover={{ scale: 1.1, y: -2 }}
                             whileTap={{ scale: 0.95 }}
                         >

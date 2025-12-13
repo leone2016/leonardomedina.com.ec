@@ -20,7 +20,7 @@ const markdownComponents = {
     ),
     a: (props) => (
         <a
-            className="font-semibold text-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-blue-500"
+            className="font-semibold text-primary underline decoration-2 underline-offset-4 transition-colors hover:text-primary/80"
             target="_blank"
             rel="noreferrer"
             {...props}
@@ -34,7 +34,7 @@ const markdownComponents = {
     ),
     blockquote: (props) => (
         <blockquote
-            className="my-8 border-l-4 border-blue-200 bg-blue-50/60 px-6 py-4 text-lg font-medium text-slate-700 italic"
+            className="my-8 border-l-4 border-primary/30 bg-primary/5 px-6 py-4 text-lg font-medium text-slate-700 italic"
             {...props}
         />
     ),
@@ -113,7 +113,7 @@ export default function PostViewer({ post }) {
             >
                 <Link
                     to="/blogs"
-                    className="inline-flex items-center text-sm font-semibold text-blue-600 transition-colors hover:text-blue-500"
+                    className="inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-primary/80"
                 >
                     ← Back to all posts
                 </Link>

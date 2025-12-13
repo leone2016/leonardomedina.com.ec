@@ -15,7 +15,7 @@ const contactInfo = [
         label: 'Email',
         value: 'leoz.31@hotmail.com',
         href: 'mailto:leoz.31@hotmail.com',
-        color: 'from-blue-500 to-blue-600'
+        color: 'from-primary to-primary/80'
     },
     {
         icon: MapPin,
@@ -31,7 +31,7 @@ const socialLinks = [
         icon: Linkedin,
         label: 'LinkedIn',
         href: 'https://www.linkedin.com/in/leone2018/',
-        color: 'bg-blue-600 hover:bg-blue-700'
+        color: 'bg-primary hover:bg-primary/90'
     },
     {
         icon: Github,
@@ -75,14 +75,14 @@ export default function Contact() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
                     >
-                        Let's <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Connect</span>
+                        Let's <span className="bg-brand-gradient bg-clip-text text-transparent">Connect</span>
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"
+                        className="w-24 h-1 bg-brand-gradient mx-auto mb-6"
                     />
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
@@ -105,7 +105,7 @@ export default function Contact() {
                         transition={{ duration: 0.8 }}
                         className="lg:col-span-2"
                     >
-                        <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8">
+                        <div className="bg-gradient-to-br from-slate-50 to-primary/5 rounded-2xl p-8">
                             <h3 className="text-2xl font-bold text-slate-900 mb-8">Contact Information</h3>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -127,7 +127,7 @@ export default function Contact() {
                                                     </div>
                                                     <div>
                                                         <p className="font-semibold text-slate-900">{contact.label}</p>
-                                                        <p className="text-slate-600 hover:text-blue-600 transition-colors">{contact.value}</p>
+                                                        <p className="text-slate-600 hover:text-primary transition-colors">{contact.value}</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -207,7 +207,7 @@ export default function Contact() {
                                                 <p className="text-purple-600 text-sm font-medium">{reference.company}</p>
                                                 <a
                                                     href={`tel:${reference.phone}`}
-                                                    className="text-xs text-slate-600 hover:text-blue-600 transition-colors"
+                                                    className="text-xs text-slate-600 hover:text-primary transition-colors"
                                                 >
                                                     {reference.phone}
                                                 </a>
@@ -222,7 +222,7 @@ export default function Contact() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.8 }}
-                                className="mt-8 p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white text-center"
+                                className="mt-8 p-4 bg-brand-gradient rounded-xl text-white text-center"
                             >
                                 <p className="text-sm">
                                     References available upon request
@@ -240,7 +240,7 @@ export default function Contact() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="mt-16 text-center"
                 >
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+                    <div className="bg-brand-gradient rounded-2xl p-12 text-white">
                         <h3 className="text-3xl font-bold mb-4">Ready to Start a Project?</h3>
                         <p className="text-lg mb-8 opacity-90">
                             I'm currently available for new opportunities and excited to discuss how we can work together.
@@ -256,7 +256,7 @@ export default function Contact() {
                                 href="mailto:leoz.31@hotmail.com"
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-slate-50 transition-colors shadow-lg"
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-slate-50 transition-colors shadow-lg"
                             >
                                 <Mail className="w-5 h-5" />
                                 Send Email

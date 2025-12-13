@@ -22,12 +22,12 @@ export default function About() {
             {...fadeInUp}
             className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
           >
-            About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
+            About <span className="bg-brand-gradient bg-clip-text text-transparent">Me</span>
           </motion.h2>
           <motion.div
             {...fadeInUp}
             transition={{ delay: 0.2 }}
-            className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+            className="w-24 h-1 bg-brand-gradient mx-auto"
           />
         </motion.div>
 
@@ -40,9 +40,9 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-2xl">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-brand-gradient rounded-lg flex items-center justify-center">
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">Career Goal</h3>
@@ -55,9 +55,9 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-slate-50 to-primary/5 p-8 rounded-2xl">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-slate-600 to-slate-800 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-brand-gradient rounded-lg flex items-center justify-center">
                   <Briefcase className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">Experience</h3>
@@ -84,7 +84,7 @@ export default function About() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center"
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold bg-brand-gradient bg-clip-text text-transparent mb-2">
                   8+
                 </div>
                 <div className="text-slate-600">Years Experience</div>
@@ -94,7 +94,7 @@ export default function About() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center"
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold bg-brand-gradient bg-clip-text text-transparent mb-2">
                   15+
                 </div>
                 <div className="text-slate-600">Projects Completed</div>
@@ -104,7 +104,7 @@ export default function About() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center"
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold bg-brand-gradient bg-clip-text text-transparent mb-2">
                   4
                 </div>
                 <div className="text-slate-600">Industries</div>
@@ -114,7 +114,7 @@ export default function About() {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 text-center"
               >
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold bg-brand-gradient bg-clip-text text-transparent mb-2">
                   10+
                 </div>
                 <div className="text-slate-600">Technologies</div>
@@ -124,24 +124,24 @@ export default function About() {
             {/* Specialties */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
               <h4 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                <Code className="w-6 h-6 text-blue-500" />
+                <Code className="w-6 h-6 text-primary" />
                 Specialties
               </h4>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
                   <span className="text-slate-700">Microservices Architecture</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-secondary rounded-full"></div>
                   <span className="text-slate-700">Cloud Infrastructure (AWS)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
                   <span className="text-slate-700">Full-Stack Development</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-secondary rounded-full"></div>
                   <span className="text-slate-700">Financial Technology</span>
                 </div>
               </div>

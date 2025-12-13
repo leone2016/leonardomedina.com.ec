@@ -53,14 +53,14 @@ export default function Education() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
                     >
-                        Education & <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Certifications</span>
+                        Education & <span className="bg-brand-gradient bg-clip-text text-transparent">Certifications</span>
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+                        className="w-24 h-1 bg-brand-gradient mx-auto"
                     />
                 </motion.div>
 
@@ -74,7 +74,7 @@ export default function Education() {
                     >
                         <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 h-full">
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                                <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl flex items-center justify-center">
                                     <GraduationCap className="w-8 h-8 text-white" />
                                 </div>
                                 <div>
@@ -88,10 +88,10 @@ export default function Education() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
-                                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-500"
+                                className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 border-l-4 border-primary"
                             >
                                 <h4 className="text-xl font-bold text-slate-900 mb-2">{education.degree}</h4>
-                                <p className="text-lg font-semibold text-blue-600 mb-4">{education.university}</p>
+                                <p className="text-lg font-semibold text-primary mb-4">{education.university}</p>
 
                                 <div className="flex flex-wrap gap-4 text-sm text-slate-600">
                                     <div className="flex items-center gap-2">
@@ -117,7 +117,7 @@ export default function Education() {
                                             transition={{ delay: 0.5 + (index * 0.1) }}
                                             className="flex items-center gap-2 text-sm text-slate-700"
                                         >
-                                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                            <div className="w-2 h-2 bg-primary rounded-full"></div>
                                             <span>{area}</span>
                                         </motion.div>
                                     ))}
@@ -135,7 +135,7 @@ export default function Education() {
                     >
                         <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 h-full">
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                                <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-2xl flex items-center justify-center">
                                     <BookOpen className="w-8 h-8 text-white" />
                                 </div>
                                 <div>
@@ -153,15 +153,15 @@ export default function Education() {
                                         viewport={{ once: true }}
                                         transition={{ delay: 0.4 + (index * 0.1) }}
                                         whileHover={{ x: 5, scale: 1.02 }}
-                                        className="bg-gradient-to-r from-slate-50 to-purple-50 rounded-xl p-4 border border-slate-100 hover:shadow-md transition-all duration-300"
+                                        className="bg-gradient-to-r from-slate-50 to-secondary/5 rounded-xl p-4 border border-slate-100 hover:shadow-md transition-all duration-300"
                                     >
                                         <div className="flex items-start gap-3">
-                                            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                            <div className="w-10 h-10 bg-gradient-to-r from-secondary to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                                                 <Award className="w-5 h-5 text-white" />
                                             </div>
                                             <div className="flex-1">
                                                 <h4 className="font-bold text-slate-900 mb-1">{course.title}</h4>
-                                                <p className="text-purple-600 font-medium text-sm mb-2">{course.provider}</p>
+                                                <p className="text-secondary font-medium text-sm mb-2">{course.provider}</p>
                                                 <div className="flex items-center gap-2 text-xs text-slate-500">
                                                     <Calendar className="w-3 h-3" />
                                                     <span>{course.period}</span>
@@ -178,7 +178,7 @@ export default function Education() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.8 }}
-                                className="mt-8 p-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl text-white"
+                                className="mt-8 p-6 bg-brand-gradient-hover rounded-xl text-white"
                             >
                                 <h5 className="font-bold mb-3 flex items-center gap-2">
                                     <BookOpen className="w-5 h-5" />
