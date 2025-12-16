@@ -1,19 +1,23 @@
-# Notas sobre Clean Code
 
-La idea central de *Clean Code* es que el software es un acto de comunicación. No escribimos solo para que la computadora lo entienda, sino para que otras personas lo mantengan.
 
-> "Leave the campsite cleaner than you found it".
+> "amat victoria curam."
 
-## Principios que aplico a diario
+## Basic
 
-- Nombres que cuenten una historia
-- Funciones con una sola responsabilidad
-- Tests que expliquen el comportamiento
-- Comentarios solo cuando añaden contexto
+### 1. What is the difference between JDK and JRE
 
-| Mal | Mejor |
-| --- | --- |
-| `const data = fetch()` | `const projects = fetchProjects()` |
-| `handleClick2()` | `handleSecondaryAction()` |
+JDK stands for java developer kit. It contains the tools and libraries for development of java programs. JDK also contains compilers and debuggers required to compile a java program.
 
-Pequeñas mejoras incrementales, todos los días, construyen bases sólidas.
+JRE stands for Java runtime environment. This is included in JDK. JRE provides libraries and JVM that is required to run a java program.
+
+JDK is also considered a super set of JRE. JDK contains everything that is in JRE and it also contains the tools, utilities and directories required to compile, debug and run java code.
+
+### 2. What is Java Virtual Machine (JVM)?
+
+Java virtual machine is an abstract machine that executes Java ByteCode. There are different JVM for different hardware. Therefore, JVM is a platform dependent JVM is responsible for loading,
+verifying and executing the bytecode on a specific platform. JVM is included in JRE package. 
+
+
+
+
+

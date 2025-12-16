@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-@theme {
-    --color-primary: #2563eb;
-    --color-primary-foreground: #ffffff;
-    --color-secondary: #9333ea;
-    --color-secondary-foreground: #ffffff;
+:root {
+    /* Light Mode Defaults */
+    --primary-color: #2563eb;
+    --primary-foreground-color: #ffffff;
+    --secondary-color: #9333ea;
+    --secondary-foreground-color: #ffffff;
 
-    --color-background: #ffffff;
-    --color-foreground: #0f172a;
+    --background-color: #ffffff;
+    --foreground-color: #0f172a;
+}
+
+.dark {
+    /* Dark Mode Overrides */
+    --primary-color: #3b82f6;
+    /* Lighter blue for dark mode */
+    --secondary-color: #a855f7;
+    /* Lighter purple */
+
+    --background-color: #0f172a;
+    /* Slate 900 */
+    --foreground-color: #f8fafc;
+    /* Slate 50 */
+}
+
+@theme {
+    --color-primary: var(--primary-color);
+    --color-primary-foreground: var(--primary-foreground-color);
+    --color-secondary: var(--secondary-color);
+    --color-secondary-foreground: var(--secondary-foreground-color);
+
+    --color-background: var(--background-color);
+    --color-foreground: var(--foreground-color);
 
     --background-image-brand-gradient: linear-gradient(to right, var(--color-primary), var(--color-secondary));
     --background-image-brand-gradient-hover: linear-gradient(to right, var(--color-secondary), var(--color-primary));
-}
-
-/* Dark mode preferences if we need them later */
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Optional: Uncomment to support dark mode automagically
-    --background: #0f172a;
-    --foreground: #f8fafc; 
-    */
-    }
 }
 
 body {

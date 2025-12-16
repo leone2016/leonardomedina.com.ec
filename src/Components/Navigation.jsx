@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, GraduationCap, Code } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 
@@ -95,8 +96,8 @@ export default function Navigation() {
     return (
         <motion.nav
             className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
-                    ? 'bg-white/80 backdrop-blur-lg border-b border-slate-200/50 shadow-sm'
-                    : 'bg-transparent'
+                ? 'bg-white/80 backdrop-blur-lg border-b border-slate-200/50 shadow-sm'
+                : 'bg-transparent'
                 }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -129,8 +130,8 @@ export default function Navigation() {
                                         key={item.id}
                                         onClick={() => handleNavigation(item)}
                                         className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative ${active
-                                                ? 'text-primary'
-                                                : 'text-slate-700 hover:text-primary'
+                                            ? 'text-primary'
+                                            : 'text-slate-700 hover:text-primary'
                                             }`}
                                     >
                                         {item.label}
@@ -145,17 +146,21 @@ export default function Navigation() {
                                     </button>
                                 );
                             })}
+                            <ThemeToggle />
                         </div>
 
                     </div>
 
                     {/* Mobile menu button */}
-                    <button
-                        className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    >
-                        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                    </button>
+                    <div className="flex items-center gap-4 md:hidden">
+                        <ThemeToggle />
+                        <button
+                            className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        >
+                            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -176,8 +181,8 @@ export default function Navigation() {
                                     key={item.id}
                                     onClick={() => handleNavigation(item)}
                                     className={`block px-3 py-2 text-base font-medium w-full text-left rounded-lg transition-colors ${active
-                                            ? 'text-primary bg-primary/10'
-                                            : 'text-slate-700 hover:text-primary hover:bg-slate-50'
+                                        ? 'text-primary bg-primary/10'
+                                        : 'text-slate-700 hover:text-primary hover:bg-slate-50'
                                         }`}
                                 >
                                     {item.label}
