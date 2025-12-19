@@ -91,9 +91,9 @@ export default function Hero() {
                             <Phone className="w-5 h-5 text-primary" />
                             <span>+1 (641) 819-1456</span>
                         </a>
-                        <a href="mailto:leoz.31@hotmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                        <a href="mailto:lmedinaencalada@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                             <Mail className="w-5 h-5 text-primary" />
-                            <span>leoz.31@hotmail.com</span>
+                            <span>lmedinaencalada@gmail.com</span>
                         </a>
                     </motion.div>
 

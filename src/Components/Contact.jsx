@@ -13,8 +13,8 @@ const contactInfo = [
     {
         icon: Mail,
         label: 'Email',
-        value: 'leoz.31@hotmail.com',
-        href: 'mailto:leoz.31@hotmail.com',
+        value: 'lmedinaencalada@gmail.com',
+        href: 'mailto:lmedinaencalada@gmail.com',
         color: 'from-primary to-primary/80'
     },
     {
@@ -42,21 +42,21 @@ const socialLinks = [
 ];
 
 const references = [
-    {
-        name: 'Juan Pablo Paredes',
-        company: 'Technisys',
-        phone: '+593 992007443'
-    },
-    {
-        name: 'Lorena Guartazaca',
-        company: 'OpcionAuto',
-        phone: '+593 994607544'
-    },
-    {
-        name: 'Danilo Vasquez',
-        company: 'Bayteq',
-        phone: '+593 987965215'
-    }
+    // {
+    //     name: 'Juan Pablo Paredes',
+    //     company: 'Technisys',
+    //     phone: '+593 992007443'
+    // },
+    // {
+    //     name: 'Lorena Guartazaca',
+    //     company: 'OpcionAuto',
+    //     phone: '+593 994607544'
+    // },
+    // {
+    //     name: 'Danilo Vasquez',
+    //     company: 'Bayteq',
+    //     phone: '+593 987965215'
+    // }
 ];
 
 export default function Contact() {
@@ -253,7 +253,7 @@ export default function Contact() {
                             transition={{ delay: 0.6 }}
                         >
                             <motion.a
-                                href="mailto:leoz.31@hotmail.com"
+                                href="mailto:lmedinaencalada@gmail.com"
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-slate-50 transition-colors shadow-lg"
