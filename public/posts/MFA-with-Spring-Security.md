@@ -1,3 +1,5 @@
+> if you want to run this project, you can find it in [ GITHUB spring_mfa_demo](https://github.com/leone2016/blog-spring-security-mfa)
+
 # Practice Exercise: Multi-Factor Authentication (MFA) with Spring Security
 
 ### Objective
@@ -25,19 +27,19 @@ b. Configure your project with:
 - **Project:** Gradle - Kotlin
 - **Language:** Java
 - **Spring Boot:** 3.x or 4.x (Snapshot)
-- **Group:** `ec.com.leonardomedina`
-- **Artifact:** `spring-mfa-demo`
+- **Group:** ec.com.leonardomedina (or any other group you prefer)
+- **Artifact:** spring-mfa-demo
 - **Dependencies:**
-  - `Spring Security`
-  - `Spring Web`
-  - `OAuth2 Resource Server`
-  - `Lombok`
+  - Spring Security
+  - Spring Web
+  - OAuth2 Resource Server
+  - Lombok
 
 c. Generate and unzip the project.
 
-#### 2. Configure Dependencies (`build.gradle`)
+#### 2. Configure Dependencies (build.gradle)
 
-Open your `build.gradle.kts` and ensure you have the necessary dependencies. We are using Java 25 preview features in this lab, so make sure your toolchain is set correctly.
+Open your **build.gradle** and ensure you have the necessary dependencies. We are using Java 25 preview features in this lab, so make sure your toolchain is set correctly.
 
 ```kotlin
 plugins {
@@ -75,7 +77,7 @@ We need to configure Spring Security to recognize two levels of trust and handle
 
 ##### 3.1 Generate RSA Keys
 
-This application uses RSA keys to sign and verify the JWTs. You need to generate a Private/Public key pair and place them in the `src/main/resources/static` directory.
+This application uses RSA keys to sign and verify the JWTs. You need to generate a Private/Public key pair and place them in the **src/main/resources/static** directory.
 
 Run the following commands in your terminal (using OpenSSL):
 
@@ -94,9 +96,9 @@ openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in src/main/resources/st
 mv src/main/resources/static/private.key.pkcs8 src/main/resources/static/private.key
 ```
 
-##### 3.2 Configure Application Properties (`application.yaml`)
+##### 3.2 Configure Application Properties (application.yaml)
 
-Configure the application to locate these keys. Rename `application.properties` to `application.yaml` (or create it) in `src/main/resources/`.
+Configure the application to locate these keys. Rename **application.properties** to **application.yaml** (or create it) in **src/main/resources/**.
 
 ```yaml
 spring:
@@ -108,11 +110,11 @@ rsa:
   private-key: classpath:static/private.key
 ```
 
-##### 3.3 JWT Configuration (`JwtConfig.java`)
+##### 3.3 JWT Configuration (JwtConfig.java)
 
-We need a configuration class to load these keys and configure the `JwtEncoder` (for creating tokens) and `JwtDecoder` (for validating tokens).
+We need a configuration class to load these keys and configure the **JwtEncoder** (for creating tokens) and **JwtDecoder** (for validating tokens).
 
-Create `spring_mfa_demo/config/security/JwtConfig.java`:
+Create **spring_mfa_demo/config/security/JwtConfig.java**:
 
 ```java
 package dev.fdherrera.spring_mfa_demo.config.security;
@@ -191,11 +193,11 @@ public class JwtConfig {
 }
 ```
 
-##### 3.4 JWT Authentication Config (`JwtAuthConfig.java`)
+##### 3.4 JWT Authentication Config (JwtAuthConfig.java)
 
 We also need a small helper to convert JWT Authorities correctly.
 
-Create `spring_mfa_demo/config/security/JwtAuthConfig.java`:
+Create **spring_mfa_demo/config/security/JwtAuthConfig.java**:
 
 ```java
 package dev.fdherrera.spring_mfa_demo.config.security;
@@ -225,11 +227,11 @@ public class JwtAuthConfig {
 }
 ```
 
-##### 3.5 Security Chain Configuration (`SecurityConfig.java`)
+##### 3.5 Security Chain Configuration (SecurityConfig.java)
 
 Now we tie it all together in the main security config.
 
-Create/Edit `spring_mfa_demo/config/security/SecurityConfig.java`:
+Create/Edit **spring_mfa_demo/config/security/SecurityConfig.java**:
 
 ```java
 package ec.com.leonardomedina.spring_mfa_demo.config.security;
@@ -287,13 +289,13 @@ public class SecurityConfig {
 }
 ```
 
-*(Note: Ensure you include the `AuthenticationManager` and `UserDetailsService` beans as seen in the project reference)*
+*(Note: Ensure you include the **AuthenticationManager** and **UserDetailsService** beans as seen in the project reference)*
 
-#### 4. Initial Authentication (`AuthController.java`)
+#### 4. Initial Authentication (AuthController.java)
 
-Create a controller that accepts a username and password, authenticates the user, and issues a JWT with the `FACTOR_PASSWORD` claim.
+Create a controller that accepts a username and password, authenticates the user, and issues a JWT with the **FACTOR_PASSWORD** claim.
 
-File: `spring_mfa_demo/controller/AuthController.java`
+File: **spring_mfa_demo/controller/AuthController.java**
 
 ```java
 @Slf4j
@@ -324,14 +326,14 @@ public class AuthController {
 }
 ```
 
-#### 5. MFA Handling (`OttController.java`)
+#### 5. MFA Handling (OttController.java)
 
 This controller handles two things:
 
 1. Generating a One-Time Token (OTT) for a logged-in user.
 2. Validating that OTT to issue a new, more powerful JWT.
 
-File: `spring_mfa_demo/controller/OttController.java`
+File: **spring_mfa_demo/controller/OttController.java**
 
 ```java
 @RestController
@@ -395,7 +397,7 @@ public class UserController {
 
 #### 7. Test and Verify
 
-Follow these steps using `curl` to verify your implementation.
+Follow these steps using **curl** to verify your implementation.
 
 1. **Start the Application**:
 
@@ -412,7 +414,7 @@ Follow these steps using `curl` to verify your implementation.
      -d "password=password"
    ```
 
-   *Copy the `Authorization` header token (e.g., `eyJhb...`). Let's call this `TOKEN_1`.*
+   *Copy the **Authorization** header token (e.g., eyJhb...). Let's call this **TOKEN_1**.*
 
 3. **Try Accessing Settings (Expect Fail)**:
    Attempt to access the protected resource with just the first factor.
@@ -422,7 +424,7 @@ Follow these steps using `curl` to verify your implementation.
    --header 'Authorization: Bearer <TOKEN>'
    ```
 
-   *IMPORTANT !!!! Result: **403 Forbidden** (You lack the `OTT_AUTHORITY`).*
+   *IMPORTANT !!!! Result: **403 Forbidden** (You lack the **OTT_AUTHORITY**).*
 
 4. **Generate OTP**:
    Request an OTP code.
@@ -432,7 +434,7 @@ Follow these steps using `curl` to verify your implementation.
      -H "Authorization: Bearer <TOKEN_1>"
    ```
 
-   *Note: Since the OTP is stored in memory and not returned, you will need to check your debug console or add a `System.out.println(ott.getTokenValue())` in `OttController` to see the generated code.*
+   *Note: Since the OTP is stored in memory and not returned, you will need to check your debug console or add a System.out.println(ott.getTokenValue()) in OttController to see the generated code.*
 
 5. **Upgrade Token (Factor 2)**:
    Exchange your current token and the OTP for a new, stronger token.
@@ -442,7 +444,7 @@ Follow these steps using `curl` to verify your implementation.
      -H "Authorization: Bearer <TOKEN_1>"
    ```
 
-   *Copy the **new** `Authorization` header token. Let's call this `TOKEN_2`.*
+   *Copy the **new** **Authorization** header token. Let's call this **TOKEN_2**.*
 
 6. **Access Settings (Expect Success)**:
    Access the protected resource with the upgraded token.

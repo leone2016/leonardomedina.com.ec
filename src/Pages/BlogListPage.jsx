@@ -18,10 +18,10 @@ export default function BlogListPage() {
                             Blog
                         </p>
                         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-900">
-                            Ideas, notas y aprendizajes
+                            Ideas, notes and learnings
                         </h1>
                         <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
-                            Un espacio personal para compartir reflexiones, consejos técnicos y experiencias del día a día como desarrollador.
+                            A personal space to share reflections, technical tips and experiences from day to day as a developer.
                         </p>
                     </motion.section>
 
