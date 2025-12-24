@@ -1,4 +1,32 @@
+
 > if you want to run this project, you can find it in [ GITHUB spring_mfa_demo](https://github.com/leone2016/blog-spring-security-mfa)
+
+
+Security is no longer optional in modern applications, especially when dealing with sensitive user data and APIs exposed to the internet. One of the most effective ways to strengthen authentication is by using **Multi-Factor Authentication (MFA)**.
+
+With **Spring Security 7**, implementing MFA in a REST API—particularly one that uses **JWT**—has become significantly simpler, requiring far less custom code than before.
+
+---
+
+## What Is Multi-Factor Authentication (MFA)?
+
+Multi-Factor Authentication is a security mechanism that requires users to verify their identity using **at least two different factors** before gaining access to an application.
+
+These factors usually fall into three categories:
+
+- **Something you know** – such as a password or PIN  
+- **Something you have** – such as a mobile phone, email access, or hardware token  
+- **Something you are** – such as a fingerprint or facial recognition  
+
+In a typical MFA flow, a user first logs in with a username and password. Then, as a second step, they must confirm a one-time code sent via SMS, email, or an authenticator app.
+
+---
+
+## Why MFA Matters for REST APIs
+
+REST APIs are often stateless and rely on **JWT tokens** for authentication. While JWTs are efficient and scalable, they also increase the importance of strong identity verification at login time.
+
+Without MFA, a leaked or compromised password can grant full access to an API. MFA significantly reduces this risk by ensuring that possession of valid credentials alone is not enough to authenticate.
 
 # Practice Exercise: Multi-Factor Authentication (MFA) with Spring Security
 

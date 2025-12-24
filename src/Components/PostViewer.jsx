@@ -74,7 +74,6 @@ const markdownComponents = {
                         padding: '1.75rem',
                     }}
                     wrapLines
-                    showLineNumbers
                     lineNumberStyle={{
                         minWidth: '2.5rem',
                         textAlign: 'right',
@@ -119,7 +118,7 @@ export default function PostViewer({ post }) {
                 </Link>
 
                 <header className="mt-6 space-y-4">
-                    <p className="text-sm uppercase tracking-[0.2em] text-slate-400 ">Personal blog</p>
+                    <p className="text-sm uppercase tracking-[0.2em] text-slate-400 ">Welcome to my blog</p>
                     <h1 className="text-4xl font-semibold tracking-tight text-slate-900">
                         {post.title}
                     </h1>
