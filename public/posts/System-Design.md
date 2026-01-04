@@ -1,84 +1,78 @@
 # System Design
 
-
-
 Hey, welcome to the course. I hope this course provides a great learning experience.
 
-*This course is also available on my [website](https://karanpratapsingh.com/courses/system-design) and as an ebook on [leanpub](https://leanpub.com/systemdesign). Please leave a ⭐ as motivation if this was helpful!*
-
+_This course is also available on my [website](https://karanpratapsingh.com/courses/system-design) and as an ebook on [leanpub](https://leanpub.com/systemdesign). Please leave a ⭐ as motivation if this was helpful!_
+<!-- 
 # Table of contents
 
-
-
 - **Getting Started**
-  - [What is system design?](https://github.com/karanpratapsingh/system-design/blob/main/README.md#what-is-system-design)
+  - [What is system design?](#what-is-system-design)
 - **Chapter I**
-  - [IP](https://github.com/karanpratapsingh/system-design/blob/main/README.md#ip)
-  - [OSI Model](https://github.com/karanpratapsingh/system-design/blob/main/README.md#osi-model)
-  - [TCP and UDP](https://github.com/karanpratapsingh/system-design/blob/main/README.md#tcp-and-udp)
-  - [Domain Name System (DNS)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#domain-name-system-dns)
-  - [Load Balancing](https://github.com/karanpratapsingh/system-design/blob/main/README.md#load-balancing)
-  - [Clustering](https://github.com/karanpratapsingh/system-design/blob/main/README.md#clustering)
-  - [Caching](https://github.com/karanpratapsingh/system-design/blob/main/README.md#caching)
-  - [Content Delivery Network (CDN)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#content-delivery-network-cdn)
-  - [Proxy](https://github.com/karanpratapsingh/system-design/blob/main/README.md#proxy)
-  - [Availability](https://github.com/karanpratapsingh/system-design/blob/main/README.md#availability)
-  - [Scalability](https://github.com/karanpratapsingh/system-design/blob/main/README.md#scalability)
-  - [Storage](https://github.com/karanpratapsingh/system-design/blob/main/README.md#storage)
+  - [IP](#ip)
+  - [OSI Model](#osi-model)
+  - [TCP and UDP](#tcp-and-udp)
+  - [Domain Name System (DNS)](#domain-name-system-dns)
+  - [Load Balancing](#load-balancing)
+  - [Clustering](#clustering)
+  - [Caching](#caching)
+  - [Content Delivery Network (CDN)](#content-delivery-network-cdn)
+  - [Proxy](#proxy)
+  - [Availability](#availability)
+  - [Scalability](#scalability)
+  - [Storage](#storage)
 - **Chapter II**
-  - [Databases and DBMS](https://github.com/karanpratapsingh/system-design/blob/main/README.md#databases-and-dbms)
-  - [SQL databases](https://github.com/karanpratapsingh/system-design/blob/main/README.md#sql-databases)
-  - [NoSQL databases](https://github.com/karanpratapsingh/system-design/blob/main/README.md#nosql-databases)
-  - [SQL vs NoSQL databases](https://github.com/karanpratapsingh/system-design/blob/main/README.md#sql-vs-nosql-databases)
-  - [Database Replication](https://github.com/karanpratapsingh/system-design/blob/main/README.md#database-replication)
-  - [Indexes](https://github.com/karanpratapsingh/system-design/blob/main/README.md#indexes)
-  - [Normalization and Denormalization](https://github.com/karanpratapsingh/system-design/blob/main/README.md#normalization-and-denormalization)
-  - [ACID and BASE consistency models](https://github.com/karanpratapsingh/system-design/blob/main/README.md#acid-and-base-consistency-models)
-  - [CAP theorem](https://github.com/karanpratapsingh/system-design/blob/main/README.md#cap-theorem)
-  - [PACELC Theorem](https://github.com/karanpratapsingh/system-design/blob/main/README.md#pacelc-theorem)
-  - [Transactions](https://github.com/karanpratapsingh/system-design/blob/main/README.md#transactions)
-  - [Distributed Transactions](https://github.com/karanpratapsingh/system-design/blob/main/README.md#distributed-transactions)
-  - [Sharding](https://github.com/karanpratapsingh/system-design/blob/main/README.md#sharding)
-  - [Consistent Hashing](https://github.com/karanpratapsingh/system-design/blob/main/README.md#consistent-hashing)
-  - [Database Federation](https://github.com/karanpratapsingh/system-design/blob/main/README.md#database-federation)
+  - [Databases and DBMS](#databases-and-dbms)
+  - [SQL databases](#sql-databases)
+  - [NoSQL databases](#nosql-databases)
+  - [SQL vs NoSQL databases](#sql-vs-nosql-databases)
+  - [Database Replication](#database-replication)
+  - [Indexes](#indexes)
+  - [Normalization and Denormalization](#normalization-and-denormalization)
+  - [ACID and BASE consistency models](#acid-and-base-consistency-models)
+  - [CAP theorem](#cap-theorem)
+  - [PACELC Theorem](#pacelc-theorem)
+  - [Transactions](#transactions)
+  - [Distributed Transactions](#distributed-transactions)
+  - [Sharding](#sharding)
+  - [Consistent Hashing](#consistent-hashing)
+  - [Database Federation](#database-federation)
 - **Chapter III**
-  - [N-tier architecture](https://github.com/karanpratapsingh/system-design/blob/main/README.md#n-tier-architecture)
-  - [Message Brokers](https://github.com/karanpratapsingh/system-design/blob/main/README.md#message-brokers)
-  - [Message Queues](https://github.com/karanpratapsingh/system-design/blob/main/README.md#message-queues)
-  - [Publish-Subscribe](https://github.com/karanpratapsingh/system-design/blob/main/README.md#publish-subscribe)
-  - [Enterprise Service Bus (ESB)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#enterprise-service-bus-esb)
-  - [Monoliths and Microservices](https://github.com/karanpratapsingh/system-design/blob/main/README.md#monoliths-and-microservices)
-  - [Event-Driven Architecture (EDA)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#event-driven-architecture-eda)
-  - [Event Sourcing](https://github.com/karanpratapsingh/system-design/blob/main/README.md#event-sourcing)
-  - [Command and Query Responsibility Segregation (CQRS)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#command-and-query-responsibility-segregation-cqrs)
-  - [API Gateway](https://github.com/karanpratapsingh/system-design/blob/main/README.md#api-gateway)
-  - [REST, GraphQL, gRPC](https://github.com/karanpratapsingh/system-design/blob/main/README.md#rest-graphql-grpc)
-  - [Long polling, WebSockets, Server-Sent Events (SSE)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#long-polling-websockets-server-sent-events-sse)
+  - [N-tier architecture](#n-tier-architecture)
+  - [Message Brokers](#message-brokers)
+  - [Message Queues](#message-queues)
+  - [Publish-Subscribe](#publish-subscribe)
+  - [Enterprise Service Bus (ESB)](#enterprise-service-bus-esb)
+  - [Monoliths and Microservices](#monoliths-and-microservices)
+  - [Event-Driven Architecture (EDA)](#event-driven-architecture-eda)
+  - [Event Sourcing](#event-sourcing)
+  - [Command and Query Responsibility Segregation (CQRS)](#command-and-query-responsibility-segregation-cqrs)
+  - [API Gateway](#api-gateway)
+  - [REST, GraphQL, gRPC](#rest-graphql-grpc)
+  - [Long polling, WebSockets, Server-Sent Events (SSE)](#long-polling-websockets-server-sent-events-sse)
 - **Chapter IV**
-  - [Geohashing and Quadtrees](https://github.com/karanpratapsingh/system-design/blob/main/README.md#geohashing-and-quadtrees)
-  - [Circuit breaker](https://github.com/karanpratapsingh/system-design/blob/main/README.md#circuit-breaker)
-  - [Rate Limiting](https://github.com/karanpratapsingh/system-design/blob/main/README.md#rate-limiting)
-  - [Service Discovery](https://github.com/karanpratapsingh/system-design/blob/main/README.md#service-discovery)
-  - [SLA, SLO, SLI](https://github.com/karanpratapsingh/system-design/blob/main/README.md#sla-slo-sli)
-  - [Disaster recovery](https://github.com/karanpratapsingh/system-design/blob/main/README.md#disaster-recovery)
-  - [Virtual Machines (VMs) and Containers](https://github.com/karanpratapsingh/system-design/blob/main/README.md#virtual-machines-vms-and-containers)
-  - [OAuth 2.0 and OpenID Connect (OIDC)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#oauth-20-and-openid-connect-oidc)
-  - [Single Sign-On (SSO)](https://github.com/karanpratapsingh/system-design/blob/main/README.md#single-sign-on-sso)
-  - [SSL, TLS, mTLS](https://github.com/karanpratapsingh/system-design/blob/main/README.md#ssl-tls-mtls)
+  - [Geohashing and Quadtrees](#geohashing-and-quadtrees)
+  - [Circuit breaker](#circuit-breaker)
+  - [Rate Limiting](#rate-limiting)
+  - [Service Discovery](#service-discovery)
+  - [SLA, SLO, SLI](#sla-slo-sli)
+  - [Disaster recovery](#disaster-recovery)
+  - [Virtual Machines (VMs) and Containers](#virtual-machines-vms-and-containers)
+  - [OAuth 2.0 and OpenID Connect (OIDC)](#oauth-20-and-openid-connect-oidc)
+  - [Single Sign-On (SSO)](#single-sign-on-sso)
+  - [SSL, TLS, mTLS](#ssl-tls-mtls)
 - **Chapter V**
-  - [System Design Interviews](https://github.com/karanpratapsingh/system-design/blob/main/README.md#system-design-interviews)
-  - [URL Shortener](https://github.com/karanpratapsingh/system-design/blob/main/README.md#url-shortener)
-  - [WhatsApp](https://github.com/karanpratapsingh/system-design/blob/main/README.md#whatsapp)
-  - [Twitter](https://github.com/karanpratapsingh/system-design/blob/main/README.md#twitter)
-  - [Netflix](https://github.com/karanpratapsingh/system-design/blob/main/README.md#netflix)
-  - [Uber](https://github.com/karanpratapsingh/system-design/blob/main/README.md#uber)
+  - [System Design Interviews](#system-design-interviews)
+  - [URL Shortener](#url-shortener)
+  - [WhatsApp](#whatsapp)
+  - [Twitter](#twitter)
+  - [Netflix](#netflix)
+  - [Uber](#uber)
 - **Appendix**
-  - [Next Steps](https://github.com/karanpratapsingh/system-design/blob/main/README.md#next-steps)
-  - [References](https://github.com/karanpratapsingh/system-design/blob/main/README.md#references)
+  - [Next Steps](#next-steps)
+  - [References](#references) -->
 
 # What is system design?
-
-
 
 Before we start this course, let's talk about what even is system design.
 
@@ -86,91 +80,67 @@ System design is the process of defining the architecture, interfaces, and data 
 
 ## Why is System Design so important?
 
-
-
 System design helps us define a solution that meets the business requirements. It is one of the earliest decisions we can make when building a system. Often it is essential to think from a high level as these decisions are very difficult to correct later. It also makes it easier to reason about and manage architectural changes as the system evolves.
 
 # IP
 
-
-
-An IP address is a unique address that identifies a device on the internet or a local network. IP stands for *"Internet Protocol"*, which is the set of rules governing the format of data sent via the internet or local network.
+An IP address is a unique address that identifies a device on the internet or a local network. IP stands for _"Internet Protocol"_, which is the set of rules governing the format of data sent via the internet or local network.
 
 In essence, IP addresses are the identifier that allows information to be sent between devices on a network. They contain location information and make devices accessible for communication. The internet needs a way to differentiate between different computers, routers, and websites. IP addresses provide a way of doing so and form an essential part of how the internet works.
 
 ## Versions
 
-
-
 Now, let's learn about the different versions of IP addresses:
 
 ### IPv4
 
-
-
 The original Internet Protocol is IPv4 which uses a 32-bit numeric dot-decimal notation that only allows for around 4 billion IP addresses. Initially, it was more than enough but as internet adoption grew, we needed something better.
 
-*Example: `102.22.192.181`*
+_Example: `102.22.192.181`_
 
 ### IPv6
-
-
 
 IPv6 is a new protocol that was introduced in 1998. Deployment commenced in the mid-2000s and since the internet users have grown exponentially, it is still ongoing.
 
 This new protocol uses 128-bit alphanumeric hexadecimal notation. This means that IPv6 can provide about ~340e+36 IP addresses. That's more than enough to meet the growing demand for years to come.
 
-*Example: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`*
+_Example: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`_
 
 ## Types
-
-
 
 Let's discuss types of IP addresses:
 
 ### Public
 
-
-
 A public IP address is an address where one primary address is associated with your whole network. In this type of IP address, each of the connected devices has the same IP address.
 
-*Example: IP address provided to your router by the ISP.*
+_Example: IP address provided to your router by the ISP._
 
 ### Private
 
-
-
 A private IP address is a unique IP number assigned to every device that connects to your internet network, which includes devices like computers, tablets, and smartphones, which are used in your household.
 
-*Example: IP addresses generated by your home router for your devices.*
+_Example: IP addresses generated by your home router for your devices._
 
 ### Static
 
-
-
 A static IP address does not change and is one that was manually created, as opposed to having been assigned. These addresses are usually more expensive but are more reliable.
 
-*Example: They are usually used for important things like reliable geo-location services, remote access, server hosting, etc.*
+_Example: They are usually used for important things like reliable geo-location services, remote access, server hosting, etc._
 
 ### Dynamic
 
-
-
 A dynamic IP address changes from time to time and is not always the same. It has been assigned by a [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) server. Dynamic IP addresses are the most common type of internet protocol address. They are cheaper to deploy and allow us to reuse IP addresses within a network as needed.
 
-*Example: They are more commonly used for consumer equipment and personal use.*
+_Example: They are more commonly used for consumer equipment and personal use._
 
 # OSI Model
-
-
 
 The OSI Model is a logical and conceptual model that defines network communication used by systems open to interconnection and communication with other systems. The Open System Interconnection (OSI Model) also defines a logical network and effectively describes computer packet transfer by using various layers of protocols.
 
 The OSI Model can be seen as a universal language for computer networking. It's based on the concept of splitting up a communication system into seven abstract layers, each one stacked upon the last.
 
 ## Why does the OSI model matter?
-
-
 
 The Open System Interconnection (OSI) model has defined the common terminology used in networking discussions and documentation. This allows us to take a very complex communications process apart and evaluate its components.
 
@@ -183,61 +153,41 @@ While this model is not directly implemented in the TCP/IP networks that are mos
 
 ## Layers
 
-
-
 The seven abstraction layers of the OSI model can be defined as follows, from top to bottom:
 
 [![osi-model](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/osi-model/osi-model.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/osi-model/osi-model.png)
 
 ### Application
 
-
-
 This is the only layer that directly interacts with data from the user. Software applications like web browsers and email clients rely on the application layer to initiate communication. But it should be made clear that client software applications are not part of the application layer, rather the application layer is responsible for the protocols and data manipulation that the software relies on to present meaningful data to the user. Application layer protocols include HTTP as well as SMTP.
 
 ### Presentation
-
-
 
 The presentation layer is also called the Translation layer. The data from the application layer is extracted here and manipulated as per the required format to transmit over the network. The functions of the presentation layer are translation, encryption/decryption, and compression.
 
 ### Session
 
-
-
 This is the layer responsible for opening and closing communication between the two devices. The time between when the communication is opened and closed is known as the session. The session layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources. The session layer also synchronizes data transfer with checkpoints.
 
 ### Transport
-
-
 
 The transport layer (also known as layer 4) is responsible for end-to-end communication between the two devices. This includes taking data from the session layer and breaking it up into chunks called segments before sending it to the Network layer (layer 3). It is also responsible for reassembling the segments on the receiving device into data the session layer can consume.
 
 ### Network
 
-
-
 The network layer is responsible for facilitating data transfer between two different networks. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender's device, and reassembles these packets on the receiving device. The network layer also finds the best physical path for the data to reach its destination this is known as routing. If the two devices communicating are on the same network, then the network layer is unnecessary.
 
 ### Data Link
-
-
 
 The data link layer is very similar to the network layer, except the data link layer facilitates data transfer between two devices on the same network. The data link layer takes packets from the network layer and breaks them into smaller pieces called frames.
 
 ### Physical
 
-
-
 This layer includes the physical equipment involved in the data transfer, such as the cables and switches. This is also the layer where the data gets converted into a bit stream, which is a string of 1s and 0s. The physical layer of both devices must also agree on a signal convention so that the 1s can be distinguished from the 0s on both devices.
 
 # TCP and UDP
 
-
-
 ## TCP
-
-
 
 Transmission Control Protocol (TCP) is connection-oriented, meaning once a connection has been established, data can be transmitted in both directions. TCP has built-in systems to check for errors and to guarantee data will be delivered in the order it was sent, making it the perfect protocol for transferring information like still images, data files, and web pages.
 
@@ -247,8 +197,6 @@ But while TCP is instinctively reliable, its feedback mechanisms also result in 
 
 ## UDP
 
-
-
 User Datagram Protocol (UDP) is a simpler, connectionless internet protocol in which error-checking and recovery services are not required. With UDP, there is no overhead for opening a connection, maintaining a connection, or terminating a connection. Data is continuously sent to the recipient, whether or not they receive it.
 
 [![udp](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/tcp-and-udp/udp.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/tcp-and-udp/udp.png)
@@ -256,8 +204,6 @@ User Datagram Protocol (UDP) is a simpler, connectionless internet protocol in w
 It is largely preferred for real-time communications like broadcast or multicast network transmission. We should use UDP over TCP when we need the lowest latency and late data is worse than the loss of data.
 
 ## TCP vs UDP
-
-
 
 TCP is a connection-oriented protocol, whereas UDP is a connectionless protocol. A key difference between TCP and UDP is speed, as TCP is comparatively slower than UDP. Overall, UDP is a much faster, simpler, and more efficient protocol, however, retransmission of lost data packets is only possible with TCP.
 
@@ -274,15 +220,11 @@ TCP provides ordered delivery of data from user to server (and vice versa), wher
 
 # Domain Name System (DNS)
 
-
-
 Earlier we learned about IP addresses that enable every machine to connect with other machines. But as we know humans are more comfortable with names than numbers. It's easier to remember a name like `google.com` than something like `122.250.192.232`.
 
 This brings us to Domain Name System (DNS) which is a hierarchical and decentralized naming system used for translating human-readable domain names to IP addresses.
 
 ## How DNS works
-
-
 
 [![how-dns-works](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/domain-name-system/how-dns-works.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/domain-name-system/how-dns-works.png)
 
@@ -301,27 +243,19 @@ Once the IP address has been resolved, the client should be able to request cont
 
 ## Server types
 
-
-
 Now, let's look at the four key groups of servers that make up the DNS infrastructure.
 
 ### DNS Resolver
 
-
-
 A DNS resolver (also known as a DNS recursive resolver) is the first stop in a DNS query. The recursive resolver acts as a middleman between a client and a DNS nameserver. After receiving a DNS query from a web client, a recursive resolver will either respond with cached data, or send a request to a root nameserver, followed by another request to a TLD nameserver, and then one last request to an authoritative nameserver. After receiving a response from the authoritative nameserver containing the requested IP address, the recursive resolver then sends a response to the client.
 
 ### DNS root server
-
-
 
 A root server accepts a recursive resolver's query which includes a domain name, and the root nameserver responds by directing the recursive resolver to a TLD nameserver, based on the extension of that domain (`.com`, `.net`, `.org`, etc.). The root nameservers are overseen by a nonprofit called the [Internet Corporation for Assigned Names and Numbers (ICANN)](https://www.icann.org/).
 
 There are 13 DNS root nameservers known to every recursive resolver. Note that while there are 13 root nameservers, that doesn't mean that there are only 13 machines in the root nameserver system. There are 13 types of root nameservers, but there are multiple copies of each one all over the world, which use [Anycast routing](https://en.wikipedia.org/wiki/Anycast) to provide speedy responses.
 
 ### TLD nameserver
-
-
 
 A TLD nameserver maintains information for all the domain names that share a common domain extension, such as `.com`, `.net`, or whatever comes after the last dot in a URL.
 
@@ -332,41 +266,29 @@ Management of TLD nameservers is handled by the [Internet Assigned Numbers Autho
 
 ### Authoritative DNS server
 
-
-
 The authoritative nameserver is usually the resolver's last step in the journey for an IP address. The authoritative nameserver contains information specific to the domain name it serves (e.g. [google.com](http://google.com/)) and it can provide a recursive resolver with the IP address of that server found in the DNS A record, or if the domain has a CNAME record (alias) it will provide the recursive resolver with an alias domain, at which point the recursive resolver will have to perform a whole new DNS lookup to procure a record from an authoritative nameserver (often an A record containing an IP address). If it cannot find the domain, returns the NXDOMAIN message.
 
 ## Query Types
-
-
 
 There are three types of queries in a DNS system:
 
 ### Recursive
 
-
-
 In a recursive query, a DNS client requires that a DNS server (typically a DNS recursive resolver) will respond to the client with either the requested resource record or an error message if the resolver can't find the record.
 
 ### Iterative
-
-
 
 In an iterative query, a DNS client provides a hostname, and the DNS Resolver returns the best answer it can. If the DNS resolver has the relevant DNS records in its cache, it returns them. If not, it refers the DNS client to the Root Server or another Authoritative Name Server that is nearest to the required DNS zone. The DNS client must then repeat the query directly against the DNS server it was referred.
 
 ### Non-recursive
 
-
-
 A non-recursive query is a query in which the DNS Resolver already knows the answer. It either immediately returns a DNS record because it already stores it in a local cache, or queries a DNS Name Server which is authoritative for the record, meaning it definitely holds the correct IP for that hostname. In both cases, there is no need for additional rounds of queries (like in recursive or iterative queries). Rather, a response is immediately returned to the client.
 
 ## Record Types
 
-
-
 DNS records (aka zone files) are instructions that live in authoritative DNS servers and provide information about a domain including what IP address is associated with that domain and how to handle requests for that domain.
 
-These records consist of a series of text files written in what is known as *DNS syntax*. DNS syntax is just a string of characters used as commands that tell the DNS server what to do. All DNS records also have a *"TTL"*, which stands for time-to-live, and indicates how often a DNS server will refresh that record.
+These records consist of a series of text files written in what is known as _DNS syntax_. DNS syntax is just a string of characters used as commands that tell the DNS server what to do. All DNS records also have a _"TTL"_, which stands for time-to-live, and indicates how often a DNS server will refresh that record.
 
 There are more record types but for now, let's look at some of the most commonly used ones:
 
@@ -383,21 +305,15 @@ There are more record types but for now, let's look at some of the most commonly
 
 ## Subdomains
 
-
-
 A subdomain is an additional part of our main domain name. It is commonly used to logically separate a website into sections. We can create multiple subdomains or child domains on the main domain.
 
 For example, `blog.example.com` where `blog` is the subdomain, `example` is the primary domain and `.com` is the top-level domain (TLD). Similar examples can be `support.example.com` or `careers.example.com`.
 
 ## DNS Zones
 
-
-
 A DNS zone is a distinct part of the domain namespace which is delegated to a legal entity like a person, organization, or company, who is responsible for maintaining the DNS zone. A DNS zone is also an administrative function, allowing for granular control of DNS components, such as authoritative name servers.
 
 ## DNS Caching
-
-
 
 A DNS cache (sometimes called a DNS resolver cache) is a temporary database, maintained by a computer's operating system, that contains records of all the recent visits and attempted visits to websites and other internet domains. In other words, a DNS cache is just a memory of recent DNS lookups that our computer can quickly refer to when it's trying to figure out how to load a website.
 
@@ -405,17 +321,13 @@ The Domain Name System implements a time-to-live (TTL) on every DNS record. TTL 
 
 ## Reverse DNS
 
-
-
 A reverse DNS lookup is a DNS query for the domain name associated with a given IP address. This accomplishes the opposite of the more commonly used forward DNS lookup, in which the DNS system is queried to return an IP address. The process of reverse resolving an IP address uses PTR records. If the server does not have a PTR record, it cannot resolve a reverse lookup.
 
 Reverse lookups are commonly used by email servers. Email servers check and see if an email message came from a valid server before bringing it onto their network. Many email servers will reject messages from any server that does not support reverse lookups or from a server that is highly unlikely to be legitimate.
 
-*Note: Reverse DNS lookups are not universally adopted as they are not critical to the normal function of the internet.*
+_Note: Reverse DNS lookups are not universally adopted as they are not critical to the normal function of the internet._
 
 ## Examples
-
-
 
 These are some widely used managed DNS solutions:
 
@@ -427,8 +339,6 @@ These are some widely used managed DNS solutions:
 
 # Load Balancing
 
-
-
 Load balancing lets us distribute incoming network traffic across multiple resources ensuring high availability and reliability by sending requests only to resources that are online. This provides the flexibility to add or subtract resources as demand dictates.
 
 [![load-balancing](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/load-balancer.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/load-balancer.png)
@@ -439,15 +349,11 @@ For additional scalability and redundancy, we can try to load balance at each la
 
 ## But why?
 
-
-
 Modern high-traffic websites must serve hundreds of thousands, if not millions, of concurrent requests from users or clients. To cost-effectively scale to meet these high volumes, modern computing best practice generally requires adding more servers.
 
 A load balancer can sit in front of the servers and route client requests across all servers capable of fulfilling those requests in a manner that maximizes speed and capacity utilization. This ensures that no single server is overworked, which could degrade performance. If a single server goes down, the load balancer redirects traffic to the remaining online servers. When a new server is added to the server group, the load balancer automatically starts sending requests to it.
 
 ## Workload distribution
-
-
 
 This is the core functionality provided by a load balancer and has several common variations:
 
@@ -457,31 +363,21 @@ This is the core functionality provided by a load balancer and has several commo
 
 ## Layers
 
-
-
 Generally speaking, load balancers operate at one of the two levels:
 
 ### Network layer
-
-
 
 This is the load balancer that works at the network's transport layer, also known as layer 4. This performs routing based on networking information such as IP addresses and is not able to perform content-based routing. These are often dedicated hardware devices that can operate at high speed.
 
 ### Application layer
 
-
-
 This is the load balancer that operates at the application layer, also known as layer 7. Load balancers can read requests in their entirety and perform content-based routing. This allows the management of load based on a full understanding of traffic.
 
 ## Types
 
-
-
 Let's look at different types of load balancers:
 
 ### Software
-
-
 
 Software load balancers usually are easier to deploy than hardware versions. They also tend to be more cost-effective and flexible, and they are used in conjunction with software development environments. The software approach gives us the flexibility of configuring the load balancer to our environment's specific needs. The boost in flexibility may come at the cost of having to do more work to set up the load balancer. Compared to hardware versions, which offer more of a closed-box approach, software balancers give us more freedom to make changes and upgrades.
 
@@ -489,23 +385,17 @@ Software load balancers are widely used and are available either as installable 
 
 ### Hardware
 
-
-
 As the name implies, a hardware load balancer relies on physical, on-premises hardware to distribute application and network traffic. These devices can handle a large volume of traffic but often carry a hefty price tag and are fairly limited in terms of flexibility.
 
 Hardware load balancers include proprietary firmware that requires maintenance and updates as new versions, and security patches are released.
 
 ### DNS
 
-
-
 DNS load balancing is the practice of configuring a domain in the Domain Name System (DNS) such that client requests to the domain are distributed across a group of server machines.
 
 Unfortunately, DNS load balancing has inherent problems limiting its reliability and efficiency. Most significantly, DNS does not check for server and network outages, or errors. It always returns the same set of IP addresses for a domain even if servers are down or inaccessible.
 
 ## Routing Algorithms
-
-
 
 Now, let's discuss commonly used routing algorithms:
 
@@ -518,8 +408,6 @@ Now, let's discuss commonly used routing algorithms:
 
 ## Advantages
 
-
-
 Load balancing also plays a key role in preventing downtime, other advantages of load balancing include the following:
 
 - Scalability
@@ -529,17 +417,13 @@ Load balancing also plays a key role in preventing downtime, other advantages of
 
 ## Redundant load balancers
 
-
-
 As you must've already guessed, the load balancer itself can be a single point of failure. To overcome this, a second or `N` number of load balancers can be used in a cluster mode.
 
-And, if there's a failure detection and the *active* load balancer fails, another *passive* load balancer can take over which will make our system more fault-tolerant.
+And, if there's a failure detection and the _active_ load balancer fails, another _passive_ load balancer can take over which will make our system more fault-tolerant.
 
 [![redundant-load-balancing](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png)
 
 ## Features
-
-
 
 Here are some commonly desired features of load balancers:
 
@@ -558,8 +442,6 @@ Here are some commonly desired features of load balancers:
 
 ## Examples
 
-
-
 Following are some of the load balancing solutions commonly used in the industry:
 
 - [Amazon Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing)
@@ -570,8 +452,6 @@ Following are some of the load balancing solutions commonly used in the industry
 - [HAProxy](http://www.haproxy.org/)
 
 # Clustering
-
-
 
 At a high level, a computer cluster is a group of two or more computers, or nodes, that run in parallel to achieve a common goal. This allows workloads consisting of a high number of individual, parallelizable tasks to be distributed among the nodes in the cluster. As a result, these tasks can leverage the combined memory and processing power of each computer to increase overall performance.
 
@@ -585,8 +465,6 @@ Ideally, a cluster functions as if it were a single system. A user accessing the
 
 ## Types
 
-
-
 Computer clusters can generally be categorized into three types:
 
 - Highly available or fail-over
@@ -595,13 +473,9 @@ Computer clusters can generally be categorized into three types:
 
 ## Configurations
 
-
-
 The two most commonly used high availability (HA) clustering configurations are active-active and active-passive.
 
 ### Active-Active
-
-
 
 [![active-active](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-active.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-active.png)
 
@@ -609,15 +483,11 @@ An active-active cluster is typically made up of at least two nodes, both active
 
 ### Active-Passive
 
-
-
 [![active-passive](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-passive.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-passive.png)
 
-Like the active-active cluster configuration, an active-passive cluster also consists of at least two nodes. However, as the name *active-passive* implies, not all nodes are going to be active. For example, in the case of two nodes, if the first node is already active, then the second node must be passive or on standby.
+Like the active-active cluster configuration, an active-passive cluster also consists of at least two nodes. However, as the name _active-passive_ implies, not all nodes are going to be active. For example, in the case of two nodes, if the first node is already active, then the second node must be passive or on standby.
 
 ## Advantages
-
-
 
 Four key advantages of cluster computing are as follows:
 
@@ -628,15 +498,11 @@ Four key advantages of cluster computing are as follows:
 
 ## Load balancing vs Clustering
 
-
-
 Load balancing shares some common traits with clustering, but they are different processes. Clustering provides redundancy and boosts capacity and availability. Servers in a cluster are aware of each other and work together toward a common purpose. But with load balancing, servers are not aware of each other. Instead, they react to the requests they receive from the load balancer.
 
 We can employ load balancing in conjunction with clustering, but it also is applicable in cases involving independent servers that share a common purpose such as to run a website, business application, web service, or some other IT resource.
 
 ## Challenges
-
-
 
 The most obvious challenge clustering presents is the increased complexity of installation and maintenance. An operating system, the application, and its dependencies must each be installed and updated on every node.
 
@@ -646,8 +512,6 @@ Additionally, storage becomes more difficult to manage, a shared storage device 
 
 ## Examples
 
-
-
 Clustering is commonly used in the industry, and often many technologies offer some sort of clustering mode. For example:
 
 - Containers (e.g. [Kubernetes](https://kubernetes.io/), [Amazon ECS](https://aws.amazon.com/ecs))
@@ -656,19 +520,15 @@ Clustering is commonly used in the industry, and often many technologies offer s
 
 # Caching
 
-
-
-*"There are only two hard things in Computer Science: cache invalidation and naming things." - Phil Karlton*
+_"There are only two hard things in Computer Science: cache invalidation and naming things." - Phil Karlton_
 
 [![caching](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/caching.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/caching.png)
 
 A cache's primary purpose is to increase data retrieval performance by reducing the need to access the underlying slower storage layer. Trading off capacity for speed, a cache typically stores a subset of data transiently, in contrast to databases whose data is usually complete and durable.
 
-Caches take advantage of the locality of reference principle *"recently requested data is likely to be requested again".*
+Caches take advantage of the locality of reference principle _"recently requested data is likely to be requested again"._
 
 ## Caching and Memory
-
-
 
 Like a computer's memory, a cache is a compact, fast-performing memory that stores data in a hierarchy of levels, starting at level one, and progressing from there sequentially. They are labeled as L1, L2, L3, and so on. A cache also gets written if requested, such as when there has been an update and new content needs to be saved to the cache, replacing the older content that was saved.
 
@@ -678,11 +538,7 @@ If the data isn't found there, searches are continued in L3, then L4, and so on 
 
 ## Cache hit and Cache miss
 
-
-
 ### Cache hit
-
-
 
 A cache hit describes the situation where content is successfully served from the cache. The tags are searched in the memory rapidly, and when the data is found and read, it's considered a cache hit.
 
@@ -690,27 +546,21 @@ A cache hit describes the situation where content is successfully served from th
 
 A cache hit can also be described as cold, warm, or hot. In each of these, the speed at which the data is read is described.
 
-A hot cache is an instance where data was read from the memory at the *fastest* possible rate. This happens when the data is retrieved from L1.
+A hot cache is an instance where data was read from the memory at the _fastest_ possible rate. This happens when the data is retrieved from L1.
 
-A cold cache is the *slowest* possible rate for data to be read, though, it's still successful so it's still considered a cache hit. The data is just found lower in the memory hierarchy such as in L3, or lower.
+A cold cache is the _slowest_ possible rate for data to be read, though, it's still successful so it's still considered a cache hit. The data is just found lower in the memory hierarchy such as in L3, or lower.
 
 A warm cache is used to describe data that's found in L2 or L3. It's not as fast as a hot cache, but it's still faster than a cold cache. Generally, calling a cache warm is used to express that it's slower and closer to a cold cache than a hot one.
 
 ### Cache miss
 
-
-
 A cache miss refers to the instance when the memory is searched, and the data isn't found. When this happens, the content is transferred and written into the cache.
 
 ## Cache Invalidation
 
-
-
 Cache invalidation is a process where the computer system declares the cache entries as invalid and removes or replaces them. If the data is modified, it should be invalidated in the cache, if not, this can cause inconsistent application behavior. There are three kinds of caching systems:
 
 ### Write-through cache
-
-
 
 [![write-through-cache](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-through-cache.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-through-cache.png)
 
@@ -722,8 +572,6 @@ Data is written into the cache and the corresponding database simultaneously.
 
 ### Write-around cache
 
-
-
 [![write-around-cache](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-around-cache.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-around-cache.png)
 
 Where write directly goes to the database or permanent storage, bypassing the cache.
@@ -734,8 +582,6 @@ Where write directly goes to the database or permanent storage, bypassing the ca
 
 ### Write-back cache
 
-
-
 [![write-back-cache](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-back-cache.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-back-cache.png)
 
 Where the write is only done to the caching layer and the write is confirmed as soon as the write to the cache completes. The cache then asynchronously syncs this write to the database.
@@ -745,8 +591,6 @@ Where the write is only done to the caching layer and the write is confirmed as 
 **Con**: There is a risk of data loss in case the caching layer crashes. We can improve this by having more than one replica acknowledging the write in the cache.
 
 ## Eviction policies
-
-
 
 Following are some of the most common cache eviction policies:
 
@@ -759,23 +603,17 @@ Following are some of the most common cache eviction policies:
 
 ## Distributed Cache
 
-
-
 [![distributed-cache](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/distributed-cache.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/distributed-cache.png)
 
 A distributed cache is a system that pools together the random-access memory (RAM) of multiple networked computers into a single in-memory data store used as a data cache to provide fast access to data. While most caches are traditionally in one physical server or hardware component, a distributed cache can grow beyond the memory limits of a single computer by linking together multiple computers.
 
 ## Global Cache
 
-
-
 [![global-cache](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/global-cache.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/caching/global-cache.png)
 
 As the name suggests, we will have a single shared cache that all the application nodes will use. When the requested data is not found in the global cache, it's the responsibility of the cache to find out the missing piece of data from the underlying data store.
 
 ## Use cases
-
-
 
 Caching can have many real-world use cases such as:
 
@@ -792,11 +630,9 @@ Let's also look at some scenarios where we should not use cache:
 - Caching doesn't work as well when requests have low repetition (higher randomness), because caching performance comes from repeated memory access patterns.
 - Caching isn't helpful when the data changes frequently, as the cached version gets out of sync, and the primary data store must be accessed every time.
 
-*It's important to note that a cache should not be used as permanent data storage. They are almost always implemented in volatile memory because it is faster, and thus should be considered transient.*
+_It's important to note that a cache should not be used as permanent data storage. They are almost always implemented in volatile memory because it is faster, and thus should be considered transient._
 
 ## Advantages
-
-
 
 Below are some advantages of caching:
 
@@ -808,8 +644,6 @@ Below are some advantages of caching:
 
 ## Examples
 
-
-
 Here are some commonly used technologies for caching:
 
 - [Redis](https://redis.io/)
@@ -819,21 +653,15 @@ Here are some commonly used technologies for caching:
 
 # Content Delivery Network (CDN)
 
-
-
 A content delivery network (CDN) is a geographically distributed group of servers that work together to provide fast delivery of internet content. Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN.
 
 [![cdn-map](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn-map.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn-map.png)
 
 ## Why use a CDN?
 
-
-
 Content Delivery Network (CDN) increases content availability and redundancy while reducing bandwidth costs and improving security. Serving content from CDNs can significantly improve performance as users receive content from data centers close to them and our servers do not have to serve requests that the CDN fulfills.
 
 ## How does a CDN work?
-
-
 
 [![cdn](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn.png)
 
@@ -847,13 +675,9 @@ For example, when someone in the UK requests our website which might be hosted i
 
 ## Types
 
-
-
 CDNs are generally divided into two types:
 
 ### Push CDNs
-
-
 
 Push CDNs receive new content whenever changes occur on the server. We take full responsibility for providing content, uploading directly to the CDN, and rewriting URLs to point to the CDN. We can configure when content expires and when it is updated. Content is uploaded only when it is new or changed, minimizing traffic, but maximizing storage.
 
@@ -861,15 +685,11 @@ Sites with a small amount of traffic or sites with content that isn't often upda
 
 ### Pull CDNs
 
-
-
 In a Pull CDN situation, the cache is updated based on request. When the client sends a request that requires static assets to be fetched from the CDN if the CDN doesn't have it, then it will fetch the newly updated assets from the origin server and populate its cache with this new asset, and then send this new cached asset to the user.
 
 Contrary to the Push CDN, this requires less maintenance because cache updates on CDN nodes are performed based on requests from the client to the origin server. Sites with heavy traffic work well with pull CDNs, as traffic is spread out more evenly with only recently-requested content remaining on the CDN.
 
 ## Disadvantages
-
-
 
 As we all know good things come with extra costs, so let's discuss some disadvantages of CDNs:
 
@@ -878,8 +698,6 @@ As we all know good things come with extra costs, so let's discuss some disadvan
 - **Location**: If most of our audience is located in a country where the CDN has no servers, the data on our website may have to travel further than without using any CDN.
 
 ## Examples
-
-
 
 Here are some widely used CDNs:
 
@@ -890,19 +708,13 @@ Here are some widely used CDNs:
 
 # Proxy
 
-
-
 A proxy server is an intermediary piece of hardware/software sitting between the client and the backend server. It receives requests from clients and relays them to the origin servers. Typically, proxies are used to filter requests, log requests, or sometimes transform requests (by adding/removing headers, encrypting/decrypting, or compression).
 
 ## Types
 
-
-
 There are two types of proxies:
 
 ### Forward Proxy
-
-
 
 A forward proxy, often called a proxy, proxy server, or web proxy is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.
 
@@ -920,8 +732,6 @@ Here are some advantages of a forward proxy:
 Although proxies provide the benefits of anonymity, they can still track our personal information. Setup and maintenance of a proxy server can be costly and requires configurations.
 
 ### Reverse Proxy
-
-
 
 A reverse proxy is a server that sits in front of one or more web servers, intercepting requests from clients. When clients send requests to the origin server of a website, those requests are intercepted by the reverse proxy server.
 
@@ -943,13 +753,9 @@ Here are some advantages of using a reverse proxy:
 
 ## Load balancer vs Reverse Proxy
 
-
-
 Wait, isn't reverse proxy similar to a load balancer? Well, no as a load balancer is useful when we have multiple servers. Often, load balancers route traffic to a set of servers serving the same function, while reverse proxies can be useful even with just one web server or application server. A reverse proxy can also act as a load balancer but not the other way around.
 
 ## Examples
-
-
 
 Below are some commonly used proxy technologies:
 
@@ -960,13 +766,9 @@ Below are some commonly used proxy technologies:
 
 # Availability
 
-
-
 Availability is the time a system remains operational to perform its required function in a specific period. It is a simple measure of the percentage of time that a system, service, or machine remains operational under normal conditions.
 
 ## The Nine's of availability
-
-
 
 Availability is often quantified by uptime (or downtime) as a percentage of time the service is available. It is generally measured in the number of 9s.
 
@@ -988,13 +790,9 @@ If availability is 99.00% available, it is said to have "2 nines" of availabilit
 
 ## Availability in Sequence vs Parallel
 
-
-
 If a service consists of multiple components prone to failure, the service's overall availability depends on whether the components are in sequence or in parallel.
 
 ### Sequence
-
-
 
 Overall availability decreases when two components are in sequence.
 
@@ -1004,8 +802,6 @@ For example, if both `Foo` and `Bar` each had 99.9% availability, their total av
 
 ### Parallel
 
-
-
 Overall availability increases when two components are in parallel.
 
 Availability (Total)=1−(1−Availability (Foo))∗(1−Availability (Bar))
@@ -1014,21 +810,15 @@ For example, if both `Foo` and `Bar` each had 99.9% availability, their total av
 
 ## Availability vs Reliability
 
-
-
 If a system is reliable, it is available. However, if it is available, it is not necessarily reliable. In other words, high reliability contributes to high availability, but it is possible to achieve high availability even with an unreliable system.
 
 ## High availability vs Fault Tolerance
-
-
 
 Both high availability and fault tolerance apply to methods for providing high uptime levels. However, they accomplish the objective differently.
 
 A fault-tolerant system has no service interruption but a significantly higher cost, while a highly available system has minimal service interruption. Fault-tolerance requires full hardware redundancy as if the main system fails, with no loss in uptime, another system should take over.
 
 # Scalability
-
-
 
 Scalability is the measure of how well a system responds to changes by adding or removing resources to meet demands.
 
@@ -1038,13 +828,9 @@ Let's discuss different types of scaling:
 
 ## Vertical scaling
 
-
-
 Vertical scaling (also known as scaling up) expands a system's scalability by adding more power to an existing machine. In other words, vertical scaling refers to improving an application's capability via increasing hardware capacity.
 
 ### Advantages
-
-
 
 - Simple to implement
 - Easier to manage
@@ -1052,21 +838,15 @@ Vertical scaling (also known as scaling up) expands a system's scalability by ad
 
 ### Disadvantages
 
-
-
 - Risk of high downtime
 - Harder to upgrade
 - Can be a single point of failure
 
 ## Horizontal scaling
 
-
-
 Horizontal scaling (also known as scaling out) expands a system's scale by adding more machines. It improves the performance of the server by adding more instances to the existing pool of servers, allowing the load to be distributed more evenly.
 
 ### Advantages
-
-
 
 - Increased redundancy
 - Better fault tolerance
@@ -1075,21 +855,15 @@ Horizontal scaling (also known as scaling out) expands a system's scale by addin
 
 ### Disadvantages
 
-
-
 - Increased complexity
 - Data inconsistency
 - Increased load on downstream services
 
 # Storage
 
-
-
 Storage is a mechanism that enables a system to retain data, either temporarily or permanently. This topic is mostly skipped over in the context of system design, however, it is important to have a basic understanding of some common types of storage techniques that can help us fine-tune our storage components. Let's discuss some important storage concepts:
 
 ## RAID
-
-
 
 RAID (Redundant Array of Independent Disks) is a way of storing the same data on multiple hard disks or solid-state drives (SSDs) to protect data in the case of a drive failure.
 
@@ -1102,8 +876,6 @@ There are different RAID levels, however, and not all have the goal of providing
 - **RAID 10**: Combines striping plus mirroring from RAID 0 and RAID 1. It provides security by mirroring all data on secondary drives while using striping across each set of drives to speed up data transfers.
 
 ### Comparison
-
-
 
 Let's compare all the features of different RAID levels:
 
@@ -1119,21 +891,15 @@ Let's compare all the features of different RAID levels:
 
 ## Volumes
 
-
-
 Volume is a fixed amount of storage on a disk or tape. The term volume is often used as a synonym for the storage itself, but it is possible for a single disk to contain more than one volume or a volume to span more than one disk.
 
 ## File storage
-
-
 
 File storage is a solution to store data as files and present it to its final users as a hierarchical directories structure. The main advantage is to provide a user-friendly solution to store and retrieve files. To locate a file in file storage, the complete path of the file is required. It is economical and easily structured and is usually found on hard drives, which means that they appear exactly the same for the user and on the hard drive.
 
 Example: [Amazon EFS](https://aws.amazon.com/efs), [Azure files](https://azure.microsoft.com/en-in/services/storage/files), [Google Cloud Filestore](https://cloud.google.com/filestore), etc.
 
 ## Block storage
-
-
 
 Block storage divides data into blocks (chunks) and stores them as separate pieces. Each block of data is given a unique identifier, which allows a storage system to place the smaller pieces of data wherever it is most convenient.
 
@@ -1143,21 +909,15 @@ Example: [Amazon EBS](https://aws.amazon.com/ebs).
 
 ## Object Storage
 
-
-
 Object storage, which is also known as object-based storage, breaks data files up into pieces called objects. It then stores those objects in a single repository, which can be spread out across multiple networked systems.
 
 Example: [Amazon S3](https://aws.amazon.com/s3), [Azure Blob Storage](https://azure.microsoft.com/en-in/services/storage/blobs), [Google Cloud Storage](https://cloud.google.com/storage), etc.
 
 ## NAS
 
-
-
 A NAS (Network Attached Storage) is a storage device connected to a network that allows storage and retrieval of data from a central location for authorized network users. NAS devices are flexible, meaning that as we need additional storage, we can add to what we have. It's faster, less expensive, and provides all the benefits of a public cloud on-site, giving us complete control.
 
 ## HDFS
-
-
 
 The Hadoop Distributed File System (HDFS) is a distributed file system designed to run on commodity hardware. HDFS is highly fault-tolerant and is designed to be deployed on low-cost hardware. HDFS provides high throughput access to application data and is suitable for applications that have large data sets. It has many similarities with existing distributed file systems.
 
@@ -1165,53 +925,35 @@ HDFS is designed to reliably store very large files across machines in a large c
 
 # Databases and DBMS
 
-
-
 ## What is a Database?
-
-
 
 A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a Database Management System (DBMS). Together, the data and the DBMS, along with the applications that are associated with them, are referred to as a database system, often shortened to just database.
 
 ## What is DBMS?
 
-
-
 A database typically requires a comprehensive database software program known as a Database Management System (DBMS). A DBMS serves as an interface between the database and its end-users or programs, allowing users to retrieve, update, and manage how the information is organized and optimized. A DBMS also facilitates oversight and control of databases, enabling a variety of administrative operations such as performance monitoring, tuning, and backup and recovery.
 
 ## Components
-
-
 
 Here are some common components found across different databases:
 
 ### Schema
 
-
-
 The role of a schema is to define the shape of a data structure, and specify what kinds of data can go where. Schemas can be strictly enforced across the entire database, loosely enforced on part of the database, or they might not exist at all.
 
 ### Table
-
-
 
 Each table contains various columns just like in a spreadsheet. A table can have as meager as two columns and upwards of a hundred or more columns, depending upon the kind of information being put in the table.
 
 ### Column
 
-
-
 A column contains a set of data values of a particular type, one value for each row of the database. A column may contain text values, numbers, enums, timestamps, etc.
 
 ### Row
 
-
-
 Data in a table is recorded in rows. There can be thousands or millions of rows in a table having any particular information.
 
 ## Types
-
-
 
 [![database-types](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/databases-and-dbms/database-types.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/databases-and-dbms/database-types.png)
 
@@ -1230,8 +972,6 @@ SQL and NoSQL databases are broad topics and will be discussed separately in [SQ
 
 ## Challenges
 
-
-
 Some common challenges faced while running databases at scale:
 
 - **Absorbing significant increases in data volume**: The explosion of data coming in from sensors, connected machines, and dozens of other sources.
@@ -1243,15 +983,11 @@ Some common challenges faced while running databases at scale:
 
 # SQL databases
 
-
-
 A SQL (or relational) database is a collection of data items with pre-defined relationships between them. These items are organized as a set of tables with columns and rows. Tables are used to hold information about the objects to be represented in the database. Each column in a table holds a certain kind of data and a field stores the actual value of an attribute. The rows in the table represent a collection of related values of one object or entity.
 
 Each row in a table could be marked with a unique identifier called a primary key, and rows among multiple tables can be made related using foreign keys. This data can be accessed in many different ways without re-organizing the database tables themselves. SQL databases usually follow the [ACID consistency model](https://karanpratapsingh.com/courses/system-design/acid-and-base-consistency-models#acid).
 
 ## Materialized views
-
-
 
 A materialized view is a pre-computed data set derived from a query specification and stored for later use. Because the data is pre-computed, querying a materialized view is faster than executing a query against the base table of the view. This performance difference can be significant when a query is run frequently or is sufficiently complex.
 
@@ -1259,15 +995,11 @@ It also enables data subsetting and improves the performance of complex queries 
 
 ## N+1 query problem
 
-
-
 The N+1 query problem happens when the data access layer executes N additional SQL statements to fetch the same data that could have been retrieved when executing the primary SQL query. The larger the value of N, the more queries will be executed, the larger the performance impact.
 
 This is commonly seen in GraphQL and ORM (Object-Relational Mapping) tools and can be addressed by optimizing the SQL query or using a dataloader that batches consecutive requests and makes a single data request under the hood.
 
 ## Advantages
-
-
 
 Let's look at some advantages of using relational databases:
 
@@ -1278,8 +1010,6 @@ Let's look at some advantages of using relational databases:
 
 ## Disadvantages
 
-
-
 Below are the disadvantages of relational databases:
 
 - Expensive to maintain
@@ -1288,8 +1018,6 @@ Below are the disadvantages of relational databases:
 - Difficult to scale due to poor horizontal scalability
 
 ## Examples
-
-
 
 Here are some commonly used relational databases:
 
@@ -1300,15 +1028,11 @@ Here are some commonly used relational databases:
 
 # NoSQL databases
 
-
-
 NoSQL is a broad category that includes any database that doesn't use SQL as its primary data access language. These types of databases are also sometimes referred to as non-relational databases. Unlike in relational databases, data in a NoSQL database doesn't have to conform to a pre-defined schema. NoSQL databases follow [BASE consistency model](https://karanpratapsingh.com/courses/system-design/acid-and-base-consistency-models#base).
 
 Below are different types of NoSQL databases:
 
 ### Document
-
-
 
 A document database (also known as a document-oriented database or a document store) is a database that stores information in documents. They are general-purpose databases that serve a variety of use cases for both transactional and analytical applications.
 
@@ -1330,8 +1054,6 @@ A document database (also known as a document-oriented database or a document st
 - [CouchDB](https://couchdb.apache.org/)
 
 ### Key-value
-
-
 
 One of the simplest types of NoSQL databases, key-value databases save data as a group of key-value pairs made up of two data items each. They're also sometimes referred to as a key-value store.
 
@@ -1357,8 +1079,6 @@ One of the simplest types of NoSQL databases, key-value databases save data as a
 - [Aerospike](https://aerospike.com/)
 
 ### Graph
-
-
 
 A graph database is a NoSQL database that uses graph structures for semantic queries with nodes, edges, and properties to represent and store data instead of tables or documents.
 
@@ -1391,8 +1111,6 @@ The graph relates the data items in the store to a collection of nodes and edges
 
 ### Time series
 
-
-
 A time-series database is a database optimized for time-stamped, or time series, data.
 
 **Advantages**
@@ -1413,8 +1131,6 @@ A time-series database is a database optimized for time-stamped, or time series,
 - [Apache Druid](https://druid.apache.org/)
 
 ### Wide column
-
-
 
 Wide column databases, also known as wide column stores, are schema-agnostic. Data is stored in column families, rather than in rows and columns.
 
@@ -1441,8 +1157,6 @@ Wide column databases, also known as wide column stores, are schema-agnostic. Da
 
 ### Multi-model
 
-
-
 Multi-model databases combine different database models (i.e. relational, graph, key-value, document, etc.) into a single, integrated backend. This means they can accommodate various data types, indexes, queries, and store data in more than one model.
 
 **Advantages**
@@ -1464,19 +1178,13 @@ Multi-model databases combine different database models (i.e. relational, graph,
 
 # SQL vs NoSQL databases
 
-
-
 In the world of databases, there are two main types of solutions, SQL (relational) and NoSQL (non-relational) databases. Both of them differ in the way they were built, the kind of information they store, and how they store it. Relational databases are structured and have predefined schemas while non-relational databases are unstructured, distributed, and have a dynamic schema.
 
 ## High-level differences
 
-
-
 Here are some high-level differences between SQL and NoSQL:
 
 ### Storage
-
-
 
 SQL stores data in tables, where each row represents an entity and each column represents a data point about that entity.
 
@@ -1484,15 +1192,11 @@ NoSQL databases have different data storage models such as key-value, graph, doc
 
 ### Schema
 
-
-
 In SQL, each record conforms to a fixed schema, meaning the columns must be decided and chosen before data entry and each row must have data for each column. The schema can be altered later, but it involves modifying the database using migrations.
 
-Whereas in NoSQL, schemas are dynamic. Fields can be added on the fly, and each *record* (or equivalent) doesn't have to contain data for each *field*.
+Whereas in NoSQL, schemas are dynamic. Fields can be added on the fly, and each _record_ (or equivalent) doesn't have to contain data for each _field_.
 
 ### Querying
-
-
 
 SQL databases use SQL (structured query language) for defining and manipulating the data, which is very powerful.
 
@@ -1500,23 +1204,17 @@ In a NoSQL database, queries are focused on a collection of documents. Different
 
 ### Scalability
 
-
-
 In most common situations, SQL databases are vertically scalable, which can get very expensive. It is possible to scale a relational database across multiple servers, but this is a challenging and time-consuming process.
 
 On the other hand, NoSQL databases are horizontally scalable, meaning we can add more servers easily to our NoSQL database infrastructure to handle large traffic. Any cheap commodity hardware or cloud instances can host NoSQL databases, thus making it a lot more cost-effective than vertical scaling. A lot of NoSQL technologies also distribute data across servers automatically.
 
 ### Reliability
 
-
-
 The vast majority of relational databases are ACID compliant. So, when it comes to data reliability and a safe guarantee of performing transactions, SQL databases are still the better bet.
 
 Most of the NoSQL solutions sacrifice ACID compliance for performance and scalability.
 
 ## Reasons
-
-
 
 As always we should always pick the technology that fits the requirements better. So, let's look at some reasons for picking SQL or NoSQL based database:
 
@@ -1538,13 +1236,9 @@ As always we should always pick the technology that fits the requirements better
 
 # Database Replication
 
-
-
 Replication is a process that involves sharing information to ensure consistency between redundant resources such as multiple databases, to improve reliability, fault-tolerance, or accessibility.
 
 ## Master-Slave Replication
-
-
 
 The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
 
@@ -1552,15 +1246,11 @@ The master serves reads and writes, replicating writes to one or more slaves, wh
 
 ### Advantages
 
-
-
 - Backups of the entire database of relatively no impact on the master.
 - Applications can read from the slave(s) without impacting the master.
 - Slaves can be taken offline and synced back to the master without any downtime.
 
 ### Disadvantages
-
-
 
 - Replication adds more hardware and additional complexity.
 - Downtime and possibly loss of data when a master fails.
@@ -1569,15 +1259,11 @@ The master serves reads and writes, replicating writes to one or more slaves, wh
 
 ## Master-Master Replication
 
-
-
 Both masters serve reads/writes and coordinate with each other. If either master goes down, the system can continue to operate with both reads and writes.
 
 [![master-master-replication](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/database-replication/master-master-replication.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/database-replication/master-master-replication.png)
 
 ### Advantages
-
-
 
 - Applications can read from both masters.
 - Distributes write load across both master nodes.
@@ -1585,23 +1271,17 @@ Both masters serve reads/writes and coordinate with each other. If either master
 
 ### Disadvantages
 
-
-
 - Not as simple as master-slave to configure and deploy.
 - Either loosely consistent or have increased write latency due to synchronization.
 - Conflict resolution comes into play as more write nodes are added and as latency increases.
 
 ## Synchronous vs Asynchronous replication
 
-
-
 The primary difference between synchronous and asynchronous replication is how the data is written to the replica. In synchronous replication, data is written to primary storage and the replica simultaneously. As such, the primary copy and the replica should always remain synchronized.
 
 In contrast, asynchronous replication copies the data to the replica after the data is already written to the primary storage. Although the replication process may occur in near-real-time, it is more common for replication to occur on a scheduled basis and it is more cost-effective.
 
 # Indexes
-
-
 
 Indexes are well known when it comes to databases, they are used to improve the speed of data retrieval operations on the data store. An index makes the trade-offs of increased storage overhead, and slower writes (since we not only have to write the data but also have to update the index) for the benefit of faster reads. Indexes are used to quickly locate data without having to examine every row in a database table. Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access to ordered records.
 
@@ -1613,8 +1293,6 @@ One quality that database indexes can have is that they can be **dense** or **sp
 
 ## Dense Index
 
-
-
 In a dense index, an index record is created for every row of the table. Records can be located directly as each record of the index holds the search key value and the pointer to the actual record.
 
 [![dense-index](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/indexes/dense-index.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/indexes/dense-index.png)
@@ -1622,8 +1300,6 @@ In a dense index, an index record is created for every row of the table. Records
 Dense indexes require more maintenance than sparse indexes at write-time. Since every row must have an entry, the database must maintain the index on inserts, updates, and deletes. Having an entry for every row also means that dense indexes will require more memory. The benefit of a dense index is that values can be quickly found with just a binary search. Dense indexes also do not impose any ordering requirements on the data.
 
 ## Sparse Index
-
-
 
 In a sparse index, index records are created only for some of the records.
 
@@ -1633,17 +1309,11 @@ Sparse indexes require less maintenance than dense indexes at write-time since t
 
 # Normalization and Denormalization
 
-
-
 ## Terms
-
-
 
 Before we go any further, let's look at some commonly used terms in normalization and denormalization.
 
 ### Keys
-
-
 
 **Primary key**: Column or group of columns that can be used to uniquely identify every row of the table.
 
@@ -1661,8 +1331,6 @@ Before we go any further, let's look at some commonly used terms in normalizatio
 
 ### Dependencies
 
-
-
 **Partial dependency**: Occurs when the primary key determines some other attributes.
 
 **Functional dependency**: It is a relationship that exists between two attributes, typically between the primary key and non-key attribute within a table.
@@ -1670,8 +1338,6 @@ Before we go any further, let's look at some commonly used terms in normalizatio
 **Transitive functional dependency**: Occurs when some non-key attribute determines some other attribute.
 
 ### Anomalies
-
-
 
 Database anomaly happens when there is a flaw in the database due to incorrect planning or storing everything in a flat database. This is generally addressed by the process of normalization.
 
@@ -1687,35 +1353,29 @@ There are three types of database anomalies:
 
 Let's consider the following table which is not normalized:
 
-| ID   | Name   | Role              | Team |
-| ---- | ------ | ----------------- | ---- |
-| 1    | Peter  | Software Engineer | A    |
-| 2    | Brian  | DevOps Engineer   | B    |
-| 3    | Hailey | Product Manager   | C    |
-| 4    | Hailey | Product Manager   | C    |
-| 5    | Steve  | Frontend Engineer | D    |
+| ID  | Name   | Role              | Team |
+| --- | ------ | ----------------- | ---- |
+| 1   | Peter  | Software Engineer | A    |
+| 2   | Brian  | DevOps Engineer   | B    |
+| 3   | Hailey | Product Manager   | C    |
+| 4   | Hailey | Product Manager   | C    |
+| 5   | Steve  | Frontend Engineer | D    |
 
-Let's imagine, we hired a new person "John" but they might not be assigned a team immediately. This will cause an *insertion anomaly* as the team attribute is not yet present.
+Let's imagine, we hired a new person "John" but they might not be assigned a team immediately. This will cause an _insertion anomaly_ as the team attribute is not yet present.
 
-Next, let's say Hailey from Team C got promoted, to reflect that change in the database, we will need to update 2 rows to maintain consistency which can cause an *update anomaly*.
+Next, let's say Hailey from Team C got promoted, to reflect that change in the database, we will need to update 2 rows to maintain consistency which can cause an _update anomaly_.
 
-Finally, we would like to remove Team B but to do that we will also need to remove additional information such as name and role, this is an example of a *deletion anomaly*.
+Finally, we would like to remove Team B but to do that we will also need to remove additional information such as name and role, this is an example of a _deletion anomaly_.
 
 ## Normalization
-
-
 
 Normalization is the process of organizing data in a database. This includes creating tables and establishing relationships between those tables according to rules designed both to protect the data and to make the database more flexible by eliminating redundancy and inconsistent dependency.
 
 ### Why do we need normalization?
 
-
-
 The goal of normalization is to eliminate redundant data and ensure data is consistent. A fully normalized database allows its structure to be extended to accommodate new types of data without changing the existing structure too much. As a result, applications interacting with the database are minimally affected.
 
 ### Normal forms
-
-
 
 Normal forms are a series of guidelines to ensure that the database is normalized. Let's discuss some essential normal forms:
 
@@ -1751,15 +1411,13 @@ For a table to be in the Boyce-Codd normal form (BCNF), it should follow the fol
 - Satisfied the third normal form (3NF).
 - For every functional dependency X → Y, X should be the super key.
 
-*There are more normal forms such as 4NF, 5NF, and 6NF but we won't discuss them here. Check out this [amazing video](https://www.youtube.com/watch?v=GFQaEYEc8_8) that goes into detail.*
+_There are more normal forms such as 4NF, 5NF, and 6NF but we won't discuss them here. Check out this [amazing video](https://www.youtube.com/watch?v=GFQaEYEc8_8) that goes into detail._
 
-In a relational database, a relation is often described as *"normalized"* if it meets the third normal form. Most 3NF relations are free of insertion, update, and deletion anomalies.
+In a relational database, a relation is often described as _"normalized"_ if it meets the third normal form. Most 3NF relations are free of insertion, update, and deletion anomalies.
 
 As with many formal rules and specifications, real-world scenarios do not always allow for perfect compliance. If you decide to violate one of the first three rules of normalization, make sure that your application anticipates any problems that could occur, such as redundant data and inconsistent dependencies.
 
 ### Advantages
-
-
 
 Here are some advantages of normalization:
 
@@ -1770,8 +1428,6 @@ Here are some advantages of normalization:
 
 ### Disadvantages
 
-
-
 Let's look at some disadvantages of normalization:
 
 - Data design is complex.
@@ -1781,17 +1437,13 @@ Let's look at some disadvantages of normalization:
 
 ## Denormalization
 
-
-
 Denormalization is a database optimization technique in which we add redundant data to one or more tables. This can help us avoid costly joins in a relational database. It attempts to improve read performance at the expense of some write performance. Redundant copies of the data are written in multiple tables to avoid expensive joins.
 
 Once data becomes distributed with techniques such as federation and sharding, managing joins across the network further increases complexity. Denormalization might circumvent the need for such complex joins.
 
-*Note: Denormalization does not mean reversing normalization.*
+_Note: Denormalization does not mean reversing normalization._
 
 ### Advantages
-
-
 
 Let's look at some advantages of denormalization:
 
@@ -1802,8 +1454,6 @@ Let's look at some advantages of denormalization:
 
 ### Disadvantages
 
-
-
 Below are some disadvantages of denormalization:
 
 - Expensive inserts and updates.
@@ -1813,13 +1463,9 @@ Below are some disadvantages of denormalization:
 
 # ACID and BASE consistency models
 
-
-
 Let's discuss the ACID and BASE consistency models.
 
 ## ACID
-
-
 
 The term ACID stands for Atomicity, Consistency, Isolation, and Durability. ACID properties are used for maintaining data integrity during transaction processing.
 
@@ -1827,31 +1473,21 @@ In order to maintain consistency before and after a transaction relational datab
 
 ### Atomic
 
-
-
 All operations in a transaction succeed or every operation is rolled back.
 
 ### Consistent
-
-
 
 On the completion of a transaction, the database is structurally sound.
 
 ### Isolated
 
-
-
 Transactions do not contend with one another. Contentious access to data is moderated by the database so that transactions appear to run sequentially.
 
 ### Durable
 
-
-
 Once the transaction has been completed and the writes and updates have been written to the disk, it will remain in the system even if a system failure occurs.
 
 ## BASE
-
-
 
 With the increasing amount of data and high availability requirements, the approach to database design has also changed dramatically. To increase the ability to scale and at the same time be highly available, we move the logic from the database to separate servers. In this way, the database becomes more independent and focused on the actual process of storing data.
 
@@ -1861,25 +1497,17 @@ BASE properties are much looser than ACID guarantees, but there isn't a direct o
 
 ### Basic Availability
 
-
-
 The database appears to work most of the time.
 
 ### Soft-state
-
-
 
 Stores don't have to be write-consistent, nor do different replicas have to be mutually consistent all the time.
 
 ### Eventual consistency
 
-
-
 The data might not be consistent immediately but eventually, it becomes consistent. Reads in the system are still possible even though they may not give the correct response due to inconsistency.
 
 ## ACID vs BASE Trade-offs
-
-
 
 There's no right answer to whether our application needs an ACID or a BASE consistency model. Both the models have been designed to satisfy different requirements. While choosing a database we need to keep the properties of both the models and the requirements of our application in mind.
 
@@ -1889,8 +1517,6 @@ On the other hand, planning around BASE limitations can sometimes be a major dis
 
 # CAP Theorem
 
-
-
 CAP theorem states that a distributed system can deliver only two of the three desired characteristics Consistency, Availability, and Partition tolerance (CAP).
 
 [![cap-theorem](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/cap-theorem/cap-theorem.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/cap-theorem/cap-theorem.png)
@@ -1899,31 +1525,21 @@ Let's take a detailed look at the three distributed system characteristics to wh
 
 ### Consistency
 
-
-
 Consistency means that all clients see the same data at the same time, no matter which node they connect to. For this to happen, whenever data is written to one node, it must be instantly forwarded or replicated across all the nodes in the system before the write is deemed "successful".
 
 ### Availability
-
-
 
 Availability means that any client making a request for data gets a response, even if one or more nodes are down.
 
 ### Partition tolerance
 
-
-
 Partition tolerance means the system continues to work despite message loss or partial failure. A system that is partition-tolerant can sustain any amount of network failure that doesn't result in a failure of the entire network. Data is sufficiently replicated across combinations of nodes and networks to keep the system up through intermittent outages.
 
 ## Consistency-Availability Tradeoff
 
-
-
 We live in a physical world and can't guarantee the stability of a network, so distributed databases must choose Partition Tolerance (P). This implies a tradeoff between Consistency (C) and Availability (A).
 
 ### CA database
-
-
 
 A CA database delivers consistency and availability across all nodes. It can't do this if there is a partition between any two nodes in the system, and therefore can't deliver fault tolerance.
 
@@ -1931,15 +1547,11 @@ A CA database delivers consistency and availability across all nodes. It can't d
 
 ### CP database
 
-
-
 A CP database delivers consistency and partition tolerance at the expense of availability. When a partition occurs between any two nodes, the system has to shut down the non-consistent node until the partition is resolved.
 
 **Example**: [MongoDB](https://www.mongodb.com/), [Apache HBase](https://hbase.apache.org/).
 
 ### AP database
-
-
 
 An AP database delivers availability and partition tolerance at the expense of consistency. When a partition occurs, all nodes remain available but those at the wrong end of a partition might return an older version of data than others. When the partition is resolved, the AP databases typically re-syncs the nodes to repair all inconsistencies in the system.
 
@@ -1947,13 +1559,11 @@ An AP database delivers availability and partition tolerance at the expense of c
 
 # PACELC Theorem
 
-
-
 The PACELC theorem is an extension of the CAP theorem. The CAP theorem states that in the case of network partitioning (P) in a distributed system, one has to choose between Availability (A) and Consistency (C).
 
 PACELC extends the CAP theorem by introducing latency (L) as an additional attribute of a distributed system. The theorem states that else (E), even when the system is running normally in the absence of partitions, one has to choose between latency (L) and consistency (C).
 
-*The PACELC theorem was first described by [Daniel J. Abadi](https://scholar.google.com/citations?user=zxeEF2gAAAAJ).*
+_The PACELC theorem was first described by [Daniel J. Abadi](https://scholar.google.com/citations?user=zxeEF2gAAAAJ)._
 
 [![pacelc-theorem](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/pacelc-theorem/pacelc-theorem.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/pacelc-theorem/pacelc-theorem.png)
 
@@ -1963,15 +1573,11 @@ For example, according to the CAP theorem, a database can be considered availabl
 
 # Transactions
 
+A transaction is a series of database operations that are considered to be a _"single unit of work"_. The operations in a transaction either all succeed, or they all fail. In this way, the notion of a transaction supports data integrity when part of a system fails. Not all databases choose to support ACID transactions, usually because they are prioritizing other optimizations that are hard or theoretically impossible to implement together.
 
-
-A transaction is a series of database operations that are considered to be a *"single unit of work"*. The operations in a transaction either all succeed, or they all fail. In this way, the notion of a transaction supports data integrity when part of a system fails. Not all databases choose to support ACID transactions, usually because they are prioritizing other optimizations that are hard or theoretically impossible to implement together.
-
-*Usually, relational databases support ACID transactions, and non-relational databases don't (there are exceptions).*
+_Usually, relational databases support ACID transactions, and non-relational databases don't (there are exceptions)._
 
 ## States
-
-
 
 A transaction in a database can be in one of the following states:
 
@@ -1979,31 +1585,21 @@ A transaction in a database can be in one of the following states:
 
 ### Active
 
-
-
 In this state, the transaction is being executed. This is the initial state of every transaction.
 
 ### Partially Committed
-
-
 
 When a transaction executes its final operation, it is said to be in a partially committed state.
 
 ### Committed
 
-
-
 If a transaction executes all its operations successfully, it is said to be committed. All its effects are now permanently established on the database system.
 
 ### Failed
 
-
-
 The transaction is said to be in a failed state if any of the checks made by the database recovery system fails. A failed transaction can no longer proceed further.
 
 ### Aborted
-
-
 
 If any of the checks fail and the transaction has reached a failed state, then the recovery manager rolls back all its write operations on the database to bring the database back to its original state where it was prior to the execution of the transaction. Transactions in this state are aborted.
 
@@ -2014,19 +1610,13 @@ The database recovery module can select one of the two operations after a transa
 
 ### Terminated
 
-
-
-If there isn't any roll-back or the transaction comes from the *committed state*, then the system is consistent and ready for a new transaction and the old transaction is terminated.
+If there isn't any roll-back or the transaction comes from the _committed state_, then the system is consistent and ready for a new transaction and the old transaction is terminated.
 
 # Distributed Transactions
-
-
 
 A distributed transaction is a set of operations on data that is performed across two or more databases. It is typically coordinated across separate nodes connected by a network, but may also span multiple databases on a single server.
 
 ## Why do we need distributed transactions?
-
-
 
 Unlike an ACID transaction on a single database, a distributed transaction involves altering data on multiple databases. Consequently, distributed transaction processing is more complicated, because the database must coordinate the committing or rollback of the changes in a transaction as a self-contained unit.
 
@@ -2035,8 +1625,6 @@ In other words, all the nodes must commit, or all must abort and the entire tran
 Now, let's look at some popular solutions for distributed transactions:
 
 ## Two-Phase commit
-
-
 
 [![two-phase-commit](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/two-phase-commit.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/two-phase-commit.png)
 
@@ -2048,21 +1636,17 @@ This protocol requires a coordinator node, which basically coordinates and overs
 
 ### Phases
 
-
-
 Two-phase commit consists of the following phases:
 
 **Prepare phase**
 
-The prepare phase involves the coordinator node collecting consensus from each of the participant nodes. The transaction will be aborted unless each of the nodes responds that they're *prepared*.
+The prepare phase involves the coordinator node collecting consensus from each of the participant nodes. The transaction will be aborted unless each of the nodes responds that they're _prepared_.
 
 **Commit phase**
 
-If all participants respond to the coordinator that they are *prepared*, then the coordinator asks all the nodes to commit the transaction. If a failure occurs, the transaction will be rolled back.
+If all participants respond to the coordinator that they are _prepared_, then the coordinator asks all the nodes to commit the transaction. If a failure occurs, the transaction will be rolled back.
 
 ### Problems
-
-
 
 Following problems may arise in the two-phase commit protocol:
 
@@ -2072,15 +1656,11 @@ Following problems may arise in the two-phase commit protocol:
 
 ## Three-phase commit
 
-
-
 [![three-phase-commit](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/three-phase-commit.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/three-phase-commit.png)
 
 Three-phase commit (3PC) is an extension of the two-phase commit where the commit phase is split into two phases. This helps with the blocking problem that occurs in the two-phase commit protocol.
 
 ### Phases
-
-
 
 Three-phase commit consists of the following phases:
 
@@ -2098,24 +1678,18 @@ This step is also similar to the two-phase commit protocol.
 
 ### Why is the Pre-commit phase helpful?
 
-
-
 The pre-commit phase accomplishes the following:
 
-- If the participant nodes are found in this phase, that means that *every* participant has completed the first phase. The completion of prepare phase is guaranteed.
+- If the participant nodes are found in this phase, that means that _every_ participant has completed the first phase. The completion of prepare phase is guaranteed.
 - Every phase can now time out and avoid indefinite waits.
 
 ## Sagas
-
-
 
 [![sagas](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/sagas.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/sagas.png)
 
 A saga is a sequence of local transactions. Each local transaction updates the database and publishes a message or event to trigger the next local transaction in the saga. If a local transaction fails because it violates a business rule then the saga executes a series of compensating transactions that undo the changes that were made by the preceding local transactions.
 
 ### Coordination
-
-
 
 There are two common implementation approaches:
 
@@ -2124,8 +1698,6 @@ There are two common implementation approaches:
 
 ### Problems
 
-
-
 - The Saga pattern is particularly hard to debug.
 - There's a risk of cyclic dependency between saga participants.
 - Lack of participant data isolation imposes durability challenges.
@@ -2133,25 +1705,19 @@ There are two common implementation approaches:
 
 # Sharding
 
-
-
 Before we discuss sharding, let's talk about data partitioning:
 
 ## Data Partitioning
-
-
 
 Data partitioning is a technique to break up a database into many smaller parts. It is the process of splitting up a database or a table across multiple machines to improve the manageability, performance, and availability of a database.
 
 ### Methods
 
-
-
 There are many different ways one could use to decide how to break up an application database into multiple smaller DBs. Below are two of the most popular methods used by various large-scale applications:
 
 **Horizontal Partitioning (or Sharding)**
 
-In this strategy, we split the table data horizontally based on the range of values defined by the *partition key*. It is also referred to as ***database sharding\***.
+In this strategy, we split the table data horizontally based on the range of values defined by the _partition key_. It is also referred to as **\*database sharding\***.
 
 **Vertical Partitioning**
 
@@ -2161,9 +1727,7 @@ In this tutorial, we will specifically focus on sharding.
 
 ## What is sharding?
 
-
-
-Sharding is a database architecture pattern related to *horizontal partitioning*, which is the practice of separating one table's rows into multiple different tables, known as *partitions* or *shards*. Each partition has the same schema and columns, but also a subset of the shared data. Likewise, the data held in each is unique and independent of the data held in other partitions.
+Sharding is a database architecture pattern related to _horizontal partitioning_, which is the practice of separating one table's rows into multiple different tables, known as _partitions_ or _shards_. Each partition has the same schema and columns, but also a subset of the shared data. Likewise, the data held in each is unique and independent of the data held in other partitions.
 
 [![sharding](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/sharding/sharding.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-II/sharding/sharding.png)
 
@@ -2171,13 +1735,9 @@ The justification for data sharding is that, after a certain point, it is cheape
 
 ## Partitioning criteria
 
-
-
 There are a large number of criteria available for data partitioning. Some most commonly used criteria are:
 
 ### Hash-Based
-
-
 
 This strategy divides the rows into different partitions based on a hashing algorithm rather than grouping database rows based on continuous indexes.
 
@@ -2185,13 +1745,9 @@ The disadvantage of this method is that dynamically adding/removing database ser
 
 ### List-Based
 
-
-
 In list-based partitioning, each partition is defined and selected based on the list of values on a column rather than a set of contiguous ranges of values.
 
 ### Range Based
-
-
 
 Range partitioning maps data to various partitions based on ranges of values of the partitioning key. In other words, we partition the table in such a way that each partition contains rows within a given range defined by the partition key.
 
@@ -2199,13 +1755,9 @@ Ranges should be contiguous but not overlapping, where each range specifies a no
 
 ### Composite
 
-
-
 As the name suggests, composite partitioning partitions the data based on two or more partitioning techniques. Here we first partition the data using one technique, and then each partition is further subdivided into sub-partitions using the same or some other method.
 
 ## Advantages
-
-
 
 But why do we need sharding? Here are some advantages:
 
@@ -2217,15 +1769,11 @@ But why do we need sharding? Here are some advantages:
 
 ## Disadvantages
 
-
-
 - **Complexity**: Sharding increases the complexity of the system in general.
 - **Joins across shards**: Once a database is partitioned and spread across multiple machines it is often not feasible to perform joins that span multiple database shards. Such joins will not be performance efficient since data has to be retrieved from multiple servers.
 - **Rebalancing**: If the data distribution is not uniform or there is a lot of load on a single shard, in such cases, we have to rebalance our shards so that the requests are as equally distributed among the shards as possible.
 
 ## When to use sharding?
-
-
 
 Here are some reasons why sharding might be the right choice:
 
@@ -2237,13 +1785,9 @@ Here are some reasons why sharding might be the right choice:
 
 # Consistent Hashing
 
-
-
 Let's first understand the problem we're trying to solve.
 
 ## Why do we need this?
-
-
 
 In traditional hashing-based distribution methods, we use a hash function to hash our partition keys (i.e. request ID or IP). Then if we use the modulo against the total number of nodes (server or databases). This will give us the node where we want to route our request.
 
@@ -2270,8 +1814,6 @@ Consistent hashing solves this horizontal scalability problem by ensuring that e
 Now that we understand the problem, let's discuss consistent hashing in detail.
 
 ## How does it work
-
-
 
 Consistent Hashing is a distributed hashing scheme that operates independently of the number of nodes in a distributed hash table by assigning them a position on an abstract circle, or hash ring. This allows servers and objects to scale without affecting the overall system.
 
@@ -2301,15 +1843,13 @@ Where,
 
 `m`: Total range of the hash ring.
 
-Now, when the request comes in we can simply route it to the closest node in a clockwise (can be counterclockwise as well) manner. This means that if a new node is added or removed, we can use the nearest node and only a *fraction* of the requests need to be re-routed.
+Now, when the request comes in we can simply route it to the closest node in a clockwise (can be counterclockwise as well) manner. This means that if a new node is added or removed, we can use the nearest node and only a _fraction_ of the requests need to be re-routed.
 
-In theory, consistent hashing should distribute the load evenly however it doesn't happen in practice. Usually, the load distribution is uneven and one server may end up handling the majority of the request becoming a *hotspot*, essentially a bottleneck for the system. We can fix this by adding extra nodes but that can be expensive.
+In theory, consistent hashing should distribute the load evenly however it doesn't happen in practice. Usually, the load distribution is uneven and one server may end up handling the majority of the request becoming a _hotspot_, essentially a bottleneck for the system. We can fix this by adding extra nodes but that can be expensive.
 
 Let's see how we can address these issues.
 
 ## Virtual Nodes
-
-
 
 In order to ensure a more evenly distributed load, we can introduce the idea of a virtual node, sometimes also referred to as a VNode.
 
@@ -2335,15 +1875,11 @@ As VNodes help spread the load more evenly across the physical nodes on the clus
 
 ## Data Replication
 
-
-
-To ensure high availability and durability, consistent hashing replicates each data item on multiple `N` nodes in the system where the value `N` is equivalent to the *replication factor*.
+To ensure high availability and durability, consistent hashing replicates each data item on multiple `N` nodes in the system where the value `N` is equivalent to the _replication factor_.
 
 The replication factor is the number of nodes that will receive the copy of the same data. In eventually consistent systems, this is done asynchronously.
 
 ## Advantages
-
-
 
 Let's look at some advantages of consistent hashing:
 
@@ -2354,8 +1890,6 @@ Let's look at some advantages of consistent hashing:
 
 ## Disadvantages
 
-
-
 Below are some disadvantages of consistent hashing:
 
 - Increases complexity.
@@ -2365,16 +1899,12 @@ Below are some disadvantages of consistent hashing:
 
 ## Examples
 
-
-
 Let's look at some examples where consistent hashing is used:
 
 - Data partitioning in [Apache Cassandra](https://cassandra.apache.org/).
 - Load distribution across multiple storage hosts in [Amazon DynamoDB](https://aws.amazon.com/dynamodb).
 
 # Database Federation
-
-
 
 Federation (or functional partitioning) splits up databases by function. The federation architecture makes several distinct physical databases appear as one logical database to end-users.
 
@@ -2386,8 +1916,6 @@ Federation also provides a cohesive, unified view of data derived from multiple 
 
 ## Characteristics
 
-
-
 Let's look at some key characteristics of a federated database:
 
 - **Transparency**: Federated database masks user differences and implementations of underlying data sources. Therefore, the users do not need to be aware of where the data is stored.
@@ -2398,8 +1926,6 @@ Let's look at some key characteristics of a federated database:
 
 ## Advantages
 
-
-
 Here are some advantages of federated databases:
 
 - Flexible data sharing.
@@ -2409,8 +1935,6 @@ Here are some advantages of federated databases:
 
 ## Disadvantages
 
-
-
 Below are some disadvantages of federated databases:
 
 - Adds more hardware and additional complexity.
@@ -2419,8 +1943,6 @@ Below are some disadvantages of federated databases:
 - Query performance and scalability.
 
 # N-tier architecture
-
-
 
 N-tier architecture divides an application into logical layers and physical tiers. Layers are a way to separate responsibilities and manage dependencies. Each layer has a specific responsibility. A higher layer can use services in a lower layer, but not the other way around.
 
@@ -2437,13 +1959,9 @@ A closed-layer architecture limits the dependencies between layers. However, it 
 
 ## Types of N-Tier architectures
 
-
-
 Let's look at some examples of N-Tier architecture:
 
 ### 3-Tier architecture
-
-
 
 3-Tier is widely used and consists of the following different layers:
 
@@ -2453,19 +1971,13 @@ Let's look at some examples of N-Tier architecture:
 
 ### 2-Tier architecture
 
-
-
 In this architecture, the presentation layer runs on the client and communicates with a data store. There is no business logic layer or immediate layer between client and server.
 
 ### Single Tier or 1-Tier architecture
 
-
-
 It is the simplest one as it is equivalent to running the application on a personal computer. All of the required components for an application to run are on a single application or server.
 
 ## Advantages
-
-
 
 Here are some advantages of using N-tier architecture:
 
@@ -2476,8 +1988,6 @@ Here are some advantages of using N-tier architecture:
 
 ## Disadvantages
 
-
-
 Below are some disadvantages of N-tier architecture:
 
 - Increased complexity of the system as a whole.
@@ -2487,9 +1997,7 @@ Below are some disadvantages of N-tier architecture:
 
 # Message Brokers
 
-
-
-A message broker is a software that enables applications, systems, and services to communicate with each other and exchange information. The message broker does this by translating messages between formal messaging protocols. This allows interdependent services to *"talk"* with one another directly, even if they were written in different languages or implemented on different platforms.
+A message broker is a software that enables applications, systems, and services to communicate with each other and exchange information. The message broker does this by translating messages between formal messaging protocols. This allows interdependent services to _"talk"_ with one another directly, even if they were written in different languages or implemented on different platforms.
 
 [![message-broker](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/message-brokers/message-broker.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/message-brokers/message-broker.png)
 
@@ -2497,34 +2005,26 @@ Message brokers can validate, store, route, and deliver messages to the appropri
 
 ## Models
 
-
-
 Message brokers offer two basic message distribution patterns or messaging styles:
 
 - **[Point-to-Point messaging](https://karanpratapsingh.com/courses/system-design/message-queues)**: This is the distribution pattern utilized in message queues with a one-to-one relationship between the message's sender and receiver.
-- **[Publish-Subscribe messaging](https://karanpratapsingh.com/courses/system-design/publish-subscribe)**: In this message distribution pattern, often referred to as *"pub/sub"*, the producer of each message publishes it to a topic, and multiple message consumers subscribe to topics from which they want to receive messages.
+- **[Publish-Subscribe messaging](https://karanpratapsingh.com/courses/system-design/publish-subscribe)**: In this message distribution pattern, often referred to as _"pub/sub"_, the producer of each message publishes it to a topic, and multiple message consumers subscribe to topics from which they want to receive messages.
 
-*We will discuss these messaging patterns in detail in the later tutorials.*
+_We will discuss these messaging patterns in detail in the later tutorials._
 
 ## Message brokers vs Event streaming
 
-
-
-Message brokers can support two or more messaging patterns, including message queues and pub/sub, while event streaming platforms only offer pub/sub-style distribution patterns. Designed for use with high volumes of messages, event streaming platforms are readily scalable. They're capable of ordering streams of records into categories called *topics* and storing them for a predetermined amount of time. Unlike message brokers, however, event streaming platforms cannot guarantee message delivery or track which consumers have received the messages.
+Message brokers can support two or more messaging patterns, including message queues and pub/sub, while event streaming platforms only offer pub/sub-style distribution patterns. Designed for use with high volumes of messages, event streaming platforms are readily scalable. They're capable of ordering streams of records into categories called _topics_ and storing them for a predetermined amount of time. Unlike message brokers, however, event streaming platforms cannot guarantee message delivery or track which consumers have received the messages.
 
 Event streaming platforms offer more scalability than message brokers but fewer features that ensure fault tolerance like message resending, as well as more limited message routing and queueing capabilities.
 
 ## Message brokers vs Enterprise Service Bus (ESB)
 
-
-
 [Enterprise Service Bus (ESB)](https://karanpratapsingh.com/courses/system-design/enterprise-service-bus) infrastructure is complex and can be challenging to integrate and expensive to maintain. It's difficult to troubleshoot them when problems occur in production environments, they're not easy to scale, and updating is tedious.
 
-Whereas message brokers are a *"lightweight"* alternative to ESBs that provide similar functionality, a mechanism for inter-service communication, at a lower cost. They're well-suited for use in the [microservices architectures](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) that have become more prevalent as ESBs have fallen out of favor.
+Whereas message brokers are a _"lightweight"_ alternative to ESBs that provide similar functionality, a mechanism for inter-service communication, at a lower cost. They're well-suited for use in the [microservices architectures](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) that have become more prevalent as ESBs have fallen out of favor.
 
 ## Examples
-
-
 
 Here are some commonly used message brokers:
 
@@ -2535,8 +2035,6 @@ Here are some commonly used message brokers:
 
 # Message Queues
 
-
-
 A message queue is a form of service-to-service communication that facilitates asynchronous communication. It asynchronously receives messages from producers and sends them to consumers.
 
 Queues are used to effectively manage requests in large-scale distributed systems. In small systems with minimal processing loads and small databases, writes can be predictably fast. However, in more complex and large systems writes can take an almost non-deterministic amount of time.
@@ -2545,16 +2043,12 @@ Queues are used to effectively manage requests in large-scale distributed system
 
 ## Working
 
-
-
 Messages are stored in the queue until they are processed and deleted. Each message is processed only once by a single consumer. Here's how it works:
 
 - A producer publishes a job to the queue, then notifies the user of the job status.
 - A consumer picks up the job from the queue, processes it, then signals that the job is complete.
 
 ## Advantages
-
-
 
 Let's discuss some advantages of using a message queue:
 
@@ -2565,79 +2059,53 @@ Let's discuss some advantages of using a message queue:
 
 ## Features
 
-
-
 Now, let's discuss some desired features of message queues:
 
 ### Push or Pull Delivery
-
-
 
 Most message queues provide both push and pull options for retrieving messages. Pull means continuously querying the queue for new messages. Push means that a consumer is notified when a message is available. We can also use long-polling to allow pulls to wait a specified amount of time for new messages to arrive.
 
 ### FIFO (First-In-First-Out) Queues
 
-
-
-In these queues, the oldest (or first) entry, sometimes called the *"head"* of the queue, is processed first.
+In these queues, the oldest (or first) entry, sometimes called the _"head"_ of the queue, is processed first.
 
 ### Schedule or Delay Delivery
-
-
 
 Many message queues support setting a specific delivery time for a message. If we need to have a common delay for all messages, we can set up a delay queue.
 
 ### At-Least-Once Delivery
 
-
-
 Message queues may store multiple copies of messages for redundancy and high availability, and resend messages in the event of communication failures or errors to ensure they are delivered at least once.
 
 ### Exactly-Once Delivery
-
-
 
 When duplicates can't be tolerated, FIFO (first-in-first-out) message queues will make sure that each message is delivered exactly once (and only once) by filtering out duplicates automatically.
 
 ### Dead-letter Queues
 
-
-
 A dead-letter queue is a queue to which other queues can send messages that can't be processed successfully. This makes it easy to set them aside for further inspection without blocking the queue processing or spending CPU cycles on a message that might never be consumed successfully.
 
 ### Ordering
-
-
 
 Most message queues provide best-effort ordering which ensures that messages are generally delivered in the same order as they're sent and that a message is delivered at least once.
 
 ### Poison-pill Messages
 
-
-
 Poison pills are special messages that can be received, but not processed. They are a mechanism used in order to signal a consumer to end its work so it is no longer waiting for new inputs, and are similar to closing a socket in a client/server model.
 
 ### Security
-
-
 
 Message queues will authenticate applications that try to access the queue, this allows us to encrypt messages over the network as well as in the queue itself.
 
 ### Task Queues
 
-
-
 Tasks queues receive tasks and their related data, run them, then deliver their results. They can support scheduling and can be used to run computationally-intensive jobs in the background.
 
 ## Backpressure
 
-
-
 If queues start to grow significantly, the queue size can become larger than memory, resulting in cache misses, disk reads, and even slower performance. Backpressure can help by limiting the queue size, thereby maintaining a high throughput rate and good response times for jobs already in the queue. Once the queue fills up, clients get a server busy or HTTP 503 status code to try again later. Clients can retry the request at a later time, perhaps with [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) strategy.
 
 ## Examples
-
-
 
 Following are some widely used message queues:
 
@@ -2648,8 +2116,6 @@ Following are some widely used message queues:
 
 # Publish-Subscribe
 
-
-
 Similar to a message queue, publish-subscribe is also a form of service-to-service communication that facilitates asynchronous communication. In a pub/sub model, any message published to a topic is pushed immediately to all the subscribers of the topic.
 
 [![publish-subscribe](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/publish-subscribe/publish-subscribe.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/publish-subscribe/publish-subscribe.png)
@@ -2658,70 +2124,50 @@ The subscribers to the message topic often perform different functions, and can 
 
 ## Working
 
-
-
 Unlike message queues, which batch messages until they are retrieved, message topics transfer messages with little or no queuing and push them out immediately to all subscribers. Here's how it works:
 
 - A message topic provides a lightweight mechanism to broadcast asynchronous event notifications and endpoints that allow software components to connect to the topic in order to send and receive those messages.
-- To broadcast a message, a component called a *publisher* simply pushes a message to the topic.
-- All components that subscribe to the topic (known as *subscribers*) will receive every message that was broadcasted.
+- To broadcast a message, a component called a _publisher_ simply pushes a message to the topic.
+- All components that subscribe to the topic (known as _subscribers_) will receive every message that was broadcasted.
 
 ## Advantages
 
-
-
 Let's discuss some advantages of using publish-subscribe:
 
-- **Eliminate Polling**: Message topics allow instantaneous, push-based delivery, eliminating the need for message consumers to periodically check or *"poll"* for new information and updates. This promotes faster response time and reduces the delivery latency which can be particularly problematic in systems where delays cannot be tolerated.
+- **Eliminate Polling**: Message topics allow instantaneous, push-based delivery, eliminating the need for message consumers to periodically check or _"poll"_ for new information and updates. This promotes faster response time and reduces the delivery latency which can be particularly problematic in systems where delays cannot be tolerated.
 - **Dynamic Targeting**: Pub/Sub makes the discovery of services easier, more natural, and less error-prone. Instead of maintaining a roster of peers where an application can send messages, a publisher will simply post messages to a topic. Then, any interested party will subscribe its endpoint to the topic, and start receiving these messages. Subscribers can change, upgrade, multiply or disappear and the system dynamically adjusts.
 - **Decoupled and Independent Scaling**: Publishers and subscribers are decoupled and work independently from each other, which allows us to develop and scale them independently.
 - **Simplify Communication**: The Publish-Subscribe model reduces complexity by removing all the point-to-point connections with a single connection to a message topic, which will manage subscriptions and decide what messages should be delivered to which endpoints.
 
 ## Features
 
-
-
 Now, let's discuss some desired features of publish-subscribe:
 
 ### Push Delivery
-
-
 
 Pub/Sub messaging instantly pushes asynchronous event notifications when messages are published to the message topic. Subscribers are notified when a message is available.
 
 ### Multiple Delivery Protocols
 
-
-
 In the Publish-Subscribe model, topics can typically connect to multiple types of endpoints, such as message queues, serverless functions, HTTP servers, etc.
 
 ### Fanout
-
-
 
 This scenario happens when a message is sent to a topic and then replicated and pushed to multiple endpoints. Fanout provides asynchronous event notifications which in turn allows for parallel processing.
 
 ### Filtering
 
-
-
 This feature empowers the subscriber to create a message filtering policy so that it will only get the notifications it is interested in, as opposed to receiving every single message posted to the topic.
 
 ### Durability
-
-
 
 Pub/Sub messaging services often provide very high durability, and at least once delivery, by storing copies of the same message on multiple servers.
 
 ### Security
 
-
-
 Message topics authenticate applications that try to publish content, this allows us to use encrypted endpoints and encrypt messages in transit over the network.
 
 ## Examples
-
-
 
 Here are some commonly used publish-subscribe technologies:
 
@@ -2730,15 +2176,11 @@ Here are some commonly used publish-subscribe technologies:
 
 # Enterprise Service Bus (ESB)
 
-
-
 An Enterprise Service Bus (ESB) is an architectural pattern whereby a centralized software component performs integrations between applications. It performs transformations of data models, handles connectivity, performs message routing, converts communication protocols, and potentially manages the composition of multiple requests. The ESB can make these integrations and transformations available as a service interface for reuse by new applications.
 
 [![enterprise-service-bus](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/enterprise-service-bus/enterprise-service-bus.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/enterprise-service-bus/enterprise-service-bus.png)
 
 ## Advantages
-
-
 
 In theory, a centralized ESB offers the potential to standardize and dramatically simplify communication, messaging, and integration between services across the enterprise. Here are some advantages of using an ESB:
 
@@ -2747,8 +2189,6 @@ In theory, a centralized ESB offers the potential to standardize and dramaticall
 - **Greater resilience**: Failure of one component does not impact the others, and each microservice can adhere to its own availability requirements without risking the availability of other components in the system.
 
 ## Disadvantages
-
-
 
 While ESBs were deployed successfully in many organizations, in many other organizations the ESB came to be seen as a bottleneck. Here are some disadvantages of using an ESB:
 
@@ -2760,8 +2200,6 @@ While ESBs were deployed successfully in many organizations, in many other organ
 
 ## Examples
 
-
-
 Below are some widely used Enterprise Service Bus (ESB) technologies:
 
 - [Azure Service Bus](https://azure.microsoft.com/en-in/services/service-bus)
@@ -2771,19 +2209,13 @@ Below are some widely used Enterprise Service Bus (ESB) technologies:
 
 # Monoliths and Microservices
 
-
-
 ## Monoliths
-
-
 
 A monolith is a self-contained and independent application. It is built as a single unit and is responsible for not just a particular task, but can perform every step needed to satisfy a business need.
 
 [![monolith](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/monolith.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/monolith.png)
 
 ### Advantages
-
-
 
 Following are some advantages of monoliths:
 
@@ -2793,8 +2225,6 @@ Following are some advantages of monoliths:
 - Supports ACID transactions.
 
 ### Disadvantages
-
-
 
 Some common disadvantages of monoliths are:
 
@@ -2807,15 +2237,11 @@ Some common disadvantages of monoliths are:
 
 ## Modular Monoliths
 
-
-
-A Modular Monolith is an approach where we build and deploy a single application (that's the *Monolith* part), but we build it in a way that breaks up the code into independent modules for each of the features needed in our application.
+A Modular Monolith is an approach where we build and deploy a single application (that's the _Monolith_ part), but we build it in a way that breaks up the code into independent modules for each of the features needed in our application.
 
 This approach reduces the dependencies of a module in such as way that we can enhance or change a module without affecting other modules. When done right, this can be really beneficial in the long term as it reduces the complexity that comes with maintaining a monolith as the system grows.
 
 ## Microservices
-
-
 
 A microservices architecture consists of a collection of small, autonomous services where each service is self-contained and should implement a single business capability within a bounded context. A bounded context is a natural division of business logic that provides an explicit boundary within which a domain model exists.
 
@@ -2827,19 +2253,15 @@ Services are responsible for persisting their own data or external state (databa
 
 ### Characteristics
 
-
-
 The microservices architecture style has the following characteristics:
 
 - **Loosely coupled**: Services should be loosely coupled so that they can be independently deployed and scaled. This will lead to the decentralization of development teams and thus, enabling them to develop and deploy faster with minimal constraints and operational dependencies.
-- **Small but focused**: It's about scope and responsibilities and not size, a service should be focused on a specific problem. Basically, *"It does one thing and does it well"*. Ideally, they can be independent of the underlying architecture.
+- **Small but focused**: It's about scope and responsibilities and not size, a service should be focused on a specific problem. Basically, _"It does one thing and does it well"_. Ideally, they can be independent of the underlying architecture.
 - **Built for businesses**: The microservices architecture is usually organized around business capabilities and priorities.
 - **Resilience & Fault tolerance**: Services should be designed in such a way that they still function in case of failure or errors. In environments with independently deployable services, failure tolerance is of the highest importance.
 - **Highly maintainable**: Service should be easy to maintain and test because services that cannot be maintained will be rewritten.
 
 ### Advantages
-
-
 
 Here are some advantages of microservices architecture:
 
@@ -2852,8 +2274,6 @@ Here are some advantages of microservices architecture:
 
 ### Disadvantages
 
-
-
 Microservices architecture brings its own set of challenges:
 
 - Complexity of a distributed system.
@@ -2864,8 +2284,6 @@ Microservices architecture brings its own set of challenges:
 - Network congestion and latency.
 
 ### Best practices
-
-
 
 Let's discuss some microservices best practices:
 
@@ -2881,8 +2299,6 @@ Let's discuss some microservices best practices:
 
 ### Pitfalls
 
-
-
 Below are some common pitfalls of microservices architecture:
 
 - Service boundaries are not based on the business domain.
@@ -2895,8 +2311,6 @@ Below are some common pitfalls of microservices architecture:
 - Lack of design for fault tolerance may result in cascading failures.
 
 ## Beware of the distributed monolith
-
-
 
 Distributed Monolith is a system that resembles the microservices architecture but is tightly coupled within itself like a monolithic application. Adopting microservices architecture comes with a lot of advantages. But while making one, there are good chances that we might end up with a distributed monolith.
 
@@ -2912,15 +2326,11 @@ One of the primary reasons to build an application using microservices architect
 
 ## Microservices vs Service-oriented architecture (SOA)
 
-
-
-You might have seen *Service-oriented architecture (SOA)* mentioned around the internet, sometimes even interchangeably with microservices, but they are different from each other and the main distinction between the two approaches comes down to *scope*.
+You might have seen _Service-oriented architecture (SOA)_ mentioned around the internet, sometimes even interchangeably with microservices, but they are different from each other and the main distinction between the two approaches comes down to _scope_.
 
 Service-oriented architecture (SOA) defines a way to make software components reusable via service interfaces. These interfaces utilize common communication standards and focus on maximizing application service reusability whereas microservices are built as a collection of various smallest independent service units focused on team autonomy and decoupling.
 
 ## Why you don't need microservices
-
-
 
 [![architecture-range](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/architecture-range.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/architecture-range.png)
 
@@ -2930,33 +2340,27 @@ Well, it depends. While each approach has its own advantages and disadvantages, 
 
 Before making the decision to move to microservices architecture, you need to ask yourself questions like:
 
-- *"Is the team too large to work effectively on a shared codebase?"*
-- *"Are teams blocked on other teams?"*
-- *"Does microservices deliver clear business value for us?"*
-- *"Is my business mature enough to use microservices?"*
-- *"Is our current architecture limiting us with communication overhead?"*
+- _"Is the team too large to work effectively on a shared codebase?"_
+- _"Are teams blocked on other teams?"_
+- _"Does microservices deliver clear business value for us?"_
+- _"Is my business mature enough to use microservices?"_
+- _"Is our current architecture limiting us with communication overhead?"_
 
 If your application does not require to be broken down into microservices, you don't need this. There is no absolute necessity that all applications should be broken down into microservices.
 
 We frequently draw inspiration from companies such as Netflix and their use of microservices, but we overlook the fact that we are not Netflix. They went through a lot of iterations and models before they had a market-ready solution, and this architecture became acceptable for them when they identified and solved the problem they were trying to tackle.
 
-That's why it's essential to understand in-depth if your business *actually* needs microservices. What I'm trying to say is microservices are solutions to complex concerns and if your business doesn't have complex issues, you don't need them.
+That's why it's essential to understand in-depth if your business _actually_ needs microservices. What I'm trying to say is microservices are solutions to complex concerns and if your business doesn't have complex issues, you don't need them.
 
 # Event-Driven Architecture (EDA)
-
-
 
 Event-Driven Architecture (EDA) is about using events as a way to communicate within a system. Generally, leveraging a message broker to publish and consume events asynchronously. The publisher is unaware of who is consuming an event and the consumers are unaware of each other. Event-Driven Architecture is simply a way of achieving loose coupling between services within a system.
 
 ## What is an event?
 
-
-
 An event is a data point that represents state changes in a system. It doesn't specify what should happen and how the change should modify the system, it only notifies the system of a particular state change. When a user makes an action, they trigger an event.
 
 ## Components
-
-
 
 Event-driven architectures have three key components:
 
@@ -2966,11 +2370,9 @@ Event-driven architectures have three key components:
 
 [![event-driven-architecture](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/event-driven-architecture/event-driven-architecture.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/event-driven-architecture/event-driven-architecture.png)
 
-*Note: Dots in the diagram represents different events in the system.*
+_Note: Dots in the diagram represents different events in the system._
 
 ## Patterns
-
-
 
 There are several ways to implement the event-driven architecture, and which method we use depends on the use case but here are some common examples:
 
@@ -2979,11 +2381,9 @@ There are several ways to implement the event-driven architecture, and which met
 - [Event Sourcing](https://karanpratapsingh.com/courses/system-design/event-sourcing)
 - [Command and Query Responsibility Segregation (CQRS)](https://karanpratapsingh.com/courses/system-design/command-and-query-responsibility-segregation)
 
-*Note: Each of these methods is discussed separately.*
+_Note: Each of these methods is discussed separately._
 
 ## Advantages
-
-
 
 Let's discuss some advantages:
 
@@ -2994,8 +2394,6 @@ Let's discuss some advantages:
 
 ## Challenges
 
-
-
 Here are some challenges of event-drive architecture:
 
 - Guaranteed delivery.
@@ -3005,8 +2403,6 @@ Here are some challenges of event-drive architecture:
 
 ## Use cases
 
-
-
 Below are some common use cases where event-driven architectures are beneficial:
 
 - Metadata and metrics.
@@ -3015,8 +2411,6 @@ Below are some common use cases where event-driven architectures are beneficial:
 - Fanout and parallel processing.
 
 ## Examples
-
-
 
 Here are some widely used technologies for implementing event-driven architectures:
 
@@ -3028,8 +2422,6 @@ Here are some widely used technologies for implementing event-driven architectur
 
 # Event Sourcing
 
-
-
 Instead of storing just the current state of the data in a domain, use an append-only store to record the full series of actions taken on that data. The store acts as the system of record and can be used to materialize the domain objects.
 
 [![event-sourcing](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/event-sourcing/event-sourcing.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/event-sourcing/event-sourcing.png)
@@ -3038,15 +2430,11 @@ This can simplify tasks in complex domains, by avoiding the need to synchronize 
 
 ## Event sourcing vs Event-Driven Architecture (EDA)
 
-
-
 Event sourcing is seemingly constantly being confused with [Event-driven Architecture (EDA)](https://karanpratapsingh.com/courses/system-design/event-driven-architecture). Event-driven architecture is about using events to communicate between service boundaries. Generally, leveraging a message broker to publish and consume events asynchronously within other boundaries.
 
 Whereas, event sourcing is about using events as a state, which is a different approach to storing data. Rather than storing the current state, we're instead going to be storing events. Also, event sourcing is one of the several patterns to implement an event-driven architecture.
 
 ## Advantages
-
-
 
 Let's discuss some advantages of using event sourcing:
 
@@ -3057,8 +2445,6 @@ Let's discuss some advantages of using event sourcing:
 
 ## Disadvantages
 
-
-
 Following are the disadvantages of event sourcing:
 
 - Requires an extremely efficient network infrastructure.
@@ -3067,11 +2453,9 @@ Following are the disadvantages of event sourcing:
 
 # Command and Query Responsibility Segregation (CQRS)
 
-
-
 Command Query Responsibility Segregation (CQRS) is an architectural pattern that divides a system's actions into commands and queries. It was first described by [Greg Young](https://twitter.com/gregyoung).
 
-In CQRS, a *command* is an instruction, a directive to perform a specific task. It is an intention to change something and doesn't return a value, only an indication of success or failure. And, a *query* is a request for information that doesn't change the system's state or cause any side effects.
+In CQRS, a _command_ is an instruction, a directive to perform a specific task. It is an intention to change something and doesn't return a value, only an indication of success or failure. And, a _query_ is a request for information that doesn't change the system's state or cause any side effects.
 
 [![command-and-query-responsibility-segregation](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/command-and-query-responsibility-segregation/command-and-query-responsibility-segregation.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/command-and-query-responsibility-segregation/command-and-query-responsibility-segregation.png)
 
@@ -3079,15 +2463,11 @@ The core principle of CQRS is the separation of commands and queries. They perfo
 
 ## CQRS with Event Sourcing
 
-
-
 The CQRS pattern is often used along with the Event Sourcing pattern. CQRS-based systems use separate read and write data models, each tailored to relevant tasks and often located in physically separate stores.
 
 When used with the Event Sourcing pattern, the store of events is the write model and is the official source of information. The read model of a CQRS-based system provides materialized views of the data, typically as highly denormalized views.
 
 ## Advantages
-
-
 
 Let's discuss some advantages of CQRS:
 
@@ -3099,8 +2479,6 @@ Let's discuss some advantages of CQRS:
 
 ## Disadvantages
 
-
-
 Below are some disadvantages of CQRS:
 
 - More complex application design.
@@ -3109,8 +2487,6 @@ Below are some disadvantages of CQRS:
 - Increased system maintenance efforts.
 
 ## Use cases
-
-
 
 Here are some scenarios where CQRS will be helpful:
 
@@ -3121,21 +2497,15 @@ Here are some scenarios where CQRS will be helpful:
 
 # API Gateway
 
-
-
 The API Gateway is an API management tool that sits between a client and a collection of backend services. It is a single entry point into a system that encapsulates the internal system architecture and provides an API that is tailored to each client. It also has other responsibilities such as authentication, monitoring, load balancing, caching, throttling, logging, etc.
 
 [![api-gateway](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/api-gateway/api-gateway.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-III/api-gateway/api-gateway.png)
 
 ## Why do we need an API Gateway?
 
-
-
 The granularity of APIs provided by microservices is often different than what a client needs. Microservices typically provide fine-grained APIs, which means that clients need to interact with multiple services. Hence, an API gateway can provide a single entry point for all clients with some additional features and better management.
 
 ## Features
-
-
 
 Below are some desired features of an API Gateway:
 
@@ -3155,8 +2525,6 @@ Below are some desired features of an API Gateway:
 
 ## Advantages
 
-
-
 Let's look at some advantages of using an API Gateway:
 
 - Encapsulates the internal structure of an API.
@@ -3165,8 +2533,6 @@ Let's look at some advantages of using an API Gateway:
 - Monitoring, analytics, tracing, and other such features.
 
 ## Disadvantages
-
-
 
 Here are some possible disadvantages of an API Gateway:
 
@@ -3177,8 +2543,6 @@ Here are some possible disadvantages of an API Gateway:
 
 ## Backend For Frontend (BFF) pattern
 
-
-
 In the Backend For Frontend (BFF) pattern, we create separate backend services to be consumed by specific frontend applications or interfaces. This pattern is useful when we want to avoid customizing a single backend for multiple interfaces. This pattern was first described by [Sam Newman](https://samnewman.io/).
 
 Also, sometimes the output of data returned by the microservices to the front end is not in the exact format or filtered as needed by the front end. To solve this issue, the frontend should have some logic to reformat the data, and therefore, we can use BFF to shift some of this logic to the intermediate layer.
@@ -3187,11 +2551,9 @@ Also, sometimes the output of data returned by the microservices to the front en
 
 The primary function of the backend for the frontend pattern is to get the required data from the appropriate service, format the data, and sent it to the frontend.
 
-*[GraphQL](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc#graphql) performs really well as a backend for frontend (BFF).*
+_[GraphQL](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc#graphql) performs really well as a backend for frontend (BFF)._
 
 ### When to use this pattern?
-
-
 
 We should consider using a Backend For Frontend (BFF) pattern when:
 
@@ -3200,8 +2562,6 @@ We should consider using a Backend For Frontend (BFF) pattern when:
 - Customizations are made to a general-purpose backend to accommodate multiple interfaces.
 
 ## Examples
-
-
 
 Following are some widely used gateways technologies:
 
@@ -3212,13 +2572,9 @@ Following are some widely used gateways technologies:
 
 # REST, GraphQL, gRPC
 
-
-
 A good API design is always a crucial part of any system. But it is also important to pick the right API technology. So, in this tutorial, we will briefly discuss different API technologies such as REST, GraphQL, and gRPC.
 
 ## What's an API?
-
-
 
 Before we even get into API technologies, let's first understand what is an API.
 
@@ -3228,32 +2584,28 @@ In other words, if you want to interact with a computer or system to retrieve in
 
 ## REST
 
-
-
 A [REST API](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) (also known as RESTful API) is an application programming interface that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for Representational State Transfer and it was first introduced by [Roy Fielding](https://roy.gbiv.com/) in the year 2000.
 
-*In REST API, the fundamental unit is a resource.*
+_In REST API, the fundamental unit is a resource._
 
 ### Concepts
-
-
 
 Let's discuss some concepts of a RESTful API.
 
 **Constraints**
 
-In order for an API to be considered *RESTful*, it has to conform to these architectural constraints:
+In order for an API to be considered _RESTful_, it has to conform to these architectural constraints:
 
 - **Uniform Interface**: There should be a uniform way of interacting with a given server.
 - **Client-Server**: A client-server architecture managed through HTTP.
 - **Stateless**: No client context shall be stored on the server between requests.
 - **Cacheable**: Every response should include whether the response is cacheable or not and for how much duration responses can be cached at the client-side.
 - **Layered system**: An application architecture needs to be composed of multiple layers.
-- **Code on demand**: Return executable code to support a part of your application. *(optional)*
+- **Code on demand**: Return executable code to support a part of your application. _(optional)_
 
 **HTTP Verbs**
 
-HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as *HTTP verbs*. Each of them implements a different semantic, but some common features are shared by a group of them.
+HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_. Each of them implements a different semantic, but some common features are shared by a group of them.
 
 Below are some commonly used HTTP verbs:
 
@@ -3280,8 +2632,6 @@ For example, HTTP 200 means that the request was successful.
 
 ### Advantages
 
-
-
 Let's discuss some advantages of REST API:
 
 - Simple and easy to understand.
@@ -3291,8 +2641,6 @@ Let's discuss some advantages of REST API:
 
 ### Disadvantages
 
-
-
 Let's discuss some disadvantages of REST API:
 
 - Over-fetching of data.
@@ -3300,13 +2648,9 @@ Let's discuss some disadvantages of REST API:
 
 ### Use cases
 
-
-
 REST APIs are pretty much used universally and are the default standard for designing APIs. Overall REST APIs are quite flexible and can fit almost all scenarios.
 
 ### Example
-
-
 
 Here's an example usage of a REST API that operates on a **users** resource.
 
@@ -3318,21 +2662,17 @@ Here's an example usage of a REST API that operates on a **users** resource.
 | /users/{id} | PATCH     | Update a user by id |
 | /users/{id} | DELETE    | Delete a user by id |
 
-*There is so much more to learn when it comes to REST APIs, I will highly recommend looking into [Hypermedia as the Engine of Application State (HATEOAS)](https://en.wikipedia.org/wiki/HATEOAS).*
+_There is so much more to learn when it comes to REST APIs, I will highly recommend looking into [Hypermedia as the Engine of Application State (HATEOAS)](https://en.wikipedia.org/wiki/HATEOAS)._
 
 ## GraphQL
-
-
 
 [GraphQL](https://graphql.org/) is a query language and server-side runtime for APIs that prioritizes giving clients exactly the data they request and no more. It was developed by [Facebook](https://engineering.fb.com/) and later open-sourced in 2015.
 
 GraphQL is designed to make APIs fast, flexible, and developer-friendly. Additionally, GraphQL gives API maintainers the flexibility to add or deprecate fields without impacting existing queries. Developers can build APIs with whatever methods they prefer, and the GraphQL specification will ensure they function in predictable ways to clients.
 
-*In GraphQL, the fundamental unit is a query.*
+_In GraphQL, the fundamental unit is a query._
 
 ### Concepts
-
-
 
 Let's briefly discuss some key concepts in GraphQL:
 
@@ -3350,8 +2690,6 @@ Resolver is a collection of functions that generate responses for a GraphQL quer
 
 ### Advantages
 
-
-
 Let's discuss some advantages of GraphQL:
 
 - Eliminates over-fetching of data.
@@ -3360,8 +2698,6 @@ Let's discuss some advantages of GraphQL:
 - Payload optimization.
 
 ### Disadvantages
-
-
 
 Let's discuss some disadvantages of GraphQL:
 
@@ -3372,8 +2708,6 @@ Let's discuss some disadvantages of GraphQL:
 
 ### Use cases
 
-
-
 GraphQL proves to be essential in the following scenarios:
 
 - Reducing app bandwidth usage as we can query multiple resources in a single query.
@@ -3381,8 +2715,6 @@ GraphQL proves to be essential in the following scenarios:
 - When we are working with a graph-like data model.
 
 ### Example
-
-
 
 Here's a GraphQL schema that defines a `User` type and a `Query` type.
 
@@ -3399,8 +2731,6 @@ type User {
 }
 ```
 
-
-
 Using the above schema, the client can request the required fields easily without having to fetch the entire resource or guess what the API might return.
 
 ```
@@ -3412,8 +2742,6 @@ Using the above schema, the client can request the required fields easily withou
   }
 }
 ```
-
-
 
 This will give the following response to the client.
 
@@ -3427,19 +2755,13 @@ This will give the following response to the client.
 }
 ```
 
-
-
-*Learn more about GraphQL at [graphql.org](https://graphql.org/).*
+_Learn more about GraphQL at [graphql.org](https://graphql.org/)._
 
 ## gRPC
-
-
 
 [gRPC](https://grpc.io/) is a modern open-source high-performance [Remote Procedure Call (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call) framework that can run in any environment. It can efficiently connect services in and across data centers with pluggable support for load balancing, tracing, health checking, authentication and much more.
 
 ### Concepts
-
-
 
 Let's discuss some key concepts of gRPC.
 
@@ -3453,8 +2775,6 @@ Like many RPC systems, gRPC is based on the idea of defining a service and speci
 
 ### Advantages
 
-
-
 Let's discuss some advantages of gRPC:
 
 - Lightweight and efficient.
@@ -3463,8 +2783,6 @@ Let's discuss some advantages of gRPC:
 - Bi-directional streaming.
 
 ### Disadvantages
-
-
 
 Let's discuss some disadvantages of gRPC:
 
@@ -3475,8 +2793,6 @@ Let's discuss some disadvantages of gRPC:
 
 ### Use cases
 
-
-
 Below are some good use cases for gRPC:
 
 - Real-time communication via bi-directional streaming.
@@ -3485,8 +2801,6 @@ Below are some good use cases for gRPC:
 - Polyglot environments.
 
 ### Example
-
-
 
 Here's a basic example of a gRPC service defined in a `*.proto` file. Using this definition, we can easily code generate the `HelloService` service in the programming language of our choice.
 
@@ -3504,16 +2818,12 @@ message HelloResponse {
 }
 ```
 
-
-
 ## REST vs GraphQL vs gRPC
-
-
 
 Now that we know how these API designing techniques work, let's compare them based on the following parameters:
 
 - Will it cause tight coupling?
-- How *chatty* (distinct API calls to get needed information) are the APIs?
+- How _chatty_ (distinct API calls to get needed information) are the APIs?
 - What's the performance like?
 - How complex is it to integrate?
 - How well does the caching work?
@@ -3529,19 +2839,13 @@ Now that we know how these API designing techniques work, let's compare them bas
 
 ### Which API technology is better?
 
-
-
 Well, the answer is none of them. There is no silver bullet as each of these technologies has its own advantages and disadvantages. Users only care about using our APIs in a consistent way, so make sure to focus on your domain and requirements when designing your API.
 
 # Long polling, WebSockets, Server-Sent Events (SSE)
 
-
-
 Web applications were initially developed around a client-server model, where the web client is always the initiator of transactions like requesting data from the server. Thus, there was no mechanism for the server to independently send, or push, data to the client without the client first making a request. Let's discuss some approaches to overcome this problem.
 
 ## Long polling
-
-
 
 HTTP Long polling is a technique used to push information to a client as soon as possible from the server. As a result, the server does not have to wait for the client to send a request.
 
@@ -3553,8 +2857,6 @@ Once the client receives a response, it immediately sends a new request to the s
 
 ### Working
 
-
-
 Let's understand how long polling works:
 
 1. The client makes an initial request and waits for a response.
@@ -3564,16 +2866,12 @@ Let's understand how long polling works:
 
 ### Advantages
 
-
-
 Here are some advantages of long polling:
 
 - Easy to implement, good for small-scale projects.
 - Nearly universally supported.
 
 ### Disadvantages
-
-
 
 A major downside of long polling is that it is usually not scalable. Below are some of the other reasons:
 
@@ -3582,8 +2880,6 @@ A major downside of long polling is that it is usually not scalable. Below are s
 - Increased latency as the server needs to wait for a new request.
 
 ## WebSockets
-
-
 
 WebSocket provides full-duplex communication channels over a single TCP connection. It is a persistent connection between a client and a server that both parties can use to start sending data at any time.
 
@@ -3594,8 +2890,6 @@ The client establishes a WebSocket connection through a process known as the Web
 This is made possible by providing a standardized way for the server to send content to the client without being asked and allowing for messages to be passed back and forth while keeping the connection open.
 
 ### Working
-
-
 
 Let's understand how WebSockets work:
 
@@ -3608,8 +2902,6 @@ Let's understand how WebSockets work:
 
 ### Advantages
 
-
-
 Below are some advantages of WebSockets:
 
 - Full-duplex asynchronous messaging.
@@ -3618,16 +2910,12 @@ Below are some advantages of WebSockets:
 
 ### Disadvantages
 
-
-
 Let's discuss some disadvantages of WebSockets:
 
 - Terminated connections aren't automatically recovered.
 - Older browsers don't support WebSockets (becoming less relevant).
 
 ## Server-Sent Events (SSE)
-
-
 
 Server-Sent Events (SSE) is a way of establishing long-term communication between client and server that enables the server to proactively push data to the client.
 
@@ -3637,8 +2925,6 @@ It is unidirectional, meaning once the client sends the request it can only rece
 
 ### Working
 
-
-
 Let's understand how server-sent events work:
 
 1. The client makes a request to the server.
@@ -3647,15 +2933,11 @@ Let's understand how server-sent events work:
 
 ### Advantages
 
-
-
 - Simple to implement and use for both client and server.
 - Supported by most browsers.
 - No trouble with firewalls.
 
 ### Disadvantages
-
-
 
 - Unidirectional nature can be limiting.
 - Limitation for the maximum number of open connections.
@@ -3663,19 +2945,13 @@ Let's understand how server-sent events work:
 
 # Geohashing and Quadtrees
 
-
-
 ## Geohashing
-
-
 
 Geohashing is a [geocoding](https://en.wikipedia.org/wiki/Address_geocoding) method used to encode geographic coordinates such as latitude and longitude into short alphanumeric strings. It was created by [Gustavo Niemeyer](https://twitter.com/gniemeyer) in 2008.
 
 For example, San Francisco with coordinates `37.7564, -122.4016` can be represented in geohash as `9q8yy9mf`.
 
 ### How does Geohashing work?
-
-
 
 Geohash is a hierarchical spatial index that uses Base-32 alphabet encoding, the first character in a geohash identifies the initial location as one of the 32 cells. This cell will also contain 32 cells. This means that to represent a point, the world is recursively divided into smaller and smaller cells with each additional bit until the desired precision is attained. The precision factor also determines the size of the cell.
 
@@ -3704,8 +2980,6 @@ The cell sizes of the geohashes of different lengths are as follows:
 
 ### Use cases
 
-
-
 Here are some common use cases for Geohashing:
 
 - It is a simple way to represent and store a location in a database.
@@ -3713,8 +2987,6 @@ Here are some common use cases for Geohashing:
 - We can efficiently find the nearest neighbors of a point through very simple string comparisons and efficient searching of indexes.
 
 ### Examples
-
-
 
 Geohashing is widely used and it is supported by popular databases.
 
@@ -3725,15 +2997,11 @@ Geohashing is widely used and it is supported by popular databases.
 
 ## Quadtrees
 
-
-
 A quadtree is a tree data structure in which each internal node has exactly four children. They are often used to partition a two-dimensional space by recursively subdividing it into four quadrants or regions. Each child or leaf node stores spatial information. Quadtrees are the two-dimensional analog of [Octrees](https://en.wikipedia.org/wiki/Octree) which are used to partition three-dimensional space.
 
 [![quadtree](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree.png)
 
 ### Types of Quadtrees
-
-
 
 Quadtrees may be classified according to the type of data they represent, including areas, points, lines, and curves. The following are common types of quadtrees:
 
@@ -3745,8 +3013,6 @@ Quadtrees may be classified according to the type of data they represent, includ
 
 ### Why do we need Quadtrees?
 
-
-
 Aren't latitudes and longitudes enough? Why do we need quadtrees? While in theory using latitude and longitude we can determine things such as how close points are to each other using [euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance), for practical use cases it is simply not scalable because of its CPU-intensive nature with large data sets.
 
 [![quadtree-subdivision](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree-subdivision.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree-subdivision.png)
@@ -3754,8 +3020,6 @@ Aren't latitudes and longitudes enough? Why do we need quadtrees? While in theor
 Quadtrees enable us to search points within a two-dimensional range efficiently, where those points are defined as latitude/longitude coordinates or as cartesian (x, y) coordinates. Additionally, we can save further computation by only subdividing a node after a certain threshold. And with the application of mapping algorithms such as the [Hilbert curve](https://en.wikipedia.org/wiki/Hilbert_curve), we can easily improve range query performance.
 
 ### Use cases
-
-
 
 Below are some common uses of quadtrees:
 
@@ -3767,8 +3031,6 @@ Below are some common uses of quadtrees:
 
 # Circuit breaker
 
-
-
 The circuit breaker is a design pattern used to detect failures and encapsulates the logic of preventing a failure from constantly recurring during maintenance, temporary external system failure, or unexpected system difficulties.
 
 [![circuit-breaker](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/circuit-breaker/circuit-breaker.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/circuit-breaker/circuit-breaker.png)
@@ -3777,45 +3039,31 @@ The basic idea behind the circuit breaker is very simple. We wrap a protected fu
 
 ## Why do we need circuit breaking?
 
-
-
 It's common for software systems to make remote calls to software running in different processes, probably on different machines across a network. One of the big differences between in-memory calls and remote calls is that remote calls can fail, or hang without a response until some timeout limit is reached. What's worse is if we have many callers on an unresponsive supplier, then we can run out of critical resources leading to cascading failures across multiple systems.
 
 ## States
-
-
 
 Let's discuss circuit breaker states:
 
 ### Closed
 
-
-
 When everything is normal, the circuit breakers remain closed, and all the request passes through to the services as normal. If the number of failures increases beyond the threshold, the circuit breaker trips and goes into an open state.
 
 ### Open
-
-
 
 In this state circuit breaker returns an error immediately without even invoking the services. The Circuit breakers move into the half-open state after a certain timeout period elapses. Usually, it will have a monitoring system where the timeout will be specified.
 
 ### Half-open
 
-
-
 In this state, the circuit breaker allows a limited number of requests from the service to pass through and invoke the operation. If the requests are successful, then the circuit breaker will go to the closed state. However, if the requests continue to fail, then it goes back to the open state.
 
 # Rate Limiting
-
-
 
 Rate limiting refers to preventing the frequency of an operation from exceeding a defined limit. In large-scale systems, rate limiting is commonly used to protect underlying services and resources. Rate limiting is generally used as a defensive mechanism in distributed systems, so that shared resources can maintain availability. It also protects our APIs from unintended or malicious overuse by limiting the number of requests that can reach our API in a given period of time.
 
 [![rate-limiting](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/rate-limiting/rate-limiting.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/rate-limiting/rate-limiting.png)
 
 ## Why do we need Rate Limiting?
-
-
 
 Rate limiting is a very important part of any large-scale system and it can be used to accomplish the following:
 
@@ -3826,49 +3074,33 @@ Rate limiting is a very important part of any large-scale system and it can be u
 
 ## Algorithms
 
-
-
 There are various algorithms for API rate limiting, each with its advantages and disadvantages. Let's briefly discuss some of these algorithms:
 
 ### Leaky Bucket
-
-
 
 Leaky Bucket is an algorithm that provides a simple, intuitive approach to rate limiting via a queue. When registering a request, the system appends it to the end of the queue. Processing for the first item on the queue occurs at a regular interval or first-in, first-out (FIFO). If the queue is full, then additional requests are discarded (or leaked).
 
 ### Token Bucket
 
-
-
-Here we use a concept of a *bucket*. When a request comes in, a token from the bucket must be taken and processed. The request will be refused if no token is available in the bucket, and the requester will have to try again later. As a result, the token bucket gets refreshed after a certain time period.
+Here we use a concept of a _bucket_. When a request comes in, a token from the bucket must be taken and processed. The request will be refused if no token is available in the bucket, and the requester will have to try again later. As a result, the token bucket gets refreshed after a certain time period.
 
 ### Fixed Window
-
-
 
 The system uses a window size of `n` seconds to track the fixed window algorithm rate. Each incoming request increments the counter for the window. It discards the request if the counter exceeds a threshold.
 
 ### Sliding Log
 
-
-
 Sliding Log rate-limiting involves tracking a time-stamped log for each request. The system stores these logs in a time-sorted hash set or table. It also discards logs with timestamps beyond a threshold. When a new request comes in, we calculate the sum of logs to determine the request rate. If the request would exceed the threshold rate, then it is held.
 
 ### Sliding Window
-
-
 
 Sliding Window is a hybrid approach that combines the fixed window algorithm's low processing cost and the sliding log's improved boundary conditions. Like the fixed window algorithm, we track a counter for each fixed window. Next, we account for a weighted value of the previous window's request rate based on the current timestamp to smooth out bursts of traffic.
 
 ## Rate Limiting in Distributed Systems
 
-
-
 Rate Limiting becomes complicated when distributed systems are involved. The two broad problems that come with rate limiting in distributed systems are:
 
 ### Inconsistencies
-
-
 
 When using a cluster of multiple nodes, we might need to enforce a global rate limit policy. Because if each node were to track its rate limit, a consumer could exceed a global rate limit when sending requests to different nodes. The greater the number of nodes, the more likely the user will exceed the global limit.
 
@@ -3876,33 +3108,23 @@ The simplest way to solve this problem is to use sticky sessions in our load bal
 
 ### Race Conditions
 
+This issue happens when we use a naive _"get-then-set"_ approach, in which we retrieve the current rate limit counter, increment it, and then push it back to the datastore. This model's problem is that additional requests can come through in the time it takes to perform a full cycle of read-increment-store, each attempting to store the increment counter with an invalid (lower) counter value. This allows a consumer to send a very large number of requests to bypass the rate limiting controls.
 
-
-This issue happens when we use a naive *"get-then-set"* approach, in which we retrieve the current rate limit counter, increment it, and then push it back to the datastore. This model's problem is that additional requests can come through in the time it takes to perform a full cycle of read-increment-store, each attempting to store the increment counter with an invalid (lower) counter value. This allows a consumer to send a very large number of requests to bypass the rate limiting controls.
-
-One way to avoid this problem is to use some sort of distributed locking mechanism around the key, preventing any other processes from accessing or writing to the counter. Though the lock will become a significant bottleneck and will not scale well. A better approach might be to use a *"set-then-get"* approach, allowing us to quickly increment and check counter values without letting the atomic operations get in the way.
+One way to avoid this problem is to use some sort of distributed locking mechanism around the key, preventing any other processes from accessing or writing to the counter. Though the lock will become a significant bottleneck and will not scale well. A better approach might be to use a _"set-then-get"_ approach, allowing us to quickly increment and check counter values without letting the atomic operations get in the way.
 
 # Service Discovery
-
-
 
 Service discovery is the detection of services within a computer network. Service Discovery Protocol (SDP) is a networking standard that accomplishes the detection of networks by identifying resources.
 
 ## Why do we need Service Discovery?
 
-
-
 In a monolithic application, services invoke one another through language-level methods or procedure calls. However, modern microservices-based applications typically run in virtualized or containerized environments where the number of instances of a service and their locations change dynamically. Consequently, we need a mechanism that enables the clients of service to make requests to a dynamically changing set of ephemeral service instances.
 
 ## Implementations
 
-
-
 There are two main service discovery patterns:
 
 ### Client-side discovery
-
-
 
 [![client-side-service-discovery](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/client-side-service-discovery.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/client-side-service-discovery.png)
 
@@ -3910,45 +3132,31 @@ In this approach, the client obtains the location of another service by querying
 
 ### Server-side discovery
 
-
-
 [![server-side-service-discovery](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/server-side-service-discovery.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/server-side-service-discovery.png)
 
 In this approach, we use an intermediate component such as a load balancer. The client makes a request to the service via a load balancer which then forwards the request to an available service instance.
 
 ## Service Registry
 
-
-
 A service registry is basically a database containing the network locations of service instances to which the clients can reach out. A Service Registry must be highly available and up-to-date.
 
 ## Service Registration
-
-
 
 We also need a way to obtain service information, often known as service registration. Let's look at two possible service registration approaches:
 
 ### Self-Registration
 
-
-
 When using the self-registration model, a service instance is responsible for registering and de-registering itself in the Service Registry. In addition, if necessary, a service instance sends heartbeat requests to keep its registration alive.
 
 ### Third-party Registration
-
-
 
 The registry keeps track of changes to running instances by polling the deployment environment or subscribing to events. When it detects a newly available service instance, it records it in its database. The Service Registry also de-registers terminated service instances.
 
 ## Service mesh
 
-
-
 Service-to-service communication is essential in a distributed application but routing this communication, both within and across application clusters, becomes increasingly complex as the number of services grows. Service mesh enables managed, observable, and secure communication between individual services. It works with a service discovery protocol to detect services. [Istio](https://istio.io/latest/about/service-mesh) and [envoy](https://www.envoyproxy.io/) are some of the most commonly used service mesh technologies.
 
 ## Examples
-
-
 
 Here are some commonly used service discovery infrastructure tools:
 
@@ -3959,49 +3167,35 @@ Here are some commonly used service discovery infrastructure tools:
 
 # SLA, SLO, SLI
 
-
-
 Let's briefly discuss SLA, SLO, and SLI. These are mostly related to the business and site reliability side of things but good to know nonetheless.
 
 ## Why are they important?
-
-
 
 SLAs, SLOs, and SLIs allow companies to define, track and monitor the promises made for a service to its users. Together, SLAs, SLOs, and SLIs should help teams generate more user trust in their services with an added emphasis on continuous improvement to incident management and response processes.
 
 ## SLA
 
-
-
 An SLA, or Service Level Agreement, is an agreement made between a company and its users of a given service. The SLA defines the different promises that the company makes to users regarding specific metrics, such as service availability.
 
-*SLAs are often written by a company's business or legal team.*
+_SLAs are often written by a company's business or legal team._
 
 ## SLO
-
-
 
 An SLO, or Service Level Objective, is the promise that a company makes to users regarding a specific metric such as incident response or uptime. SLOs exist within an SLA as individual promises contained within the full user agreement. The SLO is the specific goal that the service must meet in order to comply with the SLA. SLOs should always be simple, clearly defined, and easily measured to determine whether or not the objective is being fulfilled.
 
 ## SLI
 
-
-
 An SLI, or Service Level Indicator, is a key metric used to determine whether or not the SLO is being met. It is the measured value of the metric described within the SLO. In order to remain in compliance with the SLA, the SLI's value must always meet or exceed the value determined by the SLO.
 
 # Disaster recovery
-
-
 
 Disaster recovery (DR) is a process of regaining access and functionality of the infrastructure after events like a natural disaster, cyber attack, or even business disruptions.
 
 Disaster recovery relies upon the replication of data and computer processing in an off-premises location not affected by the disaster. When servers go down because of a disaster, a business needs to recover lost data from a second location where the data is backed up. Ideally, an organization can transfer its computer processing to that remote location as well in order to continue operations.
 
-*Disaster Recovery is often not actively discussed during system design interviews but it's important to have some basic understanding of this topic. You can learn more about disaster recovery from [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/plan-for-disaster-recovery-dr.html).*
+_Disaster Recovery is often not actively discussed during system design interviews but it's important to have some basic understanding of this topic. You can learn more about disaster recovery from [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/plan-for-disaster-recovery-dr.html)._
 
 ## Why is disaster recovery important?
-
-
 
 Disaster recovery can have the following benefits:
 
@@ -4012,57 +3206,39 @@ Disaster recovery can have the following benefits:
 
 ## Terms
 
-
-
 Let's discuss some important terms relevantly for disaster recovery:
 
 [![disaster-recovery](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/disaster-recovery/disaster-recovery.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/disaster-recovery/disaster-recovery.png)
 
 ### RTO
 
-
-
 Recovery Time Objective (RTO) is the maximum acceptable delay between the interruption of service and restoration of service. This determines what is considered an acceptable time window when service is unavailable.
 
 ### RPO
-
-
 
 Recovery Point Objective (RPO) is the maximum acceptable amount of time since the last data recovery point. This determines what is considered an acceptable loss of data between the last recovery point and the interruption of service.
 
 ## Strategies
 
-
-
 A variety of disaster recovery (DR) strategies can be part of a disaster recovery plan.
 
 ### Back-up
-
-
 
 This is the simplest type of disaster recovery and involves storing data off-site or on a removable drive.
 
 ### Cold Site
 
-
-
 In this type of disaster recovery, an organization sets up basic infrastructure in a second site.
 
 ### Hot site
-
-
 
 A hot site maintains up-to-date copies of data at all times. Hot sites are time-consuming to set up and more expensive than cold sites, but they dramatically reduce downtime.
 
 # Virtual Machines (VMs) and Containers
 
-
-
 Before we discuss virtualization vs containerization, let's learn what are virtual machines (VMs) and Containers.
 
 ## Virtual Machines (VM)
-
-
 
 A Virtual Machine (VM) is a virtual environment that functions as a virtual computer system with its own CPU, memory, network interface, and storage, created on a physical hardware system. A software called a hypervisor separates the machine's resources from the hardware and provisions them appropriately so they can be used by the VM.
 
@@ -4070,13 +3246,9 @@ VMs are isolated from the rest of the system, and multiple VMs can exist on a si
 
 ### What is a Hypervisor?
 
-
-
 A Hypervisor sometimes called a Virtual Machine Monitor (VMM), isolates the operating system and resources from the virtual machines and enables the creation and management of those VMs. The hypervisor treats resources like CPU, memory, and storage as a pool of resources that can be easily reallocated between existing guests or new virtual machines.
 
 ### Why use a Virtual Machine?
-
-
 
 Server consolidation is a top reason to use VMs. Most operating system and application deployments only use a small amount of the physical resources available. By virtualizing our servers, we can place many virtual servers onto each physical server to improve hardware utilization. This keeps us from needing to purchase additional physical resources.
 
@@ -4084,13 +3256,9 @@ A VM provides an environment that is isolated from the rest of a system, so what
 
 ## Containers
 
-
-
 A container is a standard unit of software that packages up code and all its dependencies such as specific versions of runtimes and libraries so that the application runs quickly and reliably from one computing environment to another. Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently, regardless of the target environment.
 
 ### Why do we need containers?
-
-
 
 Let's discuss some advantages of using containers:
 
@@ -4116,8 +3284,6 @@ Containers are lightweight and allow us to use just the computing resources we n
 
 ## Virtualization vs Containerization
 
-
-
 [![virtualization-vs-containerization](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/virtual-machines-and-containers/virtualization-vs-containerization.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-IV/virtual-machines-and-containers/virtualization-vs-containerization.png)
 
 In traditional virtualization, a hypervisor virtualizes physical hardware. The result is that each virtual machine contains a guest OS, a virtual copy of the hardware that the OS requires to run, and an application and its associated libraries and dependencies.
@@ -4126,17 +3292,11 @@ Instead of virtualizing the underlying hardware, containers virtualize the opera
 
 # OAuth 2.0 and OpenID Connect (OIDC)
 
-
-
 ## OAuth 2.0
-
-
 
 OAuth 2.0, which stands for Open Authorization, is a standard designed to provide consented access to resources on behalf of the user, without ever sharing the user's credentials. OAuth 2.0 is an authorization protocol and not an authentication protocol, it is designed primarily as a means of granting access to a set of resources, for example, remote APIs or user's data.
 
 ### Concepts
-
-
 
 The OAuth 2.0 protocol defines the following entities:
 
@@ -4148,8 +3308,6 @@ The OAuth 2.0 protocol defines the following entities:
 - **Access Token**: A piece of data that represents the authorization to access resources on behalf of the end-user.
 
 ### How does OAuth 2.0 work?
-
-
 
 Let's learn how OAuth 2.0 works:
 
@@ -4163,8 +3321,6 @@ Let's learn how OAuth 2.0 works:
 
 ### Disadvantages
 
-
-
 Here are the most common disadvantages of OAuth 2.0:
 
 - Lacks built-in security features.
@@ -4173,15 +3329,11 @@ Here are the most common disadvantages of OAuth 2.0:
 
 ## OpenID Connect
 
-
-
-OAuth 2.0 is designed only for *authorization*, for granting access to data and features from one application to another. OpenID Connect (OIDC) is a thin layer that sits on top of OAuth 2.0 that adds login and profile information about the person who is logged in.
+OAuth 2.0 is designed only for _authorization_, for granting access to data and features from one application to another. OpenID Connect (OIDC) is a thin layer that sits on top of OAuth 2.0 that adds login and profile information about the person who is logged in.
 
 When an Authorization Server supports OIDC, it is sometimes called an Identity Provider (IdP), since it provides information about the Resource Owner back to the Client. OpenID Connect is relatively new, resulting in lower adoption and industry implementation of best practices compared to OAuth.
 
 ### Concepts
-
-
 
 The OpenID Connect (OIDC) protocol defines the following entities:
 
@@ -4194,8 +3346,6 @@ Both OAuth 2.0 and OIDC are easy to implement and are JSON based, which is suppo
 
 # Single Sign-On (SSO)
 
-
-
 Single Sign-On (SSO) is an authentication process in which a user is provided access to multiple applications or websites by using only a single set of login credentials. This prevents the need for the user to log separately into the different applications.
 
 The user credentials and other identifying information are stored and managed by a centralized system called Identity Provider (IdP). The Identity Provider is a trusted system that provides access to other websites and applications.
@@ -4204,13 +3354,9 @@ Single Sign-On (SSO) based authentication systems are commonly used in enterpris
 
 ## Components
 
-
-
 Let's discuss some key components of Single Sign-On (SSO).
 
 ### Identity Provider (IdP)
-
-
 
 User Identity information is stored and managed by a centralized system called Identity Provider (IdP). The Identity Provider authenticates the user and provides access to the service provider.
 
@@ -4218,27 +3364,19 @@ The identity provider can directly authenticate the user by validating a usernam
 
 ### Service Provider
 
-
-
 A service provider provides services to the end-user. They rely on identity providers to assert the identity of a user, and typically certain attributes about the user are managed by the identity provider. Service providers may also maintain a local account for the user along with attributes that are unique to their service.
 
 ### Identity Broker
 
-
-
 An identity broker acts as an intermediary that connects multiple service providers with various different identity providers. Using Identity Broker, we can perform single sign-on over any application without the hassle of the protocol it follows.
 
 ## SAML
-
-
 
 Security Assertion Markup Language is an open standard that allows clients to share security information about identity, authentication, and permission across different systems. SAML is implemented with the Extensible Markup Language (XML) standard for sharing data.
 
 SAML specifically enables identity federation, making it possible for identity providers (IdPs) to seamlessly and securely pass authenticated identities and their attributes to service providers.
 
 ## How does SSO work?
-
-
 
 Now, let's discuss how Single Sign-On works:
 
@@ -4252,8 +3390,6 @@ Now, let's discuss how Single Sign-On works:
 
 ## SAML vs OAuth 2.0 and OpenID Connect (OIDC)
 
-
-
 There are many differences between SAML, OAuth, and OIDC. SAML uses XML to pass messages, while OAuth and OIDC use JSON. OAuth provides a simpler experience, while SAML is geared towards enterprise security.
 
 OAuth and OIDC use RESTful communication extensively, which is why mobile, and modern web applications find OAuth and OIDC a better experience for the user. SAML, on the other hand, drops a session cookie in a browser that allows a user to access certain web pages. This is great for short-lived workloads.
@@ -4262,11 +3398,9 @@ OIDC is developer-friendly and simpler to implement, which broadens the use case
 
 OpenID Connect is essentially a layer on top of the OAuth framework. Therefore, it can offer a built-in layer of permission that asks a user to agree to what the service provider might access. Although SAML is also capable of allowing consent flow, it achieves this by hard-coding carried out by a developer and not as part of its protocol.
 
-*Both of these authentication protocols are good at what they do. As always, a lot depends on our specific use cases and target audience.*
+_Both of these authentication protocols are good at what they do. As always, a lot depends on our specific use cases and target audience._
 
 ## Advantages
-
-
 
 Following are the benefits of using Single Sign-On:
 
@@ -4277,16 +3411,12 @@ Following are the benefits of using Single Sign-On:
 
 ## Disadvantages
 
-
-
 Here are some disadvantages of Single Sign-On:
 
 - Single Password Vulnerability, if the main SSO password gets compromised, all the supported applications get compromised.
 - The authentication process using Single Sign-On is slower than traditional authentication as every application has to request the SSO provider for verification.
 
 ## Examples
-
-
 
 These are some commonly used Identity Providers (IdP):
 
@@ -4297,31 +3427,21 @@ These are some commonly used Identity Providers (IdP):
 
 # SSL, TLS, mTLS
 
-
-
-Let's briefly discuss some important communication security protocols such as SSL, TLS, and mTLS. I would say that from a *"big picture"* system design perspective, this topic is not very important but still good to know about.
+Let's briefly discuss some important communication security protocols such as SSL, TLS, and mTLS. I would say that from a _"big picture"_ system design perspective, this topic is not very important but still good to know about.
 
 ## SSL
-
-
 
 SSL stands for Secure Sockets Layer, and it refers to a protocol for encrypting and securing communications that take place on the internet. It was first developed in 1995 but since has been deprecated in favor of TLS (Transport Layer Security).
 
 ### Why is it called an SSL certificate if it is deprecated?
 
-
-
 Most major certificate providers still refer to certificates as SSL certificates, which is why the naming convention persists.
 
 ### Why was SSL so important?
 
-
-
 Originally, data on the web was transmitted in plaintext that anyone could read if they intercepted the message. SSL was created to correct this problem and protect user privacy. By encrypting any data that goes between the user and a web server, SSL also stops certain kinds of cyber attacks by preventing attackers from tampering with data in transit.
 
 ## TLS
-
-
 
 Transport Layer Security, or TLS, is a widely adopted security protocol designed to facilitate privacy and data security for communications over the internet. TLS evolved from a previous encryption protocol called Secure Sockets Layer (SSL). A primary use case of TLS is encrypting the communication between web applications and servers.
 
@@ -4333,21 +3453,15 @@ There are three main components to what the TLS protocol accomplishes:
 
 ## mTLS
 
-
-
 Mutual TLS, or mTLS, is a method for mutual authentication. mTLS ensures that the parties at each end of a network connection are who they claim to be by verifying that they both have the correct private key. The information within their respective TLS certificates provides additional verification.
 
 ### Why use mTLS?
-
-
 
 mTLS helps ensure that the traffic is secure and trusted in both directions between a client and server. This provides an additional layer of security for users who log in to an organization's network or applications. It also verifies connections with client devices that do not follow a login process, such as Internet of Things (IoT) devices.
 
 Nowadays, mTLS is commonly used by microservices or distributed systems in a [zero trust security model](https://en.wikipedia.org/wiki/Zero_trust_security_model) to verify each other.
 
 # System Design Interviews
-
-
 
 System design is a very extensive topic and system design interviews are designed to evaluate your capability to produce technical solutions to abstract problems, as such, they're not designed for a specific answer. The unique aspect of system design interviews is the two-way nature between the candidate and the interviewer.
 
@@ -4357,13 +3471,9 @@ Let's look at some common strategies for system design interviews:
 
 ## Requirements clarifications
 
-
-
 System design interview questions, by nature, are vague or abstract. Asking questions about the exact scope of the problem, and clarifying functional requirements early in the interview is essential. Usually, requirements are divided into three parts:
 
 ### Functional requirements
-
-
 
 These are the requirements that the end user specifically demands as basic functionalities that the system should offer. All these functionalities need to be necessarily incorporated into the system as part of the contract.
 
@@ -4374,8 +3484,6 @@ For example:
 
 ### Non-functional requirements
 
-
-
 These are the quality constraints that the system must satisfy according to the project contract. The priority or extent to which these factors are implemented varies from one project to another. They are also called non-behavioral requirements. For example, portability, maintainability, reliability, scalability, security, etc.
 
 For example:
@@ -4385,8 +3493,6 @@ For example:
 
 ### Extended requirements
 
-
-
 These are basically "nice to have" requirements that might be out of the scope of the system.
 
 For example:
@@ -4395,8 +3501,6 @@ For example:
 - "Service health and performance monitoring?"
 
 ## Estimation and Constraints
-
-
 
 Estimate the scale of the system we're going to design. It is important to ask questions such as:
 
@@ -4409,8 +3513,6 @@ These questions will help us scale our design later.
 
 ## Data model design
 
-
-
 Once we have the estimations, we can start with defining the database schema. Doing so in the early stages of the interview would help us to understand the data flow which is the core of every system. In this step, we basically define all the entities and relationships between them.
 
 - "What are the different entities in the system?"
@@ -4420,8 +3522,6 @@ Once we have the estimations, we can start with defining the database schema. Do
 
 ## API design
 
-
-
 Next, we can start designing APIs for the system. These APIs will help us define the expectations from the system explicitly. We don't have to write any code, just a simple interface defining the API requirements such as parameters, functions, classes, types, entities, etc.
 
 For example:
@@ -4430,13 +3530,9 @@ For example:
 createUser(name: string, email: string): User
 ```
 
-
-
 It is advised to keep the interface as simple as possible and come back to it later when covering extended requirements.
 
 ## High-level component design
-
-
 
 Now we have established our data model and API design, it's time to identify system components (such as Load Balancers, API Gateway, etc.) that are needed to solve our problem and draft the first design of our system.
 
@@ -4446,8 +3542,6 @@ Now we have established our data model and API design, it's time to identify sys
 Once we have a basic diagram, we can start discussing with the interviewer how the system will work from the client's perspective.
 
 ## Detailed design
-
-
 
 Now it's time to go into detail about the major components of the system we designed. As always discuss with the interviewer which component may need further improvements.
 
@@ -4462,8 +3556,6 @@ Also, try not to be too opinionated about certain technologies, statements like 
 
 ## Identify and resolve bottlenecks
 
-
-
 Finally, it's time to discuss bottlenecks and approaches to mitigate them. Here are some important questions to ask:
 
 - "Do we have enough database replicas?"
@@ -4476,13 +3568,9 @@ Make sure to read the engineering blog of the company you're interviewing with. 
 
 # URL Shortener
 
-
-
 Let's design a URL shortener, similar to services like [Bitly](https://bitly.com/), [TinyURL](https://tinyurl.com/app).
 
 ## What is a URL Shortener?
-
-
 
 A URL shortener service creates an alias or a short URL for a long URL. Users are redirected to the original URL when they visit these short links.
 
@@ -4494,49 +3582,35 @@ For example, the following long URL can be changed to a shorter URL.
 
 ## Why do we need a URL shortener?
 
-
-
 URL shortener saves space in general when we are sharing URLs. Users are also less likely to mistype shorter URLs. Moreover, we can also optimize links across devices, this allows us to track individual links.
 
 ## Requirements
-
-
 
 Our URL shortening system should meet the following requirements:
 
 ### Functional requirements
 
-
-
-- Given a URL, our service should generate a *shorter and unique* alias for it.
+- Given a URL, our service should generate a _shorter and unique_ alias for it.
 - Users should be redirected to the original URL when they visit the short link.
 - Links should expire after a default timespan.
 
 ### Non-functional requirements
-
-
 
 - High availability with minimal latency.
 - The system should be scalable and efficient.
 
 ### Extended requirements
 
-
-
 - Prevent abuse of services.
 - Record analytics and metrics for redirections.
 
 ## Estimation and Constraints
 
-
-
 Let's start with the estimation and constraints.
 
-*Note: Make sure to check any scale or traffic related assumptions with your interviewer.*
+_Note: Make sure to check any scale or traffic related assumptions with your interviewer._
 
 ### Traffic
-
-
 
 This will be a read-heavy system, so let's assume a `100:1` read/write ratio with 100 million links generated per month.
 
@@ -4562,8 +3636,6 @@ And with a `100:1` read/write ratio, the number of redirections will be:
 
 ### Bandwidth
 
-
-
 Since we expect about 40 URLs every second, and if we assume each request is of size 500 bytes then the total incoming data for write requests would be:
 
 40×500 bytes=20 KB/second
@@ -4574,8 +3646,6 @@ Similarly, for the read requests, since we expect about 4K redirections, the tot
 
 ### Storage
 
-
-
 For storage, we will assume we store each link or record in our database for 10 years. Since we expect around 100M new requests every month, the total number of records we will need to store would be:
 
 100 million×10 years×12 months=12 billion
@@ -4585,8 +3655,6 @@ Like earlier, if we assume each stored record will be approximately 500 bytes. W
 12 billion×500 bytes=6 TB
 
 ### Cache
-
-
 
 For caching, we will follow the classic [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle) also known as the 80/20 rule. This means that 80% of the requests are for 20% of the data, so we can cache around 20% of our requests.
 
@@ -4600,8 +3668,6 @@ Hence, we will need around 35GB of memory per day.
 
 ### High-level estimate
 
-
-
 Here is our high-level estimate:
 
 | Type                 | Estimate   |
@@ -4614,8 +3680,6 @@ Here is our high-level estimate:
 | Memory (Caching)     | ~35 GB/day |
 
 ## Data model design
-
-
 
 Next, we will focus on the data model design. Here is our database schema:
 
@@ -4633,21 +3697,15 @@ Contains the new short URL's properties such as `expiration`, `hash`, `originalU
 
 ### What kind of database should we use?
 
-
-
 Since the data is not strongly relational, NoSQL databases such as [Amazon DynamoDB](https://aws.amazon.com/dynamodb), [Apache Cassandra](https://cassandra.apache.org/_/index.html), or [MongoDB](https://www.mongodb.com/) will be a better choice here, if we do decide to use an SQL database then we can use something like [Azure SQL Database](https://azure.microsoft.com/en-in/products/azure-sql/database) or [Amazon RDS](https://aws.amazon.com/rds).
 
-*For more details, refer to [SQL vs NoSQL](https://karanpratapsingh.com/courses/system-design/sql-vs-nosql-databases).*
+_For more details, refer to [SQL vs NoSQL](https://karanpratapsingh.com/courses/system-design/sql-vs-nosql-databases)._
 
 ## API design
-
-
 
 Let us do a basic API design for our services:
 
 ### Create URL
-
-
 
 This API should create a new short URL in our system given an original URL.
 
@@ -4655,15 +3713,13 @@ This API should create a new short URL in our system given an original URL.
 createURL(apiKey: string, originalURL: string, expiration?: Date): string
 ```
 
-
-
 **Parameters**
 
 API Key (`string`): API key provided by the user.
 
 Original URL (`string`): Original URL to be shortened.
 
-Expiration (`Date`): Expiration date of the new URL *(optional)*.
+Expiration (`Date`): Expiration date of the new URL _(optional)_.
 
 **Returns**
 
@@ -4671,15 +3727,11 @@ Short URL (`string`): New shortened URL.
 
 ### Get URL
 
-
-
 This API should retrieve the original URL from a given short URL.
 
 ```
 getURL(apiKey: string, shortURL: string): string
 ```
-
-
 
 **Parameters**
 
@@ -4693,15 +3745,11 @@ Original URL (`string`): Original URL to be retrieved.
 
 ### Delete URL
 
-
-
 This API should delete a given shortURL from our system.
 
 ```
 deleteURL(apiKey: string, shortURL: string): boolean
 ```
-
-
 
 **Parameters**
 
@@ -4715,19 +3763,13 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Why do we need an API key?
 
-
-
 As you must've noticed, we're using an API key to prevent abuse of our services. Using this API key we can limit the users to a certain number of requests per second or minute. This is quite a standard practice for developer APIs and should cover our extended requirement.
 
 ## High-level design
 
-
-
 Now let us do a high-level design of our system.
 
 ### URL Encoding
-
-
 
 Our system's primary goal is to shorten a given URL, let's look at different approaches:
 
@@ -4771,8 +3813,6 @@ Once a server reaches its maximum range Zookeeper will assign an unused counter 
 
 ### Key Generation Service (KGS)
 
-
-
 As we discussed, generating a unique key at scale without duplication and collisions can be a bit of a challenge. To solve this problem, we can create a standalone Key Generation Service (KGS) that generates a unique key ahead of time and stores it in a separate database for later use. This approach can make things simple for us.
 
 **How to handle concurrent access?**
@@ -4791,15 +3831,11 @@ While 390 GB seems like a lot for this simple use case, it is important to remem
 
 ### Caching
 
-
-
 Now, let's talk about [caching](https://karanpratapsingh.com/courses/system-design/caching). As per our estimations, we will require around ~35 GB of memory per day to cache 20% of the incoming requests to our services. For this use case, we can use [Redis](https://redis.io/) or [Memcached](https://memcached.org/) servers alongside our API server.
 
-*For more details, refer to [caching](https://karanpratapsingh.com/courses/system-design/caching).*
+_For more details, refer to [caching](https://karanpratapsingh.com/courses/system-design/caching)._
 
 ### Design
-
-
 
 Now that we have identified some core components, let's do the first draft of our system design.
 
@@ -4822,13 +3858,9 @@ Here's how it works:
 
 ## Detailed design
 
-
-
 It's time to discuss the finer details of our design.
 
 ### Data Partitioning
-
-
 
 To scale out our databases we will need to partition our data. Horizontal partitioning (aka [Sharding](https://karanpratapsingh.com/courses/system-design/sharding)) can be a good first step. We can use partitions schemes such as:
 
@@ -4839,11 +3871,9 @@ To scale out our databases we will need to partition our data. Horizontal partit
 
 The above approaches can still cause uneven data and load distribution, we can solve this using [Consistent hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).
 
-*For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).*
+_For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing)._
 
 ### Database cleanup
-
-
 
 This is more of a maintenance step for our services and depends on whether we keep the expired entries or remove them. If we do decide to remove expired entries, we can approach this in two different ways:
 
@@ -4857,15 +3887,13 @@ For passive cleanup, we can remove the entry when a user tries to access an expi
 
 ### Cache
 
-
-
 Now let us talk about [caching](https://karanpratapsingh.com/courses/system-design/caching).
 
 **Which cache eviction policy to use?**
 
 As we discussed before, we can use solutions like [Redis](https://redis.io/) or [Memcached](https://memcached.org/) and cache 20% of the daily traffic but what kind of cache eviction policy would best fit our needs?
 
-[Least Recently Used (LRU)](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) can be a good policy for our system. In this policy, we discard the least recently used key first.
+[Least Recently Used (LRU)](<https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)>) can be a good policy for our system. In this policy, we discard the least recently used key first.
 
 **How to handle cache miss?**
 
@@ -4873,21 +3901,15 @@ Whenever there is a cache miss, our servers can hit the database directly and up
 
 ### Metrics and Analytics
 
-
-
 Recording analytics and metrics is one of our extended requirements. We can store and update metadata like visitor's country, platform, the number of views, etc alongside the URL entry in our database.
 
 ### Security
-
-
 
 For security, we can introduce private URLs and authorization. A separate table can be used to store user ids that have permission to access a specific URL. If a user does not have proper permissions, we can return an HTTP 401 (Unauthorized) error.
 
 We can also use an [API Gateway](https://karanpratapsingh.com/courses/system-design/api-gateway) as they can support capabilities like authorization, rate limiting, and load balancing out of the box.
 
 ## Identify and resolve bottlenecks
-
-
 
 [![url-shortener-advanced-design](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-advanced-design.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-advanced-design.png)
 
@@ -4909,25 +3931,17 @@ To make our system more resilient we can do the following:
 
 # WhatsApp
 
-
-
 Let's design a [WhatsApp](https://whatsapp.com/) like instant messaging service, similar to services like [Facebook Messenger](https://www.messenger.com/), and [WeChat](https://www.wechat.com/).
 
 ## What is WhatsApp?
-
-
 
 WhatsApp is a chat application that provides instant messaging services to its users. It is one of the most used mobile applications on the planet, connecting over 2 billion users in 180+ countries. WhatsApp is also available on the web.
 
 ## Requirements
 
-
-
 Our system should meet the following requirements:
 
 ### Functional requirements
-
-
 
 - Should support one-on-one chat.
 - Group chats (max 100 people).
@@ -4935,14 +3949,10 @@ Our system should meet the following requirements:
 
 ### Non-functional requirements
 
-
-
 - High availability with minimal latency.
 - The system should be scalable and efficient.
 
 ### Extended requirements
-
-
 
 - Sent, Delivered, and Read receipts of the messages.
 - Show the last seen time of users.
@@ -4950,15 +3960,11 @@ Our system should meet the following requirements:
 
 ## Estimation and Constraints
 
-
-
 Let's start with the estimation and constraints.
 
-*Note: Make sure to check any scale or traffic-related assumptions with your interviewer.*
+_Note: Make sure to check any scale or traffic-related assumptions with your interviewer._
 
 ### Traffic
-
-
 
 Let us assume we have 50 million daily active users (DAU) and on average each user sends at least 10 messages to 4 different people every day. This gives us 2 billion messages per day.
 
@@ -4976,8 +3982,6 @@ Messages can also contain media such as images, videos, or other files. We can a
 
 ### Storage
 
-
-
 If we assume each message on average is 100 bytes, we will require about 200 GB of database storage every day.
 
 2 billion×100 bytes=∼200 GB/day
@@ -4992,15 +3996,11 @@ And for 10 years, we will require about 38 PB of storage.
 
 ### Bandwidth
 
-
-
 As our system is handling 10.2 TB of ingress every day, we will require a minimum bandwidth of around 120 MB per second.
 
 10.2 TB(24 hrs×3600 seconds)=∼120 MB/second
 
 ### High-level estimate
-
-
 
 Here is our high-level estimate:
 
@@ -5013,8 +4013,6 @@ Here is our high-level estimate:
 | Bandwidth                 | ~120 MB/s  |
 
 ## Data model design
-
-
 
 This is the general data model which reflects our requirements.
 
@@ -5048,29 +4046,21 @@ This table maps users and groups as multiple users can be a part of multiple gro
 
 ### What kind of database should we use?
 
-
-
 While our data model seems quite relational, we don't necessarily need to store everything in a single database, as this can limit our scalability and quickly become a bottleneck.
 
 We will split the data between different services each having ownership over a particular table. Then we can use a relational database such as [PostgreSQL](https://www.postgresql.org/) or a distributed NoSQL database such as [Apache Cassandra](https://cassandra.apache.org/_/index.html) for our use case.
 
 ## API design
 
-
-
 Let us do a basic API design for our services:
 
 ### Get all chats or groups
-
-
 
 This API will get all chats or groups for a given `userID`.
 
 ```
 getAll(userID: UUID): Chat[] | Group[]
 ```
-
-
 
 **Parameters**
 
@@ -5082,15 +4072,11 @@ Result (`Chat[] | Group[]`): All the chats and groups the user is a part of.
 
 ### Get messages
 
-
-
 Get all messages for a user given the `channelID` (chat or group id).
 
 ```
 getMessages(userID: UUID, channelID: UUID): Message[]
 ```
-
-
 
 **Parameters**
 
@@ -5104,15 +4090,11 @@ Messages (`Message[]`): All the messages in a given chat or group.
 
 ### Send message
 
-
-
 Send a message from a user to a channel (chat or group).
 
 ```
 sendMessage(userID: UUID, channelID: UUID, message: Message): boolean
 ```
-
-
 
 **Parameters**
 
@@ -5128,16 +4110,12 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Join or leave a channel
 
-
-
 Allows the user to join or leave a channel (chat or group).
 
 ```
 joinGroup(userID: UUID, channelID: UUID): boolean
 leaveGroup(userID: UUID, channelID: UUID): boolean
 ```
-
-
 
 **Parameters**
 
@@ -5151,13 +4129,9 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ## High-level design
 
-
-
 Now let us do a high-level design of our system.
 
 ### Architecture
-
-
 
 We will be using [microservices architecture](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) since it will make it easier to horizontally scale and decouple our services. Each service will have ownership of its own data model. Let's try to divide our system into some core services.
 
@@ -5175,7 +4149,7 @@ This service will simply send push notifications to the users. It will be discus
 
 **Presence Service**
 
-The presence service will keep track of the *last seen* status of all users. It will be discussed in detail separately.
+The presence service will keep track of the _last seen_ status of all users. It will be discussed in detail separately.
 
 **Media service**
 
@@ -5187,11 +4161,9 @@ Since our architecture is microservices-based, services will be communicating wi
 
 [Service discovery](https://karanpratapsingh.com/courses/system-design/service-discovery) is another thing we will have to take into account. We can also use a service mesh that enables managed, observable, and secure communication between individual services.
 
-*Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other.*
+_Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other._
 
 ### Real-time messaging
-
-
 
 How do we efficiently send and receive messages? We have two different options:
 
@@ -5205,13 +4177,11 @@ The client opens a long-lived connection with the server and once new data is av
 
 The pull model approach is not scalable as it will create unnecessary request overhead on our servers and most of the time the response will be empty, thus wasting our resources. To minimize latency, using the push model with [WebSockets](https://karanpratapsingh.com/courses/system-design/long-polling-websockets-server-sent-events#websockets) is a better choice because then we can push data to the client once it's available without any delay, given that the connection is open with the client. Also, WebSockets provide full-duplex communication, unlike [Server-Sent Events (SSE)](https://karanpratapsingh.com/courses/system-design/long-polling-websockets-server-sent-events#server-sent-events-sse) which are only unidirectional.
 
-*Note: Learn more about [Long polling, WebSockets, Server-Sent Events (SSE)](https://karanpratapsingh.com/courses/system-design/long-polling-websockets-server-sent-events).*
+_Note: Learn more about [Long polling, WebSockets, Server-Sent Events (SSE)](https://karanpratapsingh.com/courses/system-design/long-polling-websockets-server-sent-events)._
 
 ### Last seen
 
-
-
-To implement the last seen functionality, we can use a [heartbeat](https://en.wikipedia.org/wiki/Heartbeat_(computing)) mechanism, where the client can periodically ping the servers indicating its liveness. Since this needs to be as low overhead as possible, we can store the last active timestamp in the cache as follows:
+To implement the last seen functionality, we can use a [heartbeat](<https://en.wikipedia.org/wiki/Heartbeat_(computing)>) mechanism, where the client can periodically ping the servers indicating its liveness. Since this needs to be as low overhead as possible, we can store the last active timestamp in the cache as follows:
 
 | Key    | Value               |
 | ------ | ------------------- |
@@ -5221,11 +4191,9 @@ To implement the last seen functionality, we can use a [heartbeat](https://en.wi
 
 This will give us the last time the user was active. This functionality will be handled by the presence service combined with [Redis](https://redis.io/) or [Memcached](https://memcached.org/) as our cache.
 
-Another way to implement this is to track the latest action of the user, once the last activity crosses a certain threshold, such as *"user hasn't performed any action in the last 30 seconds"*, we can show the user as offline and last seen with the last recorded timestamp. This will be more of a lazy update approach and might benefit us over heartbeat mechanism in certain cases.
+Another way to implement this is to track the latest action of the user, once the last activity crosses a certain threshold, such as _"user hasn't performed any action in the last 30 seconds"_, we can show the user as offline and last seen with the last recorded timestamp. This will be more of a lazy update approach and might benefit us over heartbeat mechanism in certain cases.
 
 ### Notifications
-
-
 
 Once a message is sent in a chat or a group, we will first check if the recipient is active or not, we can get this information by taking the user's active connection and last seen into consideration.
 
@@ -5241,13 +4209,9 @@ While this seems like a classic [publish-subscribe](https://karanpratapsingh.com
 
 ### Read receipts
 
-
-
-Handling read receipts can be tricky, for this use case we can wait for some sort of [Acknowledgment (ACK)](https://en.wikipedia.org/wiki/Acknowledgement_(data_networks)) from the client to determine if the message was delivered and update the corresponding `deliveredAt` field. Similarly, we will mark the message as seen once the user opens the chat and update the corresponding `seenAt` timestamp field.
+Handling read receipts can be tricky, for this use case we can wait for some sort of [Acknowledgment (ACK)](<https://en.wikipedia.org/wiki/Acknowledgement_(data_networks)>) from the client to determine if the message was delivered and update the corresponding `deliveredAt` field. Similarly, we will mark the message as seen once the user opens the chat and update the corresponding `seenAt` timestamp field.
 
 ### Design
-
-
 
 Now that we have identified some core components, let's do the first draft of our system design.
 
@@ -5255,13 +4219,9 @@ Now that we have identified some core components, let's do the first draft of ou
 
 ## Detailed design
 
-
-
 It's time to discuss our design decisions in detail.
 
 ### Data Partitioning
-
-
 
 To scale out our databases we will need to partition our data. Horizontal partitioning (aka [Sharding](https://karanpratapsingh.com/courses/system-design/sharding)) can be a good first step. We can use partitions schemes such as:
 
@@ -5272,11 +4232,9 @@ To scale out our databases we will need to partition our data. Horizontal partit
 
 The above approaches can still cause uneven data and load distribution, we can solve this using [Consistent hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).
 
-*For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).*
+_For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing)._
 
 ### Caching
-
-
 
 In a messaging application, we have to be careful about using cache as our users expect the latest data, but many users will be requesting the same messages, especially in a group chat. So, to prevent usage spikes from our resources we can cache older messages.
 
@@ -5286,35 +4244,29 @@ Some group chats can have thousands of messages and sending that over the networ
 
 We can use solutions like [Redis](https://redis.io/) or [Memcached](https://memcached.org/) and cache 20% of the daily traffic but what kind of cache eviction policy would best fit our needs?
 
-[Least Recently Used (LRU)](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) can be a good policy for our system. In this policy, we discard the least recently used key first.
+[Least Recently Used (LRU)](<https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)>) can be a good policy for our system. In this policy, we discard the least recently used key first.
 
 **How to handle cache miss?**
 
 Whenever there is a cache miss, our servers can hit the database directly and update the cache with the new entries.
 
-*For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching).*
+_For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching)._
 
 ### Media access and storage
-
-
 
 As we know, most of our storage space will be used for storing media files such as images, videos, or other files. Our media service will be handling both access and storage of the user media files.
 
 But where can we store files at scale? Well, [object storage](https://karanpratapsingh.com/courses/system-design/storage#object-storage) is what we're looking for. Object stores break data files up into pieces called objects. It then stores those objects in a single repository, which can be spread out across multiple networked systems. We can also use distributed file storage such as [HDFS](https://karanpratapsingh.com/courses/system-design/storage#hdfs) or [GlusterFS](https://www.gluster.org/).
 
-*Fun fact: WhatsApp deletes media on its servers once it has been downloaded by the user.*
+_Fun fact: WhatsApp deletes media on its servers once it has been downloaded by the user._
 
 We can use object stores like [Amazon S3](https://aws.amazon.com/s3), [Azure Blob Storage](https://azure.microsoft.com/en-in/services/storage/blobs), or [Google Cloud Storage](https://cloud.google.com/storage) for this use case.
 
 ### Content Delivery Network (CDN)
 
-
-
 [Content Delivery Network (CDN)](https://karanpratapsingh.com/courses/system-design/content-delivery-network) increases content availability and redundancy while reducing bandwidth costs. Generally, static files such as images, and videos are served from CDN. We can use services like [Amazon CloudFront](https://aws.amazon.com/cloudfront) or [Cloudflare CDN](https://www.cloudflare.com/cdn) for this use case.
 
 ### API gateway
-
-
 
 Since we will be using multiple protocols like HTTP, WebSocket, TCP/IP, deploying multiple L4 (transport layer) or L7 (application layer) type load balancers separately for each protocol will be expensive. Instead, we can use an [API Gateway](https://karanpratapsingh.com/courses/system-design/api-gateway) that supports multiple protocols without any issues.
 
@@ -5323,8 +4275,6 @@ API Gateway can also offer other features such as authentication, authorization,
 We can use services like [Amazon API Gateway](https://aws.amazon.com/api-gateway) or [Azure API Gateway](https://azure.microsoft.com/en-in/services/api-management) for this use case.
 
 ## Identify and resolve bottlenecks
-
-
 
 [![whatsapp-advanced-design](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-advanced-design.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-advanced-design.png)
 
@@ -5352,25 +4302,17 @@ To make our system more resilient we can do the following:
 
 # Twitter
 
-
-
 Let's design a [Twitter](https://twitter.com/) like social media service, similar to services like [Facebook](https://facebook.com/), [Instagram](https://instagram.com/), etc.
 
 ## What is Twitter?
-
-
 
 Twitter is a social media service where users can read or post short messages (up to 280 characters) called tweets. It is available on the web and mobile platforms such as Android and iOS.
 
 ## Requirements
 
-
-
 Our system should meet the following requirements:
 
 ### Functional requirements
-
-
 
 - Should be able to post new tweets (can be text, image, video, etc.).
 - Should be able to follow other users.
@@ -5379,14 +4321,10 @@ Our system should meet the following requirements:
 
 ### Non-Functional requirements
 
-
-
 - High availability with minimal latency.
 - The system should be scalable and efficient.
 
 ### Extended requirements
-
-
 
 - Metrics and analytics.
 - Retweet functionality.
@@ -5394,15 +4332,11 @@ Our system should meet the following requirements:
 
 ## Estimation and Constraints
 
-
-
 Let's start with the estimation and constraints.
 
-*Note: Make sure to check any scale or traffic-related assumptions with your interviewer.*
+_Note: Make sure to check any scale or traffic-related assumptions with your interviewer._
 
 ### Traffic
-
-
 
 This will be a read-heavy system, let us assume we have 1 billion total users with 200 million daily active users (DAU), and on average each user tweets 5 times a day. This gives us 1 billion tweets per day.
 
@@ -5420,8 +4354,6 @@ Tweets can also contain media such as images, or videos. We can assume that 10 p
 
 ### Storage
 
-
-
 If we assume each message on average is 100 bytes, we will require about 100 GB of database storage every day.
 
 1 billion×100 bytes=∼100 GB/day
@@ -5436,15 +4368,11 @@ And for 10 years, we will require about 19 PB of storage.
 
 ### Bandwidth
 
-
-
 As our system is handling 5.1 TB of ingress every day, we will require a minimum bandwidth of around 60 MB per second.
 
 5.1 TB(24 hrs×3600 seconds)=∼60 MB/second
 
 ### High-level estimate
-
-
 
 Here is our high-level estimate:
 
@@ -5457,8 +4385,6 @@ Here is our high-level estimate:
 | Bandwidth                 | ~60 MB/s    |
 
 ## Data model design
-
-
 
 This is the general data model which reflects our requirements.
 
@@ -5492,21 +4418,15 @@ This table maps tweets and feed (N:M relationship).
 
 ### What kind of database should we use?
 
-
-
 While our data model seems quite relational, we don't necessarily need to store everything in a single database, as this can limit our scalability and quickly become a bottleneck.
 
 We will split the data between different services each having ownership over a particular table. Then we can use a relational database such as [PostgreSQL](https://www.postgresql.org/) or a distributed NoSQL database such as [Apache Cassandra](https://cassandra.apache.org/_/index.html) for our use case.
 
 ## API design
 
-
-
 Let us do a basic API design for our services:
 
 ### Post a tweet
-
-
 
 This API will allow the user to post a tweet on the platform.
 
@@ -5514,15 +4434,13 @@ This API will allow the user to post a tweet on the platform.
 postTweet(userID: UUID, content: string, mediaURL?: string): boolean
 ```
 
-
-
 **Parameters**
 
 User ID (`UUID`): ID of the user.
 
 Content (`string`): Contents of the tweet.
 
-Media URL (`string`): URL of the attached media *(optional)*.
+Media URL (`string`): URL of the attached media _(optional)_.
 
 **Returns**
 
@@ -5530,16 +4448,12 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Follow or unfollow a user
 
-
-
 This API will allow the user to follow or unfollow another user.
 
 ```
 follow(followerID: UUID, followeeID: UUID): boolean
 unfollow(followerID: UUID, followeeID: UUID): boolean
 ```
-
-
 
 **Parameters**
 
@@ -5553,15 +4467,11 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Get newsfeed
 
-
-
 This API will return all the tweets to be shown within a given newsfeed.
 
 ```
 getNewsfeed(userID: UUID): Tweet[]
 ```
-
-
 
 **Parameters**
 
@@ -5573,13 +4483,9 @@ Tweets (`Tweet[]`): All the tweets to be shown within a given newsfeed.
 
 ## High-level design
 
-
-
 Now let us do a high-level design of our system.
 
 ### Architecture
-
-
 
 We will be using [microservices architecture](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) since it will make it easier to horizontally scale and decouple our services. Each service will have ownership of its own data model. Let's try to divide our system into some core services.
 
@@ -5617,11 +4523,9 @@ Since our architecture is microservices-based, services will be communicating wi
 
 [Service discovery](https://karanpratapsingh.com/courses/system-design/service-discovery) is another thing we will have to take into account. We can also use a service mesh that enables managed, observable, and secure communication between individual services.
 
-*Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other.*
+_Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other._
 
 ### Newsfeed
-
-
 
 When it comes to the newsfeed, it seems easy enough to implement, but there are a lot of things that can make or break this feature. So, let's divide our problem into two parts:
 
@@ -5664,8 +4568,6 @@ The hybrid model allows only users with a lesser number of followers to use the 
 
 ### Ranking Algorithm
 
-
-
 As we discussed, we will need a ranking algorithm to rank each tweet according to its relevance to each specific user.
 
 For example, Facebook used to utilize an [EdgeRank](https://en.wikipedia.org/wiki/EdgeRank) algorithm. Here, the rank of each feed item is described by:
@@ -5684,8 +4586,6 @@ Nowadays, algorithms are much more complex and ranking is done using machine lea
 
 ### Retweets
 
-
-
 Retweets are one of our extended requirements. To implement this feature, we can simply create a new tweet with the user id of the user retweeting the original tweet and then modify the `type` enum and `content` property of the new tweet to link it with the original tweet.
 
 For example, the `type` enum property can be of type tweet, similar to text, video, etc and `content` can be the id of the original tweet. Here the first row indicates the original tweet while the second row is how we can represent a retweet.
@@ -5699,8 +4599,6 @@ This is a very basic implementation. To improve this we can create a separate ta
 
 ### Search
 
-
-
 Sometimes traditional DBMS are not performant enough, we need something which allows us to store, search, and analyze huge volumes of data quickly and in near real-time and give results within milliseconds. [Elasticsearch](https://www.elastic.co/) can help us with this use case.
 
 [Elasticsearch](https://www.elastic.co/) is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. It is built on top of [Apache Lucene](https://lucene.apache.org/).
@@ -5711,21 +4609,15 @@ Trending functionality will be based on top of the search functionality. We can 
 
 ### Notifications
 
-
-
 Push notifications are an integral part of any social media platform. We can use a message queue or a message broker such as [Apache Kafka](https://kafka.apache.org/) with the notification service to dispatch requests to [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging) or [Apple Push Notification Service (APNS)](https://developer.apple.com/documentation/usernotifications) which will handle the delivery of the push notifications to user devices.
 
-*For more details, refer to the [WhatsApp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications in detail.*
+_For more details, refer to the [WhatsApp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications in detail._
 
 ## Detailed design
-
-
 
 It's time to discuss our design decisions in detail.
 
 ### Data Partitioning
-
-
 
 To scale out our databases we will need to partition our data. Horizontal partitioning (aka [Sharding](https://karanpratapsingh.com/courses/system-design/sharding)) can be a good first step. We can use partitions schemes such as:
 
@@ -5736,11 +4628,9 @@ To scale out our databases we will need to partition our data. Horizontal partit
 
 The above approaches can still cause uneven data and load distribution, we can solve this using [Consistent hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).
 
-*For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).*
+_For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing)._
 
 ### Mutual friends
-
-
 
 For mutual friends, we can build a social graph for every user. Each node in the graph will represent a user and a directional edge will represent followers and followees. After that, we can traverse the followers of a user to find and suggest a mutual friend. This would require a graph database such as [Neo4j](https://neo4j.com/) or [ArangoDB](https://www.arangodb.com/).
 
@@ -5748,13 +4638,9 @@ This is a pretty simple algorithm, to improve our suggestion accuracy, we will n
 
 ### Metrics and Analytics
 
-
-
 Recording analytics and metrics is one of our extended requirements. As we will be using [Apache Kafka](https://kafka.apache.org/) to publish all sorts of events, we can process these events and run analytics on the data using [Apache Spark](https://spark.apache.org/) which is an open-source unified analytics engine for large-scale data processing.
 
 ### Caching
-
-
 
 In a social media application, we have to be careful about using cache as our users expect the latest data. So, to prevent usage spikes from our resources we can cache the top 20% of the tweets.
 
@@ -5764,17 +4650,15 @@ To further improve efficiency we can add pagination to our system APIs. This dec
 
 We can use solutions like [Redis](https://redis.io/) or [Memcached](https://memcached.org/) and cache 20% of the daily traffic but what kind of cache eviction policy would best fit our needs?
 
-[Least Recently Used (LRU)](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) can be a good policy for our system. In this policy, we discard the least recently used key first.
+[Least Recently Used (LRU)](<https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)>) can be a good policy for our system. In this policy, we discard the least recently used key first.
 
 **How to handle cache miss?**
 
 Whenever there is a cache miss, our servers can hit the database directly and update the cache with the new entries.
 
-*For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching).*
+_For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching)._
 
 ### Media access and storage
-
-
 
 As we know, most of our storage space will be used for storing media files such as images, videos, or other files. Our media service will be handling both access and storage of the user media files.
 
@@ -5782,13 +4666,9 @@ But where can we store files at scale? Well, [object storage](https://karanprata
 
 ### Content Delivery Network (CDN)
 
-
-
 [Content Delivery Network (CDN)](https://karanpratapsingh.com/courses/system-design/content-delivery-network) increases content availability and redundancy while reducing bandwidth costs. Generally, static files such as images, and videos are served from CDN. We can use services like [Amazon CloudFront](https://aws.amazon.com/cloudfront) or [Cloudflare CDN](https://www.cloudflare.com/cdn) for this use case.
 
 ## Identify and resolve bottlenecks
-
-
 
 [![twitter-advanced-design](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/twitter/twitter-advanced-design.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/twitter/twitter-advanced-design.png)
 
@@ -5812,25 +4692,17 @@ To make our system more resilient we can do the following:
 
 # Netflix
 
-
-
 Let's design a [Netflix](https://netflix.com/) like video streaming service, similar to services like [Amazon Prime Video](https://www.primevideo.com/), [Disney Plus](https://www.disneyplus.com/), [Hulu](https://www.hulu.com/), [Youtube](https://youtube.com/), [Vimeo](https://vimeo.com/), etc.
 
 ## What is Netflix?
-
-
 
 Netflix is a subscription-based streaming service that allows its members to watch TV shows and movies on an internet-connected device. It is available on platforms such as the Web, iOS, Android, TV, etc.
 
 ## Requirements
 
-
-
 Our system should meet the following requirements:
 
 ### Functional requirements
-
-
 
 - Users should be able to stream and share videos.
 - The content team (or users in YouTube's case) should be able to upload new videos (movies, tv shows episodes, and other content).
@@ -5839,15 +4711,11 @@ Our system should meet the following requirements:
 
 ### Non-Functional requirements
 
-
-
 - High availability with minimal latency.
 - High reliability, no uploads should be lost.
 - The system should be scalable and efficient.
 
 ### Extended requirements
-
-
 
 - Certain content should be [geo-blocked](https://en.wikipedia.org/wiki/Geo-blocking).
 - Resume video playback from the point user left off.
@@ -5855,15 +4723,11 @@ Our system should meet the following requirements:
 
 ## Estimation and Constraints
 
-
-
 Let's start with the estimation and constraints.
 
-*Note: Make sure to check any scale or traffic-related assumptions with your interviewer.*
+_Note: Make sure to check any scale or traffic-related assumptions with your interviewer._
 
 ### Traffic
-
-
 
 This will be a read-heavy system, let us assume we have 1 billion total users with 200 million daily active users (DAU), and on average each user watches 5 videos a day. This gives us 1 billion videos watched per day.
 
@@ -5881,8 +4745,6 @@ Assuming a `200:1` read/write ratio, about 5 million videos will be uploaded eve
 
 ### Storage
 
-
-
 If we assume each video is 100 MB on average, we will require about 500 TB of storage every day.
 
 5 million×100 MB=500 TB/day
@@ -5893,15 +4755,11 @@ And for 10 years, we will require an astounding 1,825 PB of storage.
 
 ### Bandwidth
 
-
-
 As our system is handling 500 TB of ingress every day, we will require a minimum bandwidth of around 5.8 GB per second.
 
 500 TB(24 hrs×3600 seconds)=∼5.8 GB/second
 
 ### High-level estimate
-
-
 
 Here is our high-level estimate:
 
@@ -5914,8 +4772,6 @@ Here is our high-level estimate:
 | Bandwidth                 | ~5.8 GB/s   |
 
 ## Data model design
-
-
 
 This is the general data model which reflects our requirements.
 
@@ -5945,29 +4801,21 @@ This table stores all the comments received on a video (like YouTube).
 
 ### What kind of database should we use?
 
-
-
 While our data model seems quite relational, we don't necessarily need to store everything in a single database, as this can limit our scalability and quickly become a bottleneck.
 
 We will split the data between different services each having ownership over a particular table. Then we can use a relational database such as [PostgreSQL](https://www.postgresql.org/) or a distributed NoSQL database such as [Apache Cassandra](https://cassandra.apache.org/_/index.html) for our use case.
 
 ## API design
 
-
-
 Let us do a basic API design for our services:
 
 ### Upload a video
-
-
 
 Given a byte stream, this API enables video to be uploaded to our service.
 
 ```
 uploadVideo(title: string, description: string, data: Stream<byte>, tags?: string[]): boolean
 ```
-
-
 
 **Parameters**
 
@@ -5977,7 +4825,7 @@ Description (`string`): Description of the new video.
 
 Data (`byte[]`): Byte stream of the video data.
 
-Tags (`string[]`): Tags for the video *(optional)*.
+Tags (`string[]`): Tags for the video _(optional)_.
 
 **Returns**
 
@@ -5985,15 +4833,11 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Streaming a video
 
-
-
 This API allows our users to stream a video with the preferred codec and resolution.
 
 ```
 streamVideo(videoID: UUID, codec: Enum<string>, resolution: Tuple<int>, offset?: int): VideoStream
 ```
-
-
 
 **Parameters**
 
@@ -6003,7 +4847,7 @@ Codec (`Enum<string>`): Required [codec](https://en.wikipedia.org/wiki/Video_cod
 
 Resolution (`Tuple<int>`): [Resolution](https://en.wikipedia.org/wiki/Display_resolution) of the requested video.
 
-Offset (`int`): Offset of the video stream in seconds to stream data from any point in the video *(optional)*.
+Offset (`int`): Offset of the video stream in seconds to stream data from any point in the video _(optional)_.
 
 **Returns**
 
@@ -6011,21 +4855,17 @@ Stream (`VideoStream`): Data stream of the requested video.
 
 ### Search for a video
 
-
-
 This API will enable our users to search for a video based on its title or tags.
 
 ```
 searchVideo(query: string, nextPage?: string): Video[]
 ```
 
-
-
 **Parameters**
 
 Query (`string`): Search query from the user.
 
-Next Page (`string`): Token for the next page, this can be used for pagination *(optional)*.
+Next Page (`string`): Token for the next page, this can be used for pagination _(optional)_.
 
 **Returns**
 
@@ -6033,15 +4873,11 @@ Videos (`Video[]`): All the videos available for a particular search query.
 
 ### Add a comment
 
-
-
 This API will allow our users to post a comment on a video (like YouTube).
 
 ```
 comment(videoID: UUID, comment: string): boolean
 ```
-
-
 
 **Parameters**
 
@@ -6055,13 +4891,9 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ## High-level design
 
-
-
 Now let us do a high-level design of our system.
 
 ### Architecture
-
-
 
 We will be using [microservices architecture](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) since it will make it easier to horizontally scale and decouple our services. Each service will have ownership of its own data model. Let's try to divide our system into some core services.
 
@@ -6091,11 +4923,9 @@ Since our architecture is microservices-based, services will be communicating wi
 
 [Service discovery](https://karanpratapsingh.com/courses/system-design/service-discovery) is another thing we will have to take into account. We can also use a service mesh that enables managed, observable, and secure communication between individual services.
 
-*Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other.*
+_Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other._
 
 ### Video processing
-
-
 
 [![video-processing-pipeline](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/video-processing-pipeline.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/video-processing-pipeline.png)
 
@@ -6131,15 +4961,13 @@ This is the last step of the processing pipeline and as the name suggests, this 
 
 It allows us to fetch the desired quality of the video as per the user's request, and once the media file finishes processing, it gets uploaded to a distributed file storage such as [HDFS](https://karanpratapsingh.com/courses/system-design/storage#hdfs), [GlusterFS](https://www.gluster.org/), or an [object storage](https://karanpratapsingh.com/courses/system-design/storage#object-storage) such as [Amazon S3](https://aws.amazon.com/s3) for later retrieval during streaming.
 
-*Note: We can add additional steps such as subtitles and thumbnails generation as part of our pipeline.*
+_Note: We can add additional steps such as subtitles and thumbnails generation as part of our pipeline._
 
 **Why are we using a message queue?**
 
 Processing videos as a long-running task and using a [message queue](https://karanpratapsingh.com/courses/system-design/message-queues) makes much more sense. It also decouples our video processing pipeline from the upload functionality. We can use something like [Amazon SQS](https://aws.amazon.com/sqs) or [RabbitMQ](https://www.rabbitmq.com/) to support this.
 
 ### Video streaming
-
-
 
 Video streaming is a challenging task from both the client and server perspectives. Moreover, internet connection speeds vary quite a lot between different users. To make sure users don't re-fetch the same content, we can use a [Content Delivery Network (CDN)](https://karanpratapsingh.com/courses/system-design/content-delivery-network).
 
@@ -6157,8 +4985,6 @@ Lastly, for playing the video from where the user left off (part of our extended
 
 ### Searching
 
-
-
 Sometimes traditional DBMS are not performant enough, we need something which allows us to store, search, and analyze huge volumes of data quickly and in near real-time and give results within milliseconds. [Elasticsearch](https://www.elastic.co/) can help us with this use case.
 
 [Elasticsearch](https://www.elastic.co/) is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured. It is built on top of [Apache Lucene](https://lucene.apache.org/).
@@ -6169,21 +4995,15 @@ Trending functionality will be based on top of the search functionality. We can 
 
 ### Sharing
 
-
-
 Sharing content is an important part of any platform, for this, we can have some sort of URL shortener service in place that can generate short URLs for the users to share.
 
-*For more details, refer to the [URL Shortener](https://karanpratapsingh.com/courses/system-design/url-shortener) system design.*
+_For more details, refer to the [URL Shortener](https://karanpratapsingh.com/courses/system-design/url-shortener) system design._
 
 ## Detailed design
-
-
 
 It's time to discuss our design decisions in detail.
 
 ### Data Partitioning
-
-
 
 To scale out our databases we will need to partition our data. Horizontal partitioning (aka [Sharding](https://karanpratapsingh.com/courses/system-design/sharding)) can be a good first step. We can use partitions schemes such as:
 
@@ -6194,19 +5014,15 @@ To scale out our databases we will need to partition our data. Horizontal partit
 
 The above approaches can still cause uneven data and load distribution, we can solve this using [Consistent hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).
 
-*For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).*
+_For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing)._
 
 ### Geo-blocking
-
-
 
 Platforms like Netflix and YouTube use [Geo-blocking](https://en.wikipedia.org/wiki/Geo-blocking) to restrict content in certain geographical areas or countries. This is primarily done due to legal distribution laws that Netflix has to adhere to when they make a deal with the production and distribution companies. In the case of YouTube, this will be controlled by the user during the publishing of the content.
 
 We can determine the user's location either using their [IP](https://karanpratapsingh.com/courses/system-design/ip) or region settings in their profile then use services like [Amazon CloudFront](https://aws.amazon.com/cloudfront) which supports a geographic restrictions feature or a [geolocation routing policy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-geo.html) with [Amazon Route53](https://aws.amazon.com/route53) to restrict the content and re-route the user to an error page if the content is not available in that particular region or country.
 
 ### Recommendations
-
-
 
 Netflix uses a machine learning model which uses the user's viewing history to predict what the user might like to watch next, an algorithm like [Collaborative Filtering](https://en.wikipedia.org/wiki/Collaborative_filtering) can be used.
 
@@ -6218,33 +5034,27 @@ However, Netflix (like YouTube) uses its own algorithm called Netflix Recommenda
 - The device which was used to stream the content.
 - The number of searches and what terms were searched.
 
-*For more detail, refer to [Netflix recommendation research](https://research.netflix.com/research-area/recommendations).*
+_For more detail, refer to [Netflix recommendation research](https://research.netflix.com/research-area/recommendations)._
 
 ### Metrics and Analytics
-
-
 
 Recording analytics and metrics is one of our extended requirements. We can capture the data from different services and run analytics on the data using [Apache Spark](https://spark.apache.org/) which is an open-source unified analytics engine for large-scale data processing. Additionally, we can store critical metadata in the views table to increase data points within our data.
 
 ### Caching
 
-
-
 In a streaming platform, caching is important. We have to be able to cache as much static media content as possible to improve user experience. We can use solutions like [Redis](https://redis.io/) or [Memcached](https://memcached.org/) but what kind of cache eviction policy would best fit our needs?
 
 **Which cache eviction policy to use?**
 
-[Least Recently Used (LRU)](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) can be a good policy for our system. In this policy, we discard the least recently used key first.
+[Least Recently Used (LRU)](<https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)>) can be a good policy for our system. In this policy, we discard the least recently used key first.
 
 **How to handle cache miss?**
 
 Whenever there is a cache miss, our servers can hit the database directly and update the cache with the new entries.
 
-*For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching).*
+_For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching)._
 
 ### Media streaming and storage
-
-
 
 As most of our storage space will be used for storing media files such as thumbnails and videos. Per our discussion earlier, the media service will be handling both the upload and processing of media files.
 
@@ -6252,13 +5062,9 @@ We will use distributed file storage such as [HDFS](https://karanpratapsingh.com
 
 ### Content Delivery Network (CDN)
 
-
-
 [Content Delivery Network (CDN)](https://karanpratapsingh.com/courses/system-design/content-delivery-network) increases content availability and redundancy while reducing bandwidth costs. Generally, static files such as images, and videos are served from CDN. We can use services like [Amazon CloudFront](https://aws.amazon.com/cloudfront) or [Cloudflare CDN](https://www.cloudflare.com/cdn) for this use case.
 
 ## Identify and resolve bottlenecks
-
-
 
 [![netflix-advanced-design](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/netflix-advanced-design.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/netflix-advanced-design.png)
 
@@ -6278,25 +5084,17 @@ To make our system more resilient we can do the following:
 
 # Uber
 
-
-
 Let's design an [Uber](https://uber.com/) like ride-hailing service, similar to services like [Lyft](https://www.lyft.com/), [OLA Cabs](https://www.olacabs.com/), etc.
 
 ## What is Uber?
-
-
 
 Uber is a mobility service provider, allowing users to book rides and a driver to transport them in a way similar to a taxi. It is available on the web and mobile platforms such as Android and iOS.
 
 ## Requirements
 
-
-
 Our system should meet the following requirements:
 
 ### Functional requirements
-
-
 
 We will design our system for two types of users: Customers and Drivers.
 
@@ -6314,15 +5112,11 @@ We will design our system for two types of users: Customers and Drivers.
 
 ### Non-Functional requirements
 
-
-
 - High reliability.
 - High availability with minimal latency.
 - The system should be scalable and efficient.
 
 ### Extended requirements
-
-
 
 - Customers can rate the trip after it's completed.
 - Payment processing.
@@ -6330,15 +5124,11 @@ We will design our system for two types of users: Customers and Drivers.
 
 ## Estimation and Constraints
 
-
-
 Let's start with the estimation and constraints.
 
-*Note: Make sure to check any scale or traffic-related assumptions with your interviewer.*
+_Note: Make sure to check any scale or traffic-related assumptions with your interviewer._
 
 ### Traffic
-
-
 
 Let us assume we have 100 million daily active users (DAU) with 1 million drivers and on average our platform enables 10 million rides daily.
 
@@ -6354,8 +5144,6 @@ If on average each user performs 10 actions (such as request a check available r
 
 ### Storage
 
-
-
 If we assume each message on average is 400 bytes, we will require about 400 GB of database storage every day.
 
 1 billion×400 bytes=∼400 GB/day
@@ -6366,15 +5154,11 @@ And for 10 years, we will require about 1.4 PB of storage.
 
 ### Bandwidth
 
-
-
 As our system is handling 400 GB of ingress every day, we will require a minimum bandwidth of around 5 MB per second.
 
 400 GB(24 hrs×3600 seconds)=∼5 MB/second
 
 ### High-level estimate
-
-
 
 Here is our high-level estimate:
 
@@ -6387,8 +5171,6 @@ Here is our high-level estimate:
 | Bandwidth                 | ~5 MB/s     |
 
 ## Data model design
-
-
 
 This is the general data model which reflects our requirements.
 
@@ -6422,29 +5204,21 @@ The payments table contains the payment-related data with the corresponding `tri
 
 ### What kind of database should we use?
 
-
-
 While our data model seems quite relational, we don't necessarily need to store everything in a single database, as this can limit our scalability and quickly become a bottleneck.
 
 We will split the data between different services each having ownership over a particular table. Then we can use a relational database such as [PostgreSQL](https://www.postgresql.org/) or a distributed NoSQL database such as [Apache Cassandra](https://cassandra.apache.org/_/index.html) for our use case.
 
 ## API design
 
-
-
 Let us do a basic API design for our services:
 
 ### Request a Ride
-
-
 
 Through this API, customers will be able to request a ride.
 
 ```
 requestRide(customerID: UUID, source: Tuple<float>, destination: Tuple<float>, cabType: Enum<string>, paymentMethod: Enum<string>): Ride
 ```
-
-
 
 **Parameters**
 
@@ -6460,21 +5234,17 @@ Result (`Ride`): Associated ride information of the trip.
 
 ### Cancel the Ride
 
-
-
 This API will allow customers to cancel the ride.
 
 ```
 cancelRide(customerID: UUID, reason?: string): boolean
 ```
 
-
-
 **Parameters**
 
 Customer ID (`UUID`): ID of the customer.
 
-Reason (`UUID`): Reason for canceling the ride *(optional)*.
+Reason (`UUID`): Reason for canceling the ride _(optional)_.
 
 **Returns**
 
@@ -6482,16 +5252,12 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Accept or Deny the Ride
 
-
-
 This API will allow the driver to accept or deny the trip.
 
 ```
 acceptRide(driverID: UUID, rideID: UUID): boolean
 denyRide(driverID: UUID, rideID: UUID): boolean
 ```
-
-
 
 **Parameters**
 
@@ -6505,16 +5271,12 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Start or End the Trip
 
-
-
 Using this API, a driver will be able to start and end the trip.
 
 ```
 startTrip(driverID: UUID, tripID: UUID): boolean
 endTrip(driverID: UUID, tripID: UUID): boolean
 ```
-
-
 
 **Parameters**
 
@@ -6528,15 +5290,11 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Rate the Trip
 
-
-
 This API will enable customers to rate the trip.
 
 ```
 rateTrip(customerID: UUID, tripID: UUID, rating: int, feedback?: string): boolean
 ```
-
-
 
 **Parameters**
 
@@ -6546,7 +5304,7 @@ Trip ID (`UUID`): ID of the completed trip.
 
 Rating (`int`): Rating of the trip.
 
-Feedback (`string`): Feedback about the trip by the customer *(optional)*.
+Feedback (`string`): Feedback about the trip by the customer _(optional)_.
 
 **Returns**
 
@@ -6554,13 +5312,9 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ## High-level design
 
-
-
 Now let us do a high-level design of our system.
 
 ### Architecture
-
-
 
 We will be using [microservices architecture](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) since it will make it easier to horizontally scale and decouple our services. Each service will have ownership of its own data model. Let's try to divide our system into some core services.
 
@@ -6598,11 +5352,9 @@ Since our architecture is microservices-based, services will be communicating wi
 
 [Service discovery](https://karanpratapsingh.com/courses/system-design/service-discovery) is another thing we will have to take into account. We can also use a service mesh that enables managed, observable, and secure communication between individual services.
 
-*Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other.*
+_Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/courses/system-design/rest-graphql-grpc) and how they compare with each other._
 
 ### How is the service expected to work?
-
-
 
 Here's how our service is expected to work:
 
@@ -6618,8 +5370,6 @@ Here's how our service is expected to work:
 
 ### Location Tracking
 
-
-
 How do we efficiently send and receive live location data from the client (customers and drivers) to our backend? We have two different options:
 
 **Pull model**
@@ -6634,11 +5384,9 @@ The pull model approach is not scalable as it will create unnecessary request ov
 
 Additionally, the client application should have some sort of background job mechanism to ping GPS location while the application is in the background.
 
-*Note: Learn more about [Long polling, WebSockets, Server-Sent Events (SSE)](https://karanpratapsingh.com/courses/system-design/long-polling-websockets-server-sent-events).*
+_Note: Learn more about [Long polling, WebSockets, Server-Sent Events (SSE)](https://karanpratapsingh.com/courses/system-design/long-polling-websockets-server-sent-events)._
 
 ### Ride Matching
-
-
 
 We need a way to efficiently store and query nearby drivers. Let's explore different solutions we can incorporate into our design.
 
@@ -6649,8 +5397,6 @@ We already have access to the latitude and longitude of our customers, and with 
 ```
 SELECT * FROM locations WHERE lat BETWEEN X-R AND X+R AND long BETWEEN Y-R AND Y+R
 ```
-
-
 
 However, this is not scalable, and performing this query on large datasets will be quite slow.
 
@@ -6682,9 +5428,9 @@ We can save further computation by only subdividing a node after a certain thres
 
 **What about race conditions?**
 
-Race conditions can easily occur when a large number of customers will be requesting rides simultaneously. To avoid this, we can wrap our ride matching logic in a [Mutex](https://en.wikipedia.org/wiki/Lock_(computer_science)) to avoid any race conditions. Furthermore, every action should be transactional in nature.
+Race conditions can easily occur when a large number of customers will be requesting rides simultaneously. To avoid this, we can wrap our ride matching logic in a [Mutex](<https://en.wikipedia.org/wiki/Lock_(computer_science)>) to avoid any race conditions. Furthermore, every action should be transactional in nature.
 
-*For more details, refer to [Transactions](https://karanpratapsingh.com/courses/system-design/transactions) and [Distributed Transactions](https://karanpratapsingh.com/courses/system-design/distributed-transactions).*
+_For more details, refer to [Transactions](https://karanpratapsingh.com/courses/system-design/transactions) and [Distributed Transactions](https://karanpratapsingh.com/courses/system-design/distributed-transactions)._
 
 **How to find the best drivers nearby?**
 
@@ -6694,61 +5440,47 @@ Once we have a list of nearby drivers from the Quadtree servers, we can perform 
 
 In cases of high demand, we can use the concept of Surge Pricing. Surge pricing is a dynamic pricing method where prices are temporarily increased as a reaction to increased demand and mostly limited supply. This surge price can be added to the base price of the trip.
 
-*For more details, learn how [surge pricing works](https://www.uber.com/us/en/drive/driver-app/how-surge-works) with Uber.*
+_For more details, learn how [surge pricing works](https://www.uber.com/us/en/drive/driver-app/how-surge-works) with Uber._
 
 ### Payments
-
-
 
 Handling payments at scale is challenging, to simplify our system we can use a third-party payment processor like [Stripe](https://stripe.com/) or [PayPal](https://www.paypal.com/). Once the payment is complete, the payment processor will redirect the user back to our application and we can set up a [webhook](https://en.wikipedia.org/wiki/Webhook) to capture all the payment-related data.
 
 ### Notifications
 
-
-
 Push notifications will be an integral part of our platform. We can use a message queue or a message broker such as [Apache Kafka](https://kafka.apache.org/) with the notification service to dispatch requests to [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging) or [Apple Push Notification Service (APNS)](https://developer.apple.com/documentation/usernotifications) which will handle the delivery of the push notifications to user devices.
 
-*For more details, refer to the [WhatsApp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications in detail.*
+_For more details, refer to the [WhatsApp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications in detail._
 
 ## Detailed design
-
-
 
 It's time to discuss our design decisions in detail.
 
 ### Data Partitioning
 
-
-
 To scale out our databases we will need to partition our data. Horizontal partitioning (aka [Sharding](https://karanpratapsingh.com/courses/system-design/sharding)) can be a good first step. We can shard our database either based on existing [partition schemes](https://karanpratapsingh.com/courses/system-design/sharding#partitioning-criteria) or regions. If we divide the locations into regions using let's say zip codes, we can effectively store all the data in a given region on a fixed node. But this can still cause uneven data and load distribution, we can solve this using [Consistent hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).
 
-*For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing).*
+_For more details, refer to [Sharding](https://karanpratapsingh.com/courses/system-design/sharding) and [Consistent Hashing](https://karanpratapsingh.com/courses/system-design/consistent-hashing)._
 
 ### Metrics and Analytics
-
-
 
 Recording analytics and metrics is one of our extended requirements. We can capture the data from different services and run analytics on the data using [Apache Spark](https://spark.apache.org/) which is an open-source unified analytics engine for large-scale data processing. Additionally, we can store critical metadata in the views table to increase data points within our data.
 
 ### Caching
 
-
-
 In a location services-based platform, caching is important. We have to be able to cache the recent locations of the customers and drivers for fast retrieval. We can use solutions like [Redis](https://redis.io/) or [Memcached](https://memcached.org/) but what kind of cache eviction policy would best fit our needs?
 
 **Which cache eviction policy to use?**
 
-[Least Recently Used (LRU)](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)) can be a good policy for our system. In this policy, we discard the least recently used key first.
+[Least Recently Used (LRU)](<https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)>) can be a good policy for our system. In this policy, we discard the least recently used key first.
 
 **How to handle cache miss?**
 
 Whenever there is a cache miss, our servers can hit the database directly and update the cache with the new entries.
 
-*For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching).*
+_For more details, refer to [Caching](https://karanpratapsingh.com/courses/system-design/caching)._
 
 ## Identify and resolve bottlenecks
-
-
 
 [![uber-advanced-design](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-advanced-design.png)](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-advanced-design.png)
 
@@ -6769,8 +5501,6 @@ To make our system more resilient we can do the following:
 - Exactly once delivery and message ordering is challenging in a distributed system, we can use a dedicated [message broker](https://karanpratapsingh.com/courses/system-design/message-brokers) such as [Apache Kafka](https://kafka.apache.org/) or [NATS](https://nats.io/) to make our notification system more robust.
 
 # Next Steps
-
-
 
 Congratulations, you've finished the course!
 
@@ -6805,8 +5535,6 @@ Wishing you all the best for further learning!
 
 # References
 
-
-
 Here are the resources that were referenced while creating this course.
 
 - [Cloudflare learning center](https://www.cloudflare.com/learning)
@@ -6822,4 +5550,4 @@ Here are the resources that were referenced while creating this course.
 - [PagerDuty resources](https://www.pagerduty.com/resources)
 - [VMWare Blogs](https://blogs.vmware.com/learning)
 
-*All the diagrams were made using [Excalidraw](https://excalidraw.com/) and are available [here](https://github.com/karanpratapsingh/system-design/tree/main/diagrams).*
+_All the diagrams were made using [Excalidraw](https://excalidraw.com/) and are available [here](https://github.com/karanpratapsingh/system-design/tree/main/diagrams)._
