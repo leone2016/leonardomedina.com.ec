@@ -30,4 +30,15 @@ Think of the relationship as: **JDK > JRE > JVM**
 
 ## JVM Architecture
 
-![JVM Architecture](https://raw.githubusercontent.com/leone2016/leonardomedina.com.ec/refs/heads/main/public/jvm_arch.png)
+![relationship-jdk-jre-jvm](https://raw.githubusercontent.com/leone2016/leonardomedina.com.ec/refs/heads/main/public/jvm_arch.png)
+
+
+
+### Class loader Subsystem 
+
+Handles `.class` file loading.
+
+
+
+
+
